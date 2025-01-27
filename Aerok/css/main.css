@@ -11,8 +11,13 @@
     gap: 2.82em;
 }
 .visual .swiper ul {
-    width: 57.30%;
     height: 324px;
+}
+.visual .swiper ul li.swiper-slide-prev {
+    width: 57.30%;
+}
+.visual .swiper ul li.swiper-slide-active {
+    width: 57.30%;
 }
 .visual .swiper ul li a {
     display: flex;
@@ -20,10 +25,68 @@
 }
 
 .visual .user {
+    /* display: flex;
+    flex-direction: column;
+    gap: 2.82em; */
     width: 38.88%;
     height: 648px;
     padding: 2.82em;
-    border: 1px solid var(--Border);
+    border: 1px solid var(--border);
     border-radius: 1.17rem;
 }
-.visual .user 
+.visual .user .title {
+    font-size: var( --title-XL);
+    font-weight: 700;
+    color: var(--title-color);
+    margin-bottom: 2.82em;
+}
+.visual .user .user_group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.41em;
+}
+.visual .user .check_group {
+    display: flex;
+    margin-bottom: 1.41em;
+    gap: 1.41em;
+}
+.visual .user .check_group .inner {
+    display: flex;
+    align-items: center;
+    gap: 0.58em;
+}
+.visual .user .check_group span {
+    font-size: var( --title-m);
+    font-weight: 700;
+    color: var(--title-color);
+}
+
+[type="checkbox"] {
+    appearance: none; /* 기본(네이티브) 모양을 제거 */
+    box-sizing: border-box;
+    background-clip: content-box;
+    padding: 0.2em;
+    width: 1.17rem;
+    height: 1.17rem;
+    border: 2px solid var(--disalbe);
+    border-radius: 50%;
+    cursor: pointer;
+}
+[type="checkbox"]:checked {
+    border-color: var( --bdoy-color);
+    background-color: var(--bdoy-color);
+}
+
+.visual .user .form_group {
+    display: flex;
+    gap: 2.82em;
+}
+.visual .user .form_group label {
+    color: var(--disalbe);
+}
+.visual .user .form_group input {
+    width: 100%;
+    padding: 0.58em 1.17em;
+    border: 1px solid var(--border);
+    border-radius: 0.29rem;  
+}

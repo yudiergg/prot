@@ -52,3 +52,12 @@ th {
     font-weight: inherit;
     text-align: inherit;
 }
+input {
+    height: auto;  /* 높이값 초기화 */
+    line-height : normal;  /* line-height 초기화 */
+    font-family: inherit;  /* 폰트 상속 */
+    outline-style: none;  /* 포커스시 발생하는 효과 제거를 원한다면 */
+    -webkit-appearance: none;  /* 브라우저별 기본 스타일링 제거 */
+    -moz-appearance: none;
+    appearance: none;
+}

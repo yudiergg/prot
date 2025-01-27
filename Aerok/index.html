@@ -43,22 +43,50 @@
                     <div class="title">
                         에어로케이와 함께하는 첫 걸음<br>출발지를 선택하세요
                     </div>
-                    
-                    <div class="checkbox">
-                        <div class="active">
-                            <span></span>
-                            <input type="checkbox" checked>
+                        <div class="check_group">
+                            <div class="inner">
+                                <span>편도</span>
+                                <input type="checkbox" checked>
+                            </div>
+                            <div class="inner">
+                                <span>왕복</span>
+                                <input type="checkbox">
+                            </div>
                         </div>
-                        <div class="disalbe">
-                            <span></span>
-                            <input type="checkbox">
+                        <div class="user_group">
+                            <div class="form_group route_point">
+                                <div class="inner">
+                                    <label for="origin">출발지</label>
+                                    <input type="text" style="width:8.29rem;" id="route-start" name="출발지"/>
+                                </div>
+                                <div class="inner">
+                                    <label for="origin">도착지</label>
+                                    <input type="text" style="width:8.29rem;" id="route-end" name="도착지"/>
+                                </div>
+                            </div>
+                            <div class="form_group date">
+                                <div class="inner">
+                                    <label for="origin">날짜</label>
+                                    <input type="text" style="width:8.29rem;" id="date-tart" name="날짜시작"/>
+                                </div>
+                                <div class="inner">
+                                    <label for="origin">날짜</label>
+                                    <input type="text" style="width:8.29rem;" id="date-end" name="날짜종료"/>
+                                </div>
+                            </div>
+                            <div class="form_group booking_options">
+                                <div class="inner">
+                                    <label for="origin">인원선택</label>
+                                    <input type="number" style="width:8.29rem;"id="people-count" name="인원수"/>
+                                </div>
+                                <div class="inner">
+                                    <label for="origin">프로모션코드</label>
+                                    <input type="text" style="width:8.29rem;" id="promo-code" name="날짜종료" placeholder="코드 입력"/>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="origin">
-                        <strong>출발지 </strong>
                     </div>
                 </div>
-            </div>
         </section>
         <section class="travel"></section>
         <section class="event ticket"></section>

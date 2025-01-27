@@ -19,28 +19,28 @@ body, html {
 
 :root {
     /* color */
-    --Primary-color: #FFA600;
-    --Secondary-color: #002554;
-    --Gray-color: #1D1D1D;
+    --primary-color: #FFA600;
+    --secondary-color: #002554;
+    --title-color: #1D1D1D;
     --bdoy-color: #555;
-    --Disalbe:#8e8e8e;
-    --Border:#c6c6c6;
-    --Disable-Border-color:#E4E4E4;
-    --Hover-color :#F4BD22;
-    --Pressed-color:#EAB318;
-    --Bg-color:#fff;
+    --disalbe:#8e8e8e;
+    --border:#c6c6c6;
+    --disable-Border-color:#E4E4E4;
+    --hover-color :#F4BD22;
+    --pressed-color:#EAB318;
+    --bg-color:#fff;
     /* font*/
-    --Visual-L: 3.88rem;
-    --Visual-m: 2.94rem;
+    --visual-L: 3.88rem;
+    --visual-m: 2.94rem;
     --visual-s: 2.35rem;
     --h-L: 2.94rem;
     --h-m: 2.35rem;
     --h-s: 1.88rem;
-    --Title-XXL: 1.88rem;
-    --Title-XL: 1.47rem;
-    --Title-L: 1.23rem;
-    --Title-m: 1.11rem;
-    --Title-s: 1rem;
+    --title-XXL: 1.88rem;
+    --title-XL: 1.47rem;
+    --title-L: 1.23rem;
+    --title-m: 1.11rem;
+    --title-s: 1rem;
     --body-L: 1.11rem;
     --body-m-default: 17px;
     --body-s: 0.88rem;
