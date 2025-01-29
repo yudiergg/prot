@@ -10,35 +10,66 @@
     display: flex;
     gap: 2.82em;
 }
-.visual .swiper ul {
-    height: 324px;
-}
-.visual .swiper ul li.swiper-slide-prev {
-    width: 57.30%;
-}
-.visual .swiper ul li.swiper-slide-active {
+.visual .swiper {
     width: 57.30%;
 }
 .visual .swiper ul li a {
     display: flex;
     flex-direction: column;
+    height: 324px;
+    padding: 2.35em;
+    border-radius: 1.17rem;
+    color: #fff;
 }
-
+.visual .swiper ul li a strong {
+    font-weight: 400;
+    font-size: var(--body-L);
+}
+.visual .swiper ul li a .visual_title_L {
+    font-weight: 700;
+    font-size: var(--h-s);
+}
+.visual .swiper ul li a.popup_title_1 {
+    align-items: center;
+    background: url(../images/popup/visual_banner01.jpg) no-repeat center center / cover;
+}
+.visual .swiper ul li a.popup_title_1 .logo {
+    padding-top: 2.35em;
+    font-size: 0;
+    line-height: 0;
+    width: 8.41rem;
+    height: 27px;
+    background-image: url(../images/popup/visual\ logo.png);
+}
+.visual .swiper ul li a.popup_title_2 {
+    align-items: center;
+    background: url(../images/popup/visual_banner01-1.jpg) no-repeat center center / cover;   
+}
+.visual .swiper ul li a.popup_title_3 {
+    background: url(../images/popup/visual_banner02.jpg) no-repeat center center / cover;
+}
+.visual .swiper .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.70em;
+    top: 348px;
+}
+.visual .swiper .swiper-pagination-bullet {
+    width: 0.58rem;
+    height: 0.58rem;
+    background-color: var(--disalbe);
+}
 .visual .user {
-    /* display: flex;
-    flex-direction: column;
-    gap: 2.82em; */
     width: 38.88%;
-    height: 648px;
     padding: 2.82em;
     border: 1px solid var(--border);
     border-radius: 1.17rem;
 }
 .visual .user .title {
+    margin-bottom: 2.82em;
     font-size: var( --title-XL);
     font-weight: 700;
     color: var(--title-color);
-    margin-bottom: 2.82em;
 }
 .visual .user .user_group {
     display: flex;
@@ -61,7 +92,7 @@
     color: var(--title-color);
 }
 
-[type="checkbox"] {
+.user .check_group [type="checkbox"] {
     appearance: none; /* 기본(네이티브) 모양을 제거 */
     box-sizing: border-box;
     background-clip: content-box;
@@ -72,21 +103,70 @@
     border-radius: 50%;
     cursor: pointer;
 }
-[type="checkbox"]:checked {
+.user .check_group [type="checkbox"]:checked {
     border-color: var( --bdoy-color);
     background-color: var(--bdoy-color);
 }
 
-.visual .user .form_group {
+.visual .user .user_group .form_group {
+    position: relative;
     display: flex;
+    width: 100%;
     gap: 2.82em;
 }
+.visual .user .user_group .route_point::after {
+    position: absolute;
+    content: "";
+    bottom: 0.58em;
+    right: calc(50% - 12px);
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 21L2 16L7 11L8.425 12.4L5.825 15H21V17H5.825L8.425 19.6L7 21ZM17 13L15.575 11.6L18.175 9H3V7H18.175L15.575 4.4L17 3L22 8L17 13Z' fill='%23555555'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 .visual .user .form_group label {
+    display: flex;
+    font-size: var( --body-s);
     color: var(--disalbe);
 }
 .visual .user .form_group input {
+    display: flex;
     width: 100%;
     padding: 0.58em 1.17em;
     border: 1px solid var(--border);
-    border-radius: 0.29rem;  
+    border-radius: 0.29rem;
+}
+.visual .user .date .inner {
+    position: relative;
+}
+.visual .user .date .inner ::after {
+    position: absolute;
+    content: "";
+    bottom: 0.58em;
+    right: 1.17em;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.30775 21.4981C4.80258 21.4981 4.375 21.3231 4.025 20.9731C3.675 20.6231 3.5 20.1955 3.5 19.6903V6.30581C3.5 5.80065 3.675 5.37306 4.025 5.02306C4.375 4.67306 4.80258 4.49806 5.30775 4.49806H6.69225V2.38281H8.23075V4.49806H15.8077V2.38281H17.3077V4.49806H18.6923C19.1974 4.49806 19.625 4.67306 19.975 5.02306C20.325 5.37306 20.5 5.80065 20.5 6.30581V19.6903C20.5 20.1955 20.325 20.6231 19.975 20.9731C19.625 21.3231 19.1974 21.4981 18.6923 21.4981H5.30775ZM5.30775 19.9981H18.6923C18.7692 19.9981 18.8398 19.966 18.9038 19.9018C18.9679 19.8378 19 19.7673 19 19.6903V10.3058H5V19.6903C5 19.7673 5.03208 19.8378 5.09625 19.9018C5.16025 19.966 5.23075 19.9981 5.30775 19.9981ZM5 8.80581H19V6.30581C19 6.22881 18.9679 6.15831 18.9038 6.09431C18.8398 6.03014 18.7692 5.99806 18.6923 5.99806H5.30775C5.23075 5.99806 5.16025 6.03014 5.09625 6.09431C5.03208 6.15831 5 6.22881 5 6.30581V8.80581ZM12 14.0751C11.7552 14.0751 11.5465 13.9888 11.374 13.8163C11.2017 13.644 11.1155 13.4353 11.1155 13.1903C11.1155 12.9455 11.2017 12.7368 11.374 12.5643C11.5465 12.392 11.7552 12.3058 12 12.3058C12.2448 12.3058 12.4535 12.392 12.626 12.5643C12.7983 12.7368 12.8845 12.9455 12.8845 13.1903C12.8845 13.4353 12.7983 13.644 12.626 13.8163C12.4535 13.9888 12.2448 14.0751 12 14.0751ZM8 14.0751C7.75517 14.0751 7.5465 13.9888 7.374 13.8163C7.20167 13.644 7.1155 13.4353 7.1155 13.1903C7.1155 12.9455 7.20167 12.7368 7.374 12.5643C7.5465 12.392 7.75517 12.3058 8 12.3058C8.24483 12.3058 8.4535 12.392 8.626 12.5643C8.79833 12.7368 8.8845 12.9455 8.8845 13.1903C8.8845 13.4353 8.79833 13.644 8.626 13.8163C8.4535 13.9888 8.24483 14.0751 8 14.0751ZM16 14.0751C15.7552 14.0751 15.5465 13.9888 15.374 13.8163C15.2017 13.644 15.1155 13.4353 15.1155 13.1903C15.1155 12.9455 15.2017 12.7368 15.374 12.5643C15.5465 12.392 15.7552 12.3058 16 12.3058C16.2448 12.3058 16.4535 12.392 16.626 12.5643C16.7983 12.7368 16.8845 12.9455 16.8845 13.1903C16.8845 13.4353 16.7983 13.644 16.626 13.8163C16.4535 13.9888 16.2448 14.0751 16 14.0751ZM12 17.9981C11.7552 17.9981 11.5465 17.9118 11.374 17.7393C11.2017 17.567 11.1155 17.3584 11.1155 17.1136C11.1155 16.8686 11.2017 16.6599 11.374 16.4876C11.5465 16.3151 11.7552 16.2288 12 16.2288C12.2448 16.2288 12.4535 16.3151 12.626 16.4876C12.7983 16.6599 12.8845 16.8686 12.8845 17.1136C12.8845 17.3584 12.7983 17.567 12.626 17.7393C12.4535 17.9118 12.2448 17.9981 12 17.9981ZM8 17.9981C7.75517 17.9981 7.5465 17.9118 7.374 17.7393C7.20167 17.567 7.1155 17.3584 7.1155 17.1136C7.1155 16.8686 7.20167 16.6599 7.374 16.4876C7.5465 16.3151 7.75517 16.2288 8 16.2288C8.24483 16.2288 8.4535 16.3151 8.626 16.4876C8.79833 16.6599 8.8845 16.8686 8.8845 17.1136C8.8845 17.3584 8.79833 17.567 8.626 17.7393C8.4535 17.9118 8.24483 17.9981 8 17.9981ZM16 17.9981C15.7552 17.9981 15.5465 17.9118 15.374 17.7393C15.2017 17.567 15.1155 17.3584 15.1155 17.1136C15.1155 16.8686 15.2017 16.6599 15.374 16.4876C15.5465 16.3151 15.7552 16.2288 16 16.2288C16.2448 16.2288 16.4535 16.3151 16.626 16.4876C16.7983 16.6599 16.8845 16.8686 16.8845 17.1136C16.8845 17.3584 16.7983 17.567 16.626 17.7393C16.4535 17.9118 16.2448 17.9981 16 17.9981Z' fill='%238E8E8E'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+
+}
+.visual .user .form_group input::placeholder {
+    color: var(--disalbe);
+}
+.visual .user button {
+    margin-top: 2.82em;
+    font-size: var(--body-L);
+    font-weight: 700;
+    width: 100%;
+    padding: 0.58em 0;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    border-radius: 0.29em;
+}
+.visual .user button:hover {
+    background-color: var(--hover-color);
 }
