@@ -1,0 +1,51 @@
+.skipnav {
+    display: none;
+}
+
+header {
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.2em;
+    width: 100%;
+    height: var(--header-h);
+    font-size: var(--body-L);
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+header .logo a {
+    display: flex;
+    width: 6.05rem;
+    height: 21px;
+    font-size: 0;
+    line-height: 0;
+    background: url(../images/popup/Aero_K_logo\ b.svg) no-repeat center center / contain;
+}
+header .gnb .gnb_wrap ul.depth1 {
+    display: flex;
+}
+header .gnb .gnb_wrap ul.depth1 > li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7.35rem;
+    height: 80px;
+}
+header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
+    display: none;
+}
+header .gnb .gnb_open {
+    display: none;
+}
+header .gnb .gnb_close {
+    display: none;
+}
+header .gnb .m_lang {
+    display: none;
+}
+
+header .tnb {
+    display: flex;
+}

@@ -45,6 +45,9 @@ body, html {
     --body-m-default: 17px;
     --body-s: 0.88rem;
 
+    /* header */
+    --header-h:80px
+
 }
 
 @media screen and (max-width:1300px){
