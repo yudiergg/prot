@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/layout.js"></script>
     <script src="js/main.js"></script>
     <script src="js/common.js"></script>
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
@@ -23,10 +24,10 @@
                 <button class="gnb_open">메뉴열기</button>
                 <div class="gnb_wrap">
                     <ul class="depth1">
-                        <li>
+                        <li class="open">
                              <!--pc 버전에서 메뉴에 마우스를 올리면 : over
                                 모바일에서 메뉴를 클릭해서 열면 : open -->
-                            <a href="#n">예약</a>
+                            <a href="#n"><span>예약</span></a>
                             <ul class="depth2">
                                 <li><a href="#n">항공권</a></li>
                                 <li><a href="#n">여행 준비</a></li>
@@ -37,20 +38,20 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#n">나의 예약</a>
+                            <a href="#n"><span>나의 예약</span></a>
                             <ul class="depth2">
                                 <li><a href="#n">비회원 예약 조회</a></li>
                                 <li><a href="#n">온라인 체크인</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#n">이벤트</a>
+                            <a href="#n"><span>이벤트</span></a>
                             <ul class="depth2">
                                 <li><a href="#">정기간행물</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#n">서비스 안내</a>
+                            <a href="#n"><span>서비스 안내</span></a>
                             <ul class="depth2">
                                 <li><a href="#">도움이 필요한 손님</a></li>
                                 <li><a href="#">탑승 수속</a></li>
@@ -61,7 +62,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#n">고객센터</a>
+                            <a href="#n"><span>고객센터</span></a>
                             <ul class="depth2">
                                 <li><a href="#">FAQ</a></li>
                                 <li><a href="#">고객상담</a></li>
@@ -71,15 +72,21 @@
                                 <li><a href="#">약관 및 고지사항</a></li>
                             </ul>
                         </li>
-                        <li><a href="#n">브랜드 샵</a></li>
+                        <li><a href="#n"><span>브랜드 샵</span></a></li>
                         <div class="m_lang"><button>한국어</button></div>
                         <button class="gnb_close">메뉴닫기</button>
                     </ul>
                 </div>
             </nav>
-            <div class="tnb">
-                <div class="search"><button>검색</button></div>
-                <div class="lang"><button>한국어</button></div>
+            <div class="tnb">                
+                <div class="lang">
+                    <button>한국어</button>
+                    <ul class="lang_wrap">
+                        <li><a href="#n">KO</a></li>
+                        <li><a href="#n">EN</a></li>
+                    </ul>
+                </div>
+                <div class="menu"><button>메뉴바</button></div>
             </div>
         </header>
         <section class="visual">
@@ -126,27 +133,27 @@
                             <div class="form_group route_point">
                                 <div class="inner">
                                     <label for="origin">출발지</label>
-                                    <input type="text" id="route-start" name="출발지"/>
+                                    <input type="text" id="route-start" name="출발지" placeholder="도시또는공항"/>
                                 </div>
                                 <div class="inner">
                                     <label for="origin">도착지</label>
-                                    <input type="text" id="route-end" name="도착지"/>
+                                    <input type="text" id="route-end" name="도착지" placeholder="도시또는공항"/>
                                 </div>
                             </div>
                             <div class="form_group date">
                                 <div class="inner">
                                     <label for="origin">날짜</label>
-                                    <input type="text" id="date-start" name="날짜시작"/>
+                                    <input type="text" id="date-start" name="날짜시작" placeholder="날짜선택"/>
                                 </div>
                                 <div class="inner">
                                     <label for="origin">날짜</label>
-                                    <input type="text" id="date-end" name="날짜종료"/>
+                                    <input type="text" id="date-end" name="날짜종료"  placeholder="날짜선택"/>
                                 </div>
                             </div>
                             <div class="form_group booking_options">
                                 <div class="inner">
                                     <label for="origin">인원선택</label>
-                                    <input type="number" id="people-count" name="인원수"/>
+                                    <input type="number" id="people-count" name="인원수"  placeholder="0명"/>
                                 </div>
                                 <div class="inner">
                                     <label for="origin">프로모션코드</label>

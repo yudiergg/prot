@@ -4,7 +4,7 @@
 @import url(layout.css);
 
 .visual {
-    padding: 5.64rem 0;
+    padding: 6.58em 0 5.64rem 0;
 }
 .visual .wrapper {
     display: flex;
