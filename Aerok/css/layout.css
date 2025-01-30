@@ -125,3 +125,11 @@ header .tnb .menu button {
         color: var(--secondary-color);
     }
 }
+@media screen and (max-width:1024px){
+    header .gnb .gnb_wrap {
+        display: none;
+    }
+    header .gnb .m_lang {
+        display: none;
+    }
+}

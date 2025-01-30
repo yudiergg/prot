@@ -65,7 +65,7 @@
     border-radius: 1.17rem;
 }
 .visual .user .title {
-    margin-bottom: 2.82em;
+    margin-bottom: 1.92em;
     font-size: var( --title-XL);
     font-weight: 700;
     color: var(--title-color);
@@ -133,7 +133,7 @@
 .visual .user .form_group input {
     display: flex;
     width: 100%;
-    padding: 0.58em 1.17em;
+    padding: 0.58em;
     border: 1px solid var(--border);
     border-radius: 0.29rem;
 }
@@ -168,4 +168,139 @@
 }
 .visual .user button:hover {
     background-color: var(--hover-color);
+}
+
+@media screen and (max-width:768px){
+    .visual .wrapper{
+        flex-direction: column;
+    }
+    .visual .swiper {
+        width: 100%;
+    }
+    .visual .user {
+        width: 100%;
+    }
+    .visual .user .user_group .form_group {
+        justify-content: space-between;
+    }
+}
+
+.travel .title {
+    margin-bottom: 1.92em;
+    font-size: var( --title-XL);
+    font-weight: 700;
+    color: var(--title-color);
+}
+.travel .tab_menu {
+    display: flex;
+    padding: 0.58em 0.58em;
+    max-width: 11.76rem;
+    border-radius: 100px;
+    margin-bottom: 1.26em;
+    font-size: var(--body-L);
+    font-weight: 700;
+    color: var(--disalbe);
+    background-color: var( --bg-color-2);
+}
+.travel .tab_menu a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5.29rem;
+    height: 49px;
+}
+.travel .tab_menu a.active {
+    color: var( --bg-color);
+    background-color: var(--secondary-color);
+    border-radius: 100px;
+}
+
+.travel .event_popup {
+    position: relative;
+    height: 200px;
+    padding: 2.35em 2.82em;
+    margin-bottom: 2.82em;
+    background:linear-gradient(to right, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 60%), url(../images/popup/event_popup_01.jpg) no-repeat center center / cover;
+    border-radius: 0.58rem;
+    font-weight: 700;
+    color: var(--bg-color);  
+}
+.travel .event_popup strong {
+    font-size: var(--title-s);
+}
+.travel .event_popup .event_title_s {
+    font-size: var( --visual-s);
+    margin-bottom: 0.25em;
+}
+.travel .event_popup span {
+    font-size: var(--body-s);
+}
+.travel .event_popup button {
+    position: absolute;
+    bottom: 2.35rem;
+    right: 2.82rem;
+    padding: 0.58em 1.17em;
+    font-size: var(--body-m-default);
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    border-radius: 0.26rem;
+}
+.travel ul {
+    display: flex;
+    gap: 1.41em;
+}
+.travel ul li {
+    flex: 1;
+}
+.travel ul li a {
+    display: flex;
+    flex-direction: column;
+}
+.travel ul li a .photo {
+    height: 200px;
+    font-size: 0;
+    line-height: 0;
+    background: url(../images/popup/event_list_banner_01.jpg)no-repeat center center / cover;
+    border-radius: 0.58rem;
+}
+.travel ul li a .inner strong {
+    margin-bottom: 0.42em;
+    font-size: var(--title-s);
+    font-weight: 700;
+    color: var(--title-color);
+}
+.travel ul li a .inner .date {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.13em;
+    font-size: var(--body-s);
+}
+.travel ul li a .inner .date .first, .end {
+    display: flex;
+    gap: 0.53rem;
+}
+.travel ul li a .inner .date .icon {
+    font-size: 0;
+    line-height: 0;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.6537 12.2798L10.25 16.6836L10.25 7.87609L14.6537 12.2798Z' fill='%235F6368'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.travel ul li a .inner .money {
+    font-size: var(--title-XL);
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+.travel ul li a .inner label {
+    padding: 0.33em 0.66em;
+    font-size: var(--body-s);
+    border: 1px solid var(--secondary-color);
+    border-radius: 0.33rem;
+    color: var(--secondary-color);
+}
+footer {
+    padding: 1000px 0;
 }
