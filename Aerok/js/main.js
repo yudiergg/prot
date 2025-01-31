@@ -17,4 +17,15 @@ $(document).ready(function(){
 			// },
 		},
 		});
+		$(".tab_menu li a").click(function (e) {
+			e.preventDefault();
+			
+			$(".tab_menu li").removeClass("active");
+			$(this).parent().addClass("active");
+	
+			$(".tab_content section").hide();
+			$($(this).attr("href")).show();
+		});
+	
+		$("#section2").hide(); // 페이지 로드 시 section2 숨김
 });

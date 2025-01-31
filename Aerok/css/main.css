@@ -185,13 +185,14 @@
     }
 }
 
+/* 탭 메뉴 */
 .travel .title {
     margin-bottom: 1.92em;
     font-size: var( --title-XL);
     font-weight: 700;
     color: var(--title-color);
 }
-.travel .tab_menu {
+.travel .tab_menu ul {
     display: flex;
     padding: 0.58em 0.58em;
     max-width: 11.76rem;
@@ -202,19 +203,20 @@
     color: var(--disalbe);
     background-color: var( --bg-color-2);
 }
-.travel .tab_menu a {
+.travel .tab_menu ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 5.29rem;
     height: 49px;
 }
-.travel .tab_menu a.active {
+.travel .tab_menu ul li.active a {
     color: var( --bg-color);
     background-color: var(--secondary-color);
     border-radius: 100px;
 }
 
+/* event 팝업 */
 .travel .event_popup {
     position: relative;
     height: 200px;
@@ -224,6 +226,9 @@
     border-radius: 0.58rem;
     font-weight: 700;
     color: var(--bg-color);  
+}
+.travel #section2 .event_popup {
+    background:linear-gradient(to right, rgba(0, 37, 84, 1) 20%, rgba(0, 0, 0, 0) 60%), url(../images/popup/event_popup_02.jpg) no-repeat center center / cover;
 }
 .travel .event_popup strong {
     font-size: var(--title-s);
@@ -245,41 +250,72 @@
     background-color: var(--primary-color);
     border-radius: 0.26rem;
 }
-.travel ul {
+/* 탭 컨텐츠 */
+.travel .tab_content section {
+    display: none;
+}
+.travel .tab_content section.active {
+    display: block;
+}
+.travel .tab_content section ul {
     display: flex;
     gap: 1.41em;
 }
-.travel ul li {
+.travel .tab_content section ul li {
     flex: 1;
 }
-.travel ul li a {
+.travel .tab_content section ul li a {
     display: flex;
     flex-direction: column;
+    gap: 1.41em;
 }
-.travel ul li a .photo {
+.travel .tab_content section ul li a .photo {
     height: 200px;
     font-size: 0;
     line-height: 0;
-    background: url(../images/popup/event_list_banner_01.jpg)no-repeat center center / cover;
     border-radius: 0.58rem;
 }
-.travel ul li a .inner strong {
+.travel .tab_content section ul li a .osaka {
+    background: url(../images/popup/event_list_banner_01.jpg)no-repeat center center / cover;
+}
+.travel .tab_content section ul li a .kyoto {
+    background: url(../images/popup/event_list_banner_02.jpg)no-repeat center center / cover;
+}
+.travel .tab_content section ul li a .tokyo {
+    background: url(../images/popup/event_list_banner_03.jpg)no-repeat center center / cover;
+}
+.travel .tab_content section ul li a .satporo {
+    background: url(../images/popup/event_list_banner_04.jpg)no-repeat center center / cover;
+}
+.travel .tab_content #section2 ul li a .thailand {
+    background: url(../images/popup/dongnum_list_01.jpg)no-repeat center center / cover;
+}
+.travel .tab_content #section2 ul li a .phuket {
+    background: url(../images/popup/dongnum_list_02.jpg)no-repeat center center / cover;
+}
+.travel .tab_content #section2 ul li a .chiang_mai {
+    background: url(../images/popup/dongnum_list_03.jpg)no-repeat center center / cover;
+}
+.travel .tab_content #section2 ul li a .vietnam {
+    background: url(../images/popup/dongnum_list_04.jpg)no-repeat center center / cover;
+}
+.travel .tab_content section ul li a .inner strong {
     margin-bottom: 0.42em;
     font-size: var(--title-s);
     font-weight: 700;
     color: var(--title-color);
 }
-.travel ul li a .inner .date {
+.travel .tab_content section ul li a .inner .date {
     display: flex;
     align-items: center;
     margin-bottom: 1.13em;
     font-size: var(--body-s);
 }
-.travel ul li a .inner .date .first, .end {
+.travel .tab_content section ul li a .inner .date .first, .end {
     display: flex;
     gap: 0.53rem;
 }
-.travel ul li a .inner .date .icon {
+.travel .tab_content section ul li a .inner .date .icon {
     font-size: 0;
     line-height: 0;
     width: 24px;
@@ -289,18 +325,38 @@
     background-repeat: no-repeat;
     background-size: contain;
 }
-.travel ul li a .inner .money {
+.travel .tab_content section ul li a .inner .money {
+    margin-bottom: 0.96em;
     font-size: var(--title-XL);
     font-weight: 700;
     color: var(--secondary-color);
 }
-.travel ul li a .inner label {
+.travel .tab_content section ul li a .inner .label_group {
+    display: flex;
+    gap: 0.70em;
+}
+.travel .tab_content section ul li a .inner label {
     padding: 0.33em 0.66em;
     font-size: var(--body-s);
     border: 1px solid var(--secondary-color);
     border-radius: 0.33rem;
     color: var(--secondary-color);
 }
+
+
+.travel .tab_content section ul li a .thailand {
+    
+}
+.travel .tab_content section ul li a .phuket {
+
+}
+.travel .tab_content section ul li a .chiang_mai {
+
+}
+.travel .tab_content section ul li a .vietnam {
+
+}
+
 footer {
     padding: 1000px 0;
 }
