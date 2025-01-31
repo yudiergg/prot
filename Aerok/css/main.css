@@ -343,19 +343,117 @@
     color: var(--secondary-color);
 }
 
-
-.travel .tab_content section ul li a .thailand {
-    
+.event_ticket {
+    padding: 5.64em 0;
 }
-.travel .tab_content section ul li a .phuket {
-
-}
-.travel .tab_content section ul li a .chiang_mai {
-
-}
-.travel .tab_content section ul li a .vietnam {
+.event_ticket .title {
+    margin-bottom: 1.92em;
+    font-size: var( --title-XL);
+    font-weight: 700;
+    color: var(--title-color);
 
 }
+.event_ticket .swiper {
+    width: 4129px;
+}
+.event_ticket .swiper > ul > li {
+    position: relative;
+    display: flex;
+    width: 24.53%;
+    left: 2%;
+    gap: 2.82em;
+    padding: 2.35em 2.35em;
+    border-radius: 1.17rem;
+    border: 1px solid var(--border);
+}
+.event_ticket .swiper > ul > li .photo {
+    font-size: 0;
+    line-height: 0;
+    width: 312px;
+    height: 408px;
+    border-radius: 0.29rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.event_ticket .swiper > ul > li .gundam {
+    background-image: url(../images/popup/event_tiket_list_01.jpg);
+}
+.event_ticket .swiper > ul > li .nagoya {
+    background-image: url(../images/popup/event_tiket_list_02.jpg);
+}
+.event_ticket .swiper > ul > li .yukie {
+    background-image: url(../images/popup/event_tiket_list_03.jpg);
+}
+.event_ticket .swiper > ul > li .ora {
+    background-image: url(../images/popup/event_tiket_list_04.jpg);
+}
+.event_ticket .swiper > ul > li .tiket_info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 2.82em;
+}
+.event_ticket .swiper > ul > li .tiket_info .tiket_title {
+    font-size: var(--visual-s);
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+.event_ticket .swiper > ul > li .tiket_info > ul {
+    display: flex;
+    gap: 2.82em;
+}
+.event_ticket .swiper > ul > li .tiket_info > ul > li {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1.41em;
+}
+.event_ticket .swiper > ul > li .tiket_info > ul > li .inner {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--body-L);
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+.event_ticket .swiper > ul > li .tiket_info > ul > li > span {
+    font-size: var(--body-L);
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+.event_ticket .swiper > ul > li .tiket_info ul > li > em {
+    font-size: var(--h-m);
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+.event_ticket .swiper > ul > li .tiket_info button {
+    position: absolute;
+    bottom: 2.35rem;
+    width: 7.68rem;
+    font-size: var(--body-L);
+    font-weight: 700;
+    padding: 1.05em 1.05em;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    border-radius: 0.29em;
+}
+.event_ticket .swiper > ul > li .tiket_info button:hover {
+    background-color: var(--hover-color);
+}
+.event_ticket .swiper > ul > li .tiket_info .barcod {
+    position: absolute;
+    bottom: 2.35rem;
+    right: 2.35rem;
+    font-size: 0;
+    line-height: 0;
+    width: 6.35rem;
+    height: 30px;
+    background-image: url("data:image/svg+xml,%3Csvg width='108' height='31' viewBox='0 0 108 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='4' height='30' transform='translate(0 0.28125)' fill='%231D1D1D'/%3E%3Crect width='4' height='30' transform='translate(6 0.28125)' fill='%231D1D1D'/%3E%3Crect width='4' height='30' transform='translate(12 0.28125)' fill='%231D1D1D'/%3E%3Crect width='2' height='30' transform='translate(20 0.28125)' fill='%231D1D1D'/%3E%3Crect width='2' height='30' transform='translate(24 0.28125)' fill='%231D1D1D'/%3E%3Crect width='2' height='30' transform='translate(28 0.28125)' fill='%231D1D1D'/%3E%3Crect width='2' height='30' transform='translate(26 0.28125)' fill='%231D1D1D'/%3E%3Crect width='2' height='30' transform='translate(30 0.28125)' fill='%231D1D1D'/%3E%3Crect width='2' height='30' transform='translate(34 0.28125)' fill='%231D1D1D'/%3E%3Crect width='2' height='30' transform='translate(36 0.28125)' fill='%231D1D1D'/%3E%3Crect width='2' height='30' transform='translate(40 0.28125)' fill='%231D1D1D'/%3E%3Crect width='2' height='30' transform='translate(44 0.28125)' fill='%231D1D1D'/%3E%3Crect width='2' height='30' transform='translate(46 0.28125)' fill='%231D1D1D'/%3E%3Crect width='2' height='30' transform='translate(50 0.28125)' fill='%231D1D1D'/%3E%3Crect width='2' height='30' transform='translate(54 0.28125)' fill='%231D1D1D'/%3E%3Crect width='4' height='30' transform='translate(60 0.28125)' fill='%231D1D1D'/%3E%3Crect width='4' height='30' transform='translate(66 0.28125)' fill='%231D1D1D'/%3E%3Crect width='4' height='30' transform='translate(72 0.28125)' fill='%231D1D1D'/%3E%3Crect width='4' height='30' transform='translate(78 0.28125)' fill='%231D1D1D'/%3E%3Crect width='4' height='30' transform='translate(86 0.28125)' fill='%231D1D1D'/%3E%3Crect width='4' height='30' transform='translate(92 0.28125)' fill='%231D1D1D'/%3E%3Crect width='4' height='30' transform='translate(98 0.28125)' fill='%231D1D1D'/%3E%3Crect width='4' height='30' transform='translate(104 0.28125)' fill='%231D1D1D'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.event_ticket .swiper .button_wrap .prev, .next {}
 
 footer {
     padding: 1000px 0;
