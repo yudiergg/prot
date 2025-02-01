@@ -4,7 +4,7 @@
 @import url(layout.css);
 
 .visual {
-    padding: 6.58em 0 5.64rem 0;
+    padding-top: 6.58em;
 }
 .visual .wrapper {
     display: flex;
@@ -51,7 +51,8 @@
     display: flex;
     justify-content: center;
     gap: 0.70em;
-    top: 348px;
+    top: 20.47rem;
+    max-height: fit-content;
 }
 .visual .swiper .swiper-pagination-bullet {
     width: 0.58rem;
@@ -90,8 +91,7 @@
     font-weight: 700;
     color: var(--title-color);
 }
-
-.user .check_group [type="checkbox"] {
+.visual .user .check_group [type="checkbox"] {
     appearance: none; /* 기본(네이티브) 모양을 제거 */
     box-sizing: border-box;
     background-clip: content-box;
@@ -102,11 +102,10 @@
     border-radius: 50%;
     cursor: pointer;
 }
-.user .check_group [type="checkbox"]:checked {
+.visual .user .check_group [type="checkbox"]:checked {
     border-color: var( --bdoy-color);
     background-color: var(--bdoy-color);
 }
-
 .visual .user .user_group .form_group {
     position: relative;
     display: flex;
@@ -185,6 +184,9 @@
     }
 }
 
+.travel {
+    padding: 5.64em 0;
+}
 /* 탭 메뉴 */
 .travel .title {
     margin-bottom: 1.92em;
@@ -234,11 +236,12 @@
     font-size: var(--title-s);
 }
 .travel .event_popup .event_title_s {
-    font-size: var( --visual-s);
+    font-size: var(--title-XXL);
     margin-bottom: 0.25em;
 }
 .travel .event_popup span {
     font-size: var(--body-s);
+    font-weight: 400;
 }
 .travel .event_popup button {
     position: absolute;
@@ -250,6 +253,7 @@
     background-color: var(--primary-color);
     border-radius: 0.26rem;
 }
+
 /* 탭 컨텐츠 */
 .travel .tab_content section {
     display: none;
@@ -300,7 +304,8 @@
     background: url(../images/popup/dongnum_list_04.jpg)no-repeat center center / cover;
 }
 .travel .tab_content section ul li a .inner strong {
-    margin-bottom: 0.42em;
+    display: flex;
+    margin-bottom: 0.2em;
     font-size: var(--title-s);
     font-weight: 700;
     color: var(--title-color);
@@ -308,7 +313,7 @@
 .travel .tab_content section ul li a .inner .date {
     display: flex;
     align-items: center;
-    margin-bottom: 1.13em;
+    margin-bottom: 0.53em;
     font-size: var(--body-s);
 }
 .travel .tab_content section ul li a .inner .date .first, .end {
@@ -337,14 +342,16 @@
 }
 .travel .tab_content section ul li a .inner label {
     padding: 0.33em 0.66em;
-    font-size: var(--body-s);
+    font-size: var(--sub);
     border: 1px solid var(--secondary-color);
     border-radius: 0.33rem;
     color: var(--secondary-color);
 }
 
 .event_ticket {
+    position: relative;
     padding: 5.64em 0;
+    overflow: hidden;
 }
 .event_ticket .title {
     margin-bottom: 1.92em;
@@ -360,7 +367,6 @@
     position: relative;
     display: flex;
     width: 24.53%;
-    left: 2%;
     gap: 2.82em;
     padding: 2.35em 2.35em;
     border-radius: 1.17rem;
@@ -369,8 +375,8 @@
 .event_ticket .swiper > ul > li .photo {
     font-size: 0;
     line-height: 0;
-    width: 312px;
-    height: 408px;
+    width: 26%;
+    height: 305px;
     border-radius: 0.29rem;
     background-position: center center;
     background-repeat: no-repeat;
@@ -395,7 +401,7 @@
     gap: 2.82em;
 }
 .event_ticket .swiper > ul > li .tiket_info .tiket_title {
-    font-size: var(--visual-s);
+    font-size: var(--title-XXL);
     font-weight: 700;
     color: var(--secondary-color);
 }
@@ -407,7 +413,7 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    gap: 1.41em;
+    gap: 0.41em;
 }
 .event_ticket .swiper > ul > li .tiket_info > ul > li .inner {
     display: flex;
@@ -429,10 +435,9 @@
 .event_ticket .swiper > ul > li .tiket_info button {
     position: absolute;
     bottom: 2.35rem;
-    width: 7.68rem;
     font-size: var(--body-L);
     font-weight: 700;
-    padding: 1.05em 1.05em;
+    padding: 0.52em 1.05em;
     color: var(--secondary-color);
     background-color: var(--primary-color);
     border-radius: 0.29em;
@@ -453,8 +458,82 @@
     background-position: center center;
     background-size: contain;
 }
-.event_ticket .swiper .button_wrap .prev, .next {}
+.event_ticket .swiper-pagination {
+    position: absolute;
+    bottom: 3.23rem;
+    display: flex;
+    max-height: fit-content;
+    align-items: center;
+    justify-content: center;
+    gap: 0.70em;
+}
+.event_ticket .swiper-pagination-bullet {
+    width: 0.58rem;
+    height: 0.58rem;
+    background-color: var(--disalbe);
+}
 
+.help {
+    padding: 5.64em 0;
+}
+.help .title {
+    margin-bottom: 1.92em;
+    font-size: var( --title-XL);
+    font-weight: 700;
+    color: var(--title-color);
+}
+.help .inner {
+    display: flex;
+    gap: 1.41em;
+}
+.help .sale_coupon, .cs {
+    position: relative;
+    flex: 1;
+    padding: 1.64em 2.35em; 
+    border-radius: 0.58rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.help .sale_coupon {
+    color: var(--bg-color);
+    background-color: var(--secondary-color);
+}
+.help .cs {
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
+.help strong {
+    display: flex;
+    margin-bottom: 0.32em;
+    font-size: var( --title-XL);
+    font-weight: 700;
+}
+.help p {
+    margin-bottom: 1.41em;
+}
+.help .more {
+    width: max-content;
+    border-bottom: 1px solid;
+}
+.help .sale_coupon::after {
+    position: absolute;
+    content: "";
+    top: 3.26rem;
+    right: 2.35rem;
+    width:  3.76rem;
+    height: 3.76rem;
+    background-image: url("data:image/svg+xml,%3Csvg width='64' height='65' viewBox='0 0 64 65' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.667 45.55V50.6267C10.667 50.832 10.7525 51.02 10.9237 51.1907C11.0943 51.3618 11.2823 51.4474 11.4877 51.4474H52.513C52.7183 51.4474 52.9063 51.3618 53.077 51.1907C53.2481 51.02 53.3337 50.832 53.3337 50.6267V45.55H10.667ZM11.4877 18.1654H18.867C18.6448 17.7654 18.479 17.3431 18.3697 16.8987C18.2603 16.4543 18.2057 15.9876 18.2057 15.4987C18.2057 13.6356 18.851 12.0587 20.1417 10.768C21.4323 9.47736 23.0092 8.83203 24.8723 8.83203C25.9901 8.83203 27.0241 9.12248 27.9743 9.70337C28.9245 10.2843 29.7537 11.0058 30.4617 11.868L31.949 13.858L33.4363 11.868C34.1168 10.9725 34.9403 10.2425 35.907 9.67803C36.8741 9.11403 37.9157 8.83203 39.0317 8.83203C40.8912 8.83203 42.4661 9.47736 43.7563 10.768C45.047 12.0587 45.6923 13.6356 45.6923 15.4987C45.6923 15.9876 45.6419 16.4543 45.541 16.8987C45.4401 17.3431 45.2701 17.7654 45.031 18.1654H52.513C53.8601 18.1654 55.0003 18.632 55.9337 19.5654C56.867 20.4987 57.3337 21.6389 57.3337 22.986V50.6267C57.3337 51.9738 56.867 53.114 55.9337 54.0474C55.0003 54.9807 53.8601 55.4474 52.513 55.4474H11.4877C10.1405 55.4474 9.00033 54.9807 8.06699 54.0474C7.13366 53.114 6.66699 51.9738 6.66699 50.6267V22.986C6.66699 21.6389 7.13366 20.4987 8.06699 19.5654C9.00033 18.632 10.1405 18.1654 11.4877 18.1654ZM10.667 38.678H53.3337V22.986C53.3337 22.7807 53.2481 22.5927 53.077 22.422C52.9063 22.2509 52.7183 22.1654 52.513 22.1654H37.9383L43.385 29.6114L40.195 31.9087L31.949 20.7194L23.703 31.9087L20.513 29.6114L25.8777 22.1654H11.4877C11.2823 22.1654 11.0943 22.2509 10.9237 22.422C10.7525 22.5927 10.667 22.7807 10.667 22.986V38.678ZM24.8723 18.1654C25.6279 18.1654 26.2612 17.9098 26.7723 17.3987C27.2834 16.8876 27.539 16.2543 27.539 15.4987C27.539 14.7431 27.2834 14.1098 26.7723 13.5987C26.2612 13.0876 25.6279 12.832 24.8723 12.832C24.1168 12.832 23.4834 13.0876 22.9723 13.5987C22.4612 14.1098 22.2057 14.7431 22.2057 15.4987C22.2057 16.2543 22.4612 16.8876 22.9723 17.3987C23.4834 17.9098 24.1168 18.1654 24.8723 18.1654ZM39.0257 18.1654C39.7812 18.1654 40.4146 17.9098 40.9257 17.3987C41.4368 16.8876 41.6923 16.2543 41.6923 15.4987C41.6923 14.7431 41.4368 14.1098 40.9257 13.5987C40.4146 13.0876 39.7812 12.832 39.0257 12.832C38.2701 12.832 37.6368 13.0876 37.1257 13.5987C36.6145 14.1098 36.359 14.7431 36.359 15.4987C36.359 16.2543 36.6145 16.8876 37.1257 17.3987C37.6368 17.9098 38.2701 18.1654 39.0257 18.1654Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+.help .cs::after {
+    position: absolute;
+    content: "";
+    top: 3.26rem;
+    right: 2.35rem;
+    width:  3.76rem;
+    height: 3.76rem;
+    background-image: url("data:image/svg+xml,%3Csvg width='64' height='65' viewBox='0 0 64 65' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.2816 55.4492C17.9558 55.4492 16.8209 54.9772 15.8769 54.0332C14.9329 53.0892 14.4609 51.9543 14.4609 50.6286V22.1159C14.4609 20.7901 14.9329 19.6552 15.8769 18.7112C16.8209 17.7672 17.9558 17.2952 19.2816 17.2952H24.8203V12.2699C24.8203 10.9441 25.2923 9.80922 26.2363 8.86522C27.1803 7.92122 28.3152 7.44922 29.6409 7.44922H34.3583C35.684 7.44922 36.8189 7.92122 37.7629 8.86522C38.7069 9.80922 39.1789 10.9441 39.1789 12.2699V17.2952H44.7176C46.0434 17.2952 47.1783 17.7672 48.1223 18.7112C49.0663 19.6552 49.5383 20.7901 49.5383 22.1159V50.6286C49.5383 51.9543 49.0663 53.0892 48.1223 54.0332C47.1783 54.9772 46.0434 55.4492 44.7176 55.4492V55.7566C44.7176 56.4099 44.4876 56.9663 44.0276 57.4259C43.568 57.8859 43.0116 58.1159 42.3583 58.1159C41.7054 58.1159 41.1492 57.8859 40.6896 57.4259C40.2296 56.9663 39.9996 56.4099 39.9996 55.7566V55.4492H23.9996V55.7566C23.9996 56.4099 23.7696 56.9663 23.3096 57.4259C22.85 57.8859 22.2938 58.1159 21.6409 58.1159C20.9876 58.1159 20.4312 57.8859 19.9716 57.4259C19.5116 56.9663 19.2816 56.4099 19.2816 55.7566V55.4492ZM19.2816 51.4492H44.7176C44.9567 51.4492 45.1534 51.3723 45.3076 51.2186C45.4614 51.0648 45.5383 50.8681 45.5383 50.6286V22.1159C45.5383 21.8763 45.4614 21.6797 45.3076 21.5259C45.1534 21.3721 44.9567 21.2952 44.7176 21.2952H19.2816C19.0425 21.2952 18.8458 21.3721 18.6916 21.5259C18.5378 21.6797 18.4609 21.8763 18.4609 22.1159V50.6286C18.4609 50.8681 18.5378 51.0648 18.6916 51.2186C18.8458 51.3723 19.0425 51.4492 19.2816 51.4492ZM24.8203 47.7566H28.8203V24.9879H24.8203V47.7566ZM35.1789 47.7566H39.1789V24.9879H35.1789V47.7566ZM28.8203 17.2952H35.1789V12.2699C35.1789 12.0303 35.102 11.8337 34.9483 11.6799C34.7945 11.5261 34.5978 11.4492 34.3583 11.4492H29.6409C29.4014 11.4492 29.2047 11.5261 29.0509 11.6799C28.8972 11.8337 28.8203 12.0303 28.8203 12.2699V17.2952Z' fill='%23002554'/%3E%3C/svg%3E%0A");
+}
 footer {
     padding: 1000px 0;
 }

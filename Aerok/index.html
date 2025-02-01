@@ -6,6 +6,8 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/layout.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/common.js"></script>
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
@@ -488,10 +490,39 @@
                         </li>
                     </ul>
                 </div>
+                <div class="swiper-pagination"></div>
             </div>
         </section>
-        <section class="help"></section>
-        <section class="news"></section>
+        <section class="help">
+            <div class="wrapper">
+                <div class="title">도움이필요하신가요?</div>
+                    <div class="inner">
+                        <div class="sale_coupon">
+                            <strong>할인쿠폰</strong>
+                            <p>특가 쿠폰은 여기에 있어요</p>
+                            <div class="more"><a href="#n">자세히보기</a></div>
+                        </div>
+                        <div class="cs">
+                            <strong>상담하기</strong>
+                            <p>자주묻는 질문 항공기 수하물규정이 있어요</p>
+                            <div class="more"><a href="#n">자세히보기</a></div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <section class="news">
+            <div class="wrapper">
+                <div class="title">에케의 소식을 여기에 모았어요</div>
+                <div class="section"> <!-- 좌우 요소를 감싸는 요소 -->
+                    <div class="tit">고정요소</div> <!-- 고정될 요소 -->
+                    <div class="cont_wrap"> <!-- 스크롤될 요소를 감싸는 요소 -->
+                        <div class="cont"> <!-- 스크롤될 요소 (이 내부에 콘텐츠를 코딩해야함, 스크롤될 요소가 여러개면 안됨) -->
+                            스크롤될 콘텐츠
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <footer></footer>
     </div>
 </body>

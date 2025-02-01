@@ -9,7 +9,7 @@ $(document).ready(function(){
 		loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
 	
 		pagination: {  /* 몇개의 팝업이 있는지 보여주는 동그라미 */
-			el: '.swiper-pagination', /* 해당 요소의 class명 */
+			el: '.visual .swiper-pagination', /* 해당 요소의 class명 */
 			clickable: true,  /* 클릭하면 해당 팝업으로 이동할 것인지 값 */
 			type: 'bullets',  /* type fraction을 주면 paging이 숫자로 표시됨 */
 			// renderBullet: function (index, className) {   /* paging에 특정 코드 넣기 */
@@ -42,7 +42,7 @@ $(document).ready(function(){
 			centeredSlides: false, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
 			loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
 			autoplay: {  /* 팝업 자동 실행 */
-				delay: 1000000,
+				delay: 100000,
 				disableOnInteraction: false,
 			},
 			navigation: {
@@ -52,7 +52,7 @@ $(document).ready(function(){
 			pagination: {  /* 몇개의 팝업이 있는지 보여주는 동그라미 */
 				el: '.event_ticket .swiper-pagination', /* 해당 요소의 class명 */
 				clickable: true,  /* 클릭하면 해당 팝업으로 이동할 것인지 값 */
-				type: 'fraction',  /* type fraction을 주면 paging이 숫자로 표시됨 */
+				type: 'bullets',  /* type fraction을 주면 paging이 숫자로 표시됨 */
 			},
 		});
 });
