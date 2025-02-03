@@ -53,29 +53,25 @@ body, html {
 }
 
 @media screen and (max-width:1300px){
-    .wrapper {
+    /* .wrapper {
         width: auto;
         margin: 0 120px;
-    }
-}
-@media screen and (max-width:1024px){
-    :root {
-        --header-h: 54px;
-    }
+    } */
     .wrapper {
         width: auto;
         margin: 0 20px;
+    }
+}
+@media screen and (max-width:1024px){    
+    :root {
+        --header-h: 54px;
     }
 }
 @media screen and (max-width:768px){
-    :root {
-        --header-h: 54px;
-        margin: 0 20px;
-    }
-    .wrapper {
-        width: auto;
-        margin: 0 20px;
-    }
+
+}
+@media screen and (max-width:360px){
+
 }
 
 /* 드래그했을대 색상바뀌는거
