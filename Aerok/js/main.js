@@ -59,7 +59,7 @@ $(document).ready(function(){
 				type: 'bullets',  /* type fraction을 주면 paging이 숫자로 표시됨 */
 			},
 		});
-
+		
 		gsap.registerPlugin(ScrollTrigger);
 
 		function initScrollTrigger() {
@@ -77,6 +77,7 @@ $(document).ready(function(){
 					scrollTrigger: {
 						trigger: news_sections,
 						pin: true,
+						pinSpacing: true,
 						start: "top 20%",
 						end: () => "+=500",
 						scrub: 0.5,

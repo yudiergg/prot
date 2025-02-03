@@ -276,6 +276,9 @@
 .travel .tab_content section ul {
     display: flex;
     gap: 1.41em;
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
 }
 .travel .tab_content section ul li {
     flex: 1;
@@ -638,6 +641,7 @@
     display: flex;
     overflow:hidden;
     gap: 5.64em;
+    max-height:100vh;
 }
 .news .title {
     margin-bottom: 1.92em;
@@ -645,13 +649,8 @@
     font-weight: 700;
     color: var(--title-color);
 }
-.news .section {
-    display: flex;
-    max-height: 100vh;
-    justify-content: space-between;
-}
 .news .section .tit {
-    flex: 0 0 28.06%; /* 고정된 크기 */
+    flex: 0 0 26.06%;/* 고정된 크기 */
     height: 60dvh;
     padding: 2.35em;
     border-radius: 0.58rem;
@@ -734,7 +733,7 @@
 }
 .news .section .cont_wrap .cont ul li a .content_title {
     max-width: 22.35rem;
-    margin: 1.41em 0 0.47em 0;
+    margin: 1.1em 0 0.47em 0;
     font-size: var(--title-L);
     font-weight: 700;
     white-space: nowrap;
@@ -769,10 +768,9 @@
 @media screen and (max-width:768px){
     .news .wrapper .section {
         overflow: visible;
-    }
-    .news .wrapper .section {
         flex-direction: column;
         gap: 2.64em;
+        max-height: 100%;
     }
 }
 
@@ -798,7 +796,7 @@ footer .wrapper {
 footer .wrapper .infor {
     display: flex;
     flex-direction: column;
-    gap: 1.41em;
+    gap: 0.58em;
 }
 footer .wrapper .infor ul {
     display: flex;
@@ -808,8 +806,14 @@ footer .wrapper .copyright {
     font-size: var(--sub);
 }
 @media screen and (max-width:1164px){
+    footer {
+        padding: 2.82em 0;
+    }
+    footer .wrapper .infor {
+        gap: 1.58em;
+    }
     footer .wrapper .infor ul {
-        gap: 1em;
         flex-direction: column;
+        gap: 0.5em;
     }
 }
