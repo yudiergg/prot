@@ -63,18 +63,15 @@ $(document).ready(function () {
   });
 
   // GNB 메뉴 열기
-  /*
-  $('.gnb_open').on('click', function () {
-    $('.gnb_wrap ul.depth1').css('display', 'flex'); // GNB 메뉴 보이기
-    $('.gnb_close').css('display', 'block'); // 닫기 버튼 표시
-    $('.gnb_open').css('display', 'none'); // 열기 버튼 숨기기
+  $('header .gnb_open').on('click', function () {
+    $('header').addClass('mobile_open');  // header에 mobile_open 클래스 추가
   });
-  */
+  
+  $('header .gnb_close').on('click', function () {
+    $('header').removeClass('mobile_open');  // header에서 mobile_open 클래스 제거
+  });
 
-  // GNB 메뉴 닫기
-  $('.gnb_close').on('click', function () {
-    closeMenu(); // 메뉴 닫기
-  });
+ 
 
   // depth1 > li > a 클릭 시 active 클래스 추가
   $('.gnb_wrap ul.depth1 > li > a').on('click', function (e) {
@@ -111,10 +108,5 @@ $(document).ready(function () {
     $(this).parent().addClass('active');
   });
 
-  // 메뉴 닫기 함수
-  function closeMenu() {
-    $('.gnb_wrap ul.depth1').hide(); // 메뉴 닫기
-    $('.gnb_open').show(); // GNB 열기 버튼 표시
-    $('.gnb_close').hide(); // GNB 닫기 버튼 숨기기
-  }
+  
 });

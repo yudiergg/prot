@@ -147,7 +147,7 @@ header .tnb ul li.active a {
         flex-direction: column;
         background-color: var(--bg-color);
     }
-    header.mo_open .gnb .gnb_wrap ul.depth1 {
+    header.mobile_open .gnb .gnb_wrap ul.depth1 {
         display: flex;
     }
     header .gnb .gnb_wrap ul.depth1 > li > a {
@@ -189,6 +189,9 @@ header .tnb ul li.active a {
         background-repeat: no-repeat;
         background-size: contain;
     }
+    header.mobile_open .gnb .gnb_open {
+        display: none;
+    }
     header .gnb .gnb_close {
         display: none;
         width: 2rem;
@@ -199,6 +202,9 @@ header .tnb ul li.active a {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: contain;
+    }
+    header.mobile_open .gnb .gnb_close {
+        display: block;
     }
     header .tnb {
         display: none;
