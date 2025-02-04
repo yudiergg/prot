@@ -31,21 +31,23 @@
 }
 .visual .swiper ul li a.popup_title_1 {
     align-items: center;
-    background: url(../images/popup/visual_banner01.jpg) no-repeat center center / cover;
+    justify-content: center;
+    background: url(../images/popup/visual_banner02.jpg) no-repeat center center / cover;
 }
 .visual .swiper ul li a.popup_title_1 .logo {
     font-size: 0;
     line-height: 0;
     width: 8.41rem;
     height: 27px;
+    margin-bottom: 0.8rem;
     background-image: url(../images/popup/visual\ logo.png);
 }
 .visual .swiper ul li a.popup_title_2 {
     align-items: center;
-    background: url(../images/popup/visual_banner01-1.jpg) no-repeat center center / cover;   
+    background: url(../images/popup/visual_banner01.jpg) no-repeat center center / cover;   
 }
 .visual .swiper ul li a.popup_title_3 {
-    background: url(../images/popup/visual_banner02.jpg) no-repeat center center / cover;
+    background: url(../images/popup/visual_banner03.jpg) no-repeat center center / cover;
 }
 .visual .swiper .swiper-pagination {
     display: flex;
@@ -169,7 +171,7 @@
     background-color: var(--hover-color);
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width:1024px){
     .visual .wrapper{
         flex-direction: column;
     }
@@ -181,6 +183,9 @@
     }
     .visual .user .user_group .form_group {
         justify-content: space-between;
+    }
+    .visual .user .user_group .form_group .inner {
+        flex: 1;
     }
     .visual .swiper-pagination {
         position: static;
@@ -365,12 +370,6 @@
 }
 
 @media screen and (max-width:768px){
-    .travel .tab_content section ul {
-        width: 100%;
-        overflow-x: auto; /* 가로 스크롤 유지 */
-        scrollbar-width: none; /* Firefox에서 스크롤바 숨기기 */
-        -ms-overflow-style: none; /* IE/Edge에서 스크롤바 숨기기 */
-    }
     .travel .tab_content section ul::-webkit-scrollbar {
         display: none; /* Chrome, Safari에서 스크롤바 숨기기 */
     }
@@ -765,55 +764,12 @@
     background-color: var(--secondary-color);
     color: var(--bg-color);
 }
+
 @media screen and (max-width:768px){
     .news .wrapper .section {
         overflow: visible;
         flex-direction: column;
         gap: 2.64em;
         max-height: 100%;
-    }
-}
-
-footer {
-    padding: 2.82em 4.70em;
-    font-size: var(--body-s);
-    background-color: var(--secondary-color);
-    color: rgba(255, 255, 255, 0.8);  
-}
-footer .logo {
-    display: flex;
-    width: 6.05rem;
-    height: 21px;
-    font-size: 0;
-    line-height: 0;
-    background: url(../images/popup/Aero_K_logo_w.svg) no-repeat center center / contain;
-}
-footer .wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 1.41em;
-}
-footer .wrapper .infor {
-    display: flex;
-    flex-direction: column;
-    gap: 0.58em;
-}
-footer .wrapper .infor ul {
-    display: flex;
-    gap: 2em;
-}
-footer .wrapper .copyright {
-    font-size: var(--sub);
-}
-@media screen and (max-width:1164px){
-    footer {
-        padding: 2.82em 0;
-    }
-    footer .wrapper .infor {
-        gap: 1.58em;
-    }
-    footer .wrapper .infor ul {
-        flex-direction: column;
-        gap: 0.5em;
     }
 }
