@@ -6,23 +6,23 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/layout.js"></script>
-    <script src="js/gsap.min.js"></script>
+    <!-- <script src="js/gsap.min.js"></script> -->
     <script src="js/ScrollTrigger.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/common.js"></script>
+    <script src= "../Aerok/js/jquery-sticky.js" ></script>
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Aerok-k 에어로케이항공</title>
 </head>
 <body>
     <div class="skipnav">
-        <a class="cnt" href="skip_content">본문바로가기</a>
-        <a class="menu" href="skip_nav">주메뉴바로가기</a>
+        <a class="cnt" href="#skip_content">본문바로가기</a>
     </div>
     <div class="wrap">
         <header>
             <h1 class="logo"><a href="index.html">에어로케이</a></h1>
-            <nav class="gnb">
+            <nav class="gnb" id="skip_nav">
                 <button class="gnb_open">메뉴열기</button>
                     <div class="gnb_wrap">
                         <ul class="depth1">
@@ -87,530 +87,294 @@
                 </div>
             </div>
         </header>
-        <section class="visual">
-            <div class="wrapper">
-                <div class="swiper"> 
-                    <ul class="swiper-wrapper"> 
-                        <li class="swiper-slide">
-                            <a class="popup_title_2" href="#n">
-                                <strong>와이파이도시락/USIM/eSIM</strong>
-                                <div class="visual_title_L">최대 10% 할인 혜택</div>
-                            </a>
-                        </li>
-                        <li class="swiper-slide">
-                            <a class="popup_title_1" href="#n">
-                                <div class="logo">로고</div>
-                                <strong>에어로케이 탑승객 대상 호텔 할인</strong>
-                                <div class="visual_title_L">최대 5000마일리지 제공</div>
-                            </a>
-                        </li>
-                        <li class="swiper-slide">                    
-                            <a class="popup_title_3" href="#n">                            
-                                <strong>에어로케이 항공 탑승객 대상</strong>
-                                <div class="visual_title_L">에어로케이 x 신라면세점 제휴 혜택</div>
-                            </a>                        
-                        </li> 
-                    </ul>
-                    <div class="swiper-pagination"></div>
-                </div>
-                <div class="user">
-                    <div class="title">
-                        에어로케이와 함께하는 첫 걸음<br>출발지를 선택하세요
+        <div class="contaier">
+            <section class="visual" id="skip_content">
+                <div class="wrapper">
+                    <h2>이벤트팝업창과 로그인정보</h2>
+                    <div class="siwper_wrap">
+                        <div class="swiper"> 
+                            <ul class="swiper-wrapper"> 
+                                <li class="swiper-slide">
+                                    <a class="popup_title_2" href="#n">
+                                        <strong>와이파이도시락/USIM/eSIM</strong>
+                                        <div class="visual_title_L">최대 10% 할인 혜택</div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a class="popup_title_1" href="#n">
+                                        <div class="logo">로고</div>
+                                        <strong>에어로케이 탑승객 대상 호텔 할인</strong>
+                                        <div class="visual_title_L">최대 5000마일리지 제공</div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">                    
+                                    <a class="popup_title_3" href="#n">                            
+                                        <strong>에어로케이 항공 탑승객 대상</strong>
+                                        <div class="visual_title_L">에어로케이 x 신라면세점 제휴 혜택</div>
+                                    </a>                        
+                                </li> 
+                            </ul>
+                            <div class="swiper-pagination"></div>
+                        </div>
                     </div>
+                    <div class="user">
+                        <h3>에어로케이와 함께하는 첫 걸음<br>출발지를 선택하세요</h3>
                         <div class="check_group">
                             <div class="inner">
-                                <span>편도</span>
-                                <input type="checkbox" checked>
+                                <label for="one_trip">편도</label>
+                                <input type="radio" name="trip" id="one_trip" checked="checked">
                             </div>
                             <div class="inner">
-                                <span>왕복</span>
-                                <input type="checkbox">
+                                <label for="round_trip">왕복</label>
+                                <input type="radio" name="trip" id="round_trip">
                             </div>
                         </div>
                         <div class="user_group">
                             <div class="form_group route_point">
                                 <div class="inner">
-                                    <label for="origin">출발지</label>
-                                    <input type="text" id="route-start" name="출발지" placeholder="도시또는공항"/>
+                                    <label for="route_start">출발지</label>
+                                    <input type="text" id="route_start" name="출발지" placeholder="도시또는공항"/>
                                 </div>
                                 <div class="inner">
-                                    <label for="origin">도착지</label>
-                                    <input type="text" id="route-end" name="도착지" placeholder="도시또는공항"/>
+                                    <label for="route_end">도착지</label>
+                                    <input type="text" id="route_end" name="도착지" placeholder="도시또는공항"/>
                                 </div>
                             </div>
                             <div class="form_group date">
                                 <div class="inner">
-                                    <label for="origin">가는날짜</label>
-                                    <input type="text" id="date-start" name="날짜시작" placeholder="날짜선택"/>
+                                    <label for="date_start">가는날짜</label>
+                                    <input type="text" id="date_start" name="날짜시작" placeholder="날짜선택"/>
                                 </div>
                                 <div class="inner">
-                                    <label for="origin">오는날짜</label>
-                                    <input type="text" id="date-end" name="날짜종료"  placeholder="날짜선택"/>
+                                    <label for="date_end">오는날짜</label>
+                                    <input type="text" id="date_end" name="날짜종료"  placeholder="날짜선택"/>
                                 </div>
                             </div>
                             <div class="form_group booking_options">
                                 <div class="inner">
-                                    <label for="origin">인원선택</label>
-                                    <input type="number" id="people-count" name="인원수"  placeholder="0명"/>
+                                    <label for="people_count">인원선택</label>
+                                    <input type="number" id="people_count" name="인원수"  placeholder="0명"/>
                                 </div>
                                 <div class="inner">
-                                    <label for="origin">프로모션코드</label>
-                                    <input type="text" id="promo-code" name="날짜종료" placeholder="코드 입력"/>
+                                    <label for="promo_code">프로모션코드</label>
+                                    <input type="text" id="promo_code" name="날짜종료" placeholder="코드 입력"/>
                                 </div>
                             </div>
                         </div>
-                        <button>항공편조회</button>
+                        <button type="button" class="btn">항공편조회</button>
                     </div>
                 </div>
-        </section>
-        <section class="travel">
-            <div class="wrapper">
-                <div class="title">에케와 함께 떠는 여행</div>
-                <div class="tab_menu">
-                    <ul>
-                      <li class="active"><a href="#section1">일본</a></li>
-                      <li><a href="#section2">동남아</a></li>
-                    </ul>
-                </div>
-                <div class="tab_content">
-                    <section id="section1" class="active">
-                        <div class="event_popup">
-                            <strong>일본 특가 프로모션</strong>
-                            <div class="event_title_s">국제선 일본 운항</div>
-                            <span>기간 9.24(화)-9.30(월) 17:00</span>
-                            <button>바로가기</button>
-                        </div>
-                        <ul>
-                            <li>
-                                <a href="#n">
-                                    <div class="photo osaka">이미지</div>
-                                    <div class="inner">
-                                        <strong>청주 > 오사카</strong>
-                                        <div class="date">
-                                            <div class="first">
-                                                <span>출발</span><span>08:25</span>
-                                            </div>
-                                            <div class="icon">아이콘</div>
-                                            <div class="end">
-                                                <span>도착</span><span>10:25</span>
-                                            </div>
-                                        </div>
-                                        <div class="money">72,000원</div>
-                                        <div class="label_group">
-                                            <label for="일본">#일본</label>
-                                            <label for="봄여행">#봄여행</label>
-                                        </div>
-                                    </div>
-                                </a>
+            </section>
+            <section class="travel">
+                <div class="wrapper">
+                    <h2>에케와 함께 떠는 여행</h2>
+                    <!-- tab list -->
+                    <div class="tab_list">
+                        <ul role="tab_menu">
+                            <li id="japan" role="tab" aria-selected="true" aria-controls="japan_pannel" class="active">
+                                <button type="button" class="btn_tab">일본<i class="sr-only created">선택됨</i></button>
                             </li>
-                            <li>
-                                <a href="#n">
-                                    <div class="photo kyoto">이미지</div>
-                                    <div class="inner">
-                                        <strong>청주 > 교토</strong>
-                                        <div class="date">
-                                            <div class="first">
-                                                <span>출발</span><span>08:25</span>
-                                            </div>
-                                            <div class="icon">아이콘</div>
-                                            <div class="end">
-                                                <span>도착</span><span>10:25</span>
-                                            </div>
-                                        </div>
-                                        <div class="money">71,000원</div>
-                                        <div class="label_group">
-                                            <label for="일본">#초특가_일본여행</label>
-                                            <label for="봄여행">#벚꽃</label>
-                                            <label for="봄여행">#교토</label>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n">
-                                    <div class="photo tokyo">이미지</div>
-                                    <div class="inner">
-                                        <strong>청주 > 도쿄</strong>
-                                        <div class="date">
-                                            <div class="first">
-                                                <span>출발</span><span>08:25</span>
-                                            </div>
-                                            <div class="icon">아이콘</div>
-                                            <div class="end">
-                                                <span>도착</span><span>10:25</span>
-                                            </div>
-                                        </div>
-                                        <div class="money">102,000원</div>
-                                        <div class="label_group">
-                                            <label for="일본">#시티뷰</label>
-                                            <label for="봄여행">#디즈니랜드</label>
-                                            <label for="봄여행">#쇼핑</label>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n">
-                                    <div class="photo satporo">이미지</div>
-                                    <div class="inner">
-                                        <strong>청주 > 삿포로</strong>
-                                        <div class="date">
-                                            <div class="first">
-                                                <span>출발</span><span>08:25</span>
-                                            </div>
-                                            <div class="icon">아이콘</div>
-                                            <div class="end">
-                                                <span>도착</span><span>10:25</span>
-                                            </div>
-                                        </div>
-                                        <div class="money">90,000원</div>
-                                        <div class="label_group">
-                                            <label for="일본">#일본스키여행</label>
-                                            <label for="봄여행">#삿포로눈축제</label>
-                                        </div>
-                                    </div>
-                                </a>
+                            <li id="dognum" role="tab" aria-selected="false" aria-controls="dognum_pannel">
+                                <button type="button" class="btn_tab">동남아</button>
                             </li>
                         </ul>
-                    </section>
-                    <section id="section2">
-                        <div class="event_popup">
-                            <strong>동남아 특가 프로모션</strong>
-                            <div class="event_title_s">국제선 동남아 운항</div>
-                            <span>기간 9.24(화)-9.30(월) 17:00</span>
-                            <button>바로가기</button>
-                        </div>
-                        <ul>
-                            <li>
-                                <a href="#n">
-                                    <div class="photo thailand">이미지</div>
-                                    <div class="inner">
-                                        <strong>청주 > 태국</strong>
-                                        <div class="date">
-                                            <div class="first">
-                                                <span>출발</span><span>08:25</span>
-                                            </div>
-                                            <div class="icon">아이콘</div>
-                                            <div class="end">
-                                                <span>도착</span><span>10:25</span>
-                                            </div>
-                                        </div>
-                                        <div class="money">72,000원</div>
-                                        <div class="label_group">
-                                            <label for="일본">#태국</label>
-                                            <label for="봄여행">#여름여행</label>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n">
-                                    <div class="photo phuket">이미지</div>
-                                    <div class="inner">
-                                        <strong>청주 > 푸켓</strong>
-                                        <div class="date">
-                                            <div class="first">
-                                                <span>출발</span><span>08:25</span>
-                                            </div>
-                                            <div class="icon">아이콘</div>
-                                            <div class="end">
-                                                <span>도착</span><span>10:25</span>
-                                            </div>
-                                        </div>
-                                        <div class="money">81,000원</div>
-                                        <div class="label_group">
-                                            <label for="일본">#초특가_태국여행</label>
-                                            <label for="봄여행">#푸켓</label>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n">
-                                    <div class="photo chiang_mai">이미지</div>
-                                    <div class="inner">
-                                        <strong>청주 > 치앙마이</strong>
-                                        <div class="date">
-                                            <div class="first">
-                                                <span>출발</span><span>08:25</span>
-                                            </div>
-                                            <div class="icon">아이콘</div>
-                                            <div class="end">
-                                                <span>도착</span><span>10:25</span>
-                                            </div>
-                                        </div>
-                                        <div class="money">102,000원</div>
-                                        <div class="label_group">
-                                            <label for="일본">#푸른바다</label>
-                                            <label for="봄여행">#열대휴양</label>
-                                            <label for="봄여행">#힐링</label>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n">
-                                    <div class="photo vietnam">이미지</div>
-                                    <div class="inner">
-                                        <strong>청주 > 베트남</strong>
-                                        <div class="date">
-                                            <div class="first">
-                                                <span>출발</span><span>08:25</span>
-                                            </div>
-                                            <div class="icon">아이콘</div>
-                                            <div class="end">
-                                                <span>도착</span><span>10:25</span>
-                                            </div>
-                                        </div>
-                                        <div class="money">92,000원</div>
-                                        <div class="label_group">
-                                            <label for="일본">#전통</label>
-                                            <label for="봄여행">#스냅여행</label>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </section>
-                </div>
-            </div>
-        </section>
-        <section class="event_ticket">
-            <div class="wrapper">
-                <div class="title">오직 에케에서만<br>특별한 혜택</div>
-                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
-                    <ul class="swiper-wrapper">
-                        <li class="swiper-slide">
-                            <div class="photo gundam">이미지</div>
-                            <div class="tiket_info">
-                            <div class="tiket_title">도쿄 오다이바 건담 특선</div>
-                                <ul>
-                                    <li>
-                                        <strong>남은 일수</strong>
-                                        <em>D-31</em>
-                                    </li>
-                                    <li>
-                                        <strong>날짜</strong>
-                                        <div class="inner">
-                                            <span>2025-03-01</span>
-                                            <span>-</span>
-                                            <span>2025-04-02</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <strong>장소</strong>   
-                                        <span>오다이바</span>
-                                    </li>
-                                </ul>
-                                <button>예약하기</button>
-                                <div class="barcod">바코드</div>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <div class="photo nagoya">이미지</div>
-                            <div class="tiket_info">
-                                <div class="tiket_title">에케 청주 나고야</div>
-                                <ul>
-                                    <li>
-                                        <strong>남은 일수</strong>
-                                        <em>D-2</em>
-                                    </li>
-                                    <li>
-                                        <strong>날짜</strong>
-                                        <div class="inner">
-                                            <span>2025-02-12</span>
-                                            <span>-</span>
-                                            <span>2025-02-14</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <strong>장소</strong>   
-                                        <span>나고야</span>
-                                    </li>
-                                </ul>
-                                <button>예약하기</button>
-                                <div class="barcod">바코드</div>
-                            </div>             
-                        </li>
-                        <li class="swiper-slide">
-                            <div class="photo yukie">이미지</div>
-                            <div class="tiket_info">
-                                <div class="tiket_title">청주 삿포로 눈꽃 축제</div>
-                                <ul>
-                                    <li>
-                                        <strong>남은 일수</strong>
-                                        <em>D-60</em>
-                                    </li>
-                                    <li>
-                                        <strong>날짜</strong>
-                                        <div class="inner">
-                                            <span>2025-03-01</span>
-                                            <span>-</span>
-                                            <span>2025-04-02</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <strong>장소</strong>   
-                                        <span>삿포로</span>
-                                    </li>
-                                </ul>
-                                <button>예약하기</button>
-                                <div class="barcod">바코드</div>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <div class="photo ora">이미지</div>
-                            <div class="tiket_info">
-                                <div class="tiket_title">몽골 오로라 테를지 국립공원</div>
-                                <ul>
-                                    <li>
-                                        <strong>남은 일수</strong>
-                                        <em>D-31</em>
-                                    </li>
-                                    <li>
-                                        <strong>날짜</strong>
-                                        <div class="inner">
-                                            <span>2025-03-01</span>
-                                            <span>-</span>
-                                            <span>2025-04-02</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <strong>장소</strong>   
-                                        <span>몽골</span>
-                                    </li>
-                                </ul>
-                                <button>예약하기</button>
-                                <div class="barcod">바코드</div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </section>
-        <section class="help">
-            <div class="wrapper">
-                <div class="title">도움이필요하신가요?</div>
-                    <div class="inner">
-                        <div class="sale_coupon">
-                            <strong>할인쿠폰</strong>
-                            <p>특가 쿠폰은 여기에 있어요</p>
-                            <div class="more"><a href="#n">자세히보기</a></div>
-                        </div>
-                        <div class="cs">
-                            <strong>상담하기</strong>
-                            <p>자주묻는 질문 항공기 수하물규정이 있어요</p>
-                            <div class="more"><a href="#n">자세히보기</a></div>
-                        </div>
                     </div>
-            </div>
-        </section>
-        <section class="news">
-            <div class="wrapper">
-                <div class="title">에케의 소식을 여기에 모았어요</div>
-                <div class="section">
-                    <div class="tit">
-                        <div class="fix_title">에어로 케이<br>어디까지 만나봤니?</div>
-                        <button type="button">브랜드 만나보기</button>
-                    </div>
-                    <div class="cont_wrap">
-                        <div class="cont">
+                    <!-- tab contents -->
+                    <div class="tab_content">
+                        <div id="japan_pannel" role="tabpanel" aria-labelledby="japan" class="tab_conts active">
+                            <div class="event_popup">
+                                <strong>일본 특가 프로모션</strong>
+                                <div class="event_title_s">국제선 일본 운항</div>
+                                <span>기간 9.24(화)-9.30(월) 17:00</span>
+                                <button type="button" class="btn">바로가기</button>
+                            </div>
                             <ul>
                                 <li>
                                     <a href="#n">
-                                        <div class="photo a" alt="도쿄 여행">사진</div>
-                                        <div class="content_title">나만이 알고 싶은 도쿄 구석을 알려주세요</div>
-                                        <p>낯선 곳을 여행할 때는 믿을 ‘구석’이 필요해요. 도쿄로 떠날 예비 여행자들을 위해 구석구석 알려주세요.</p>
-                                        <div class="label_group">
-                                            <label class="active">#도쿄</label>
-                                            <label>#여행자</label>
-                                            <label>#카페</label>
-                                            <label>#에디터</label>
+                                        <div class="photo osaka"><img src="../Aerok/images/popup/event_list_banner_01.jpg" alt="오사카사진">이미지</div>
+                                        <div class="inner">
+                                            <strong>청주 > 오사카</strong>
+                                            <div class="date">
+                                                <div class="first">
+                                                    <span>출발</span><span>08:25</span>
+                                                </div>
+                                                <div class="icon">아이콘</div>
+                                                <div class="end">
+                                                    <span>도착</span><span>10:25</span>
+                                                </div>
+                                            </div>
+                                            <div class="money">72,000원</div>
+                                            <div class="tag_group">
+                                                <span>#일본</span>
+                                                <span>#봄여행</span>
+                                            </div>
                                         </div>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#n">
-                                        <div class="photo b" alt="몽골 여행">사진</div>
-                                        <div class="content_title">여기는 지금 몽골</div>
-                                        <p>1년 중 몽골 여행이 가장 좋은 시기! 에어로케이와 함께 울란바토르로 떠나세요. 항공권 할인 코드 및 추첨 이벤트 진행 중!</p>
-                                        <div class="label_group">
-                                            <label class="active">#몽골</label>
-                                            <label>#울란바토르</label>
-                                            <label>#사막</label>
+                                        <div class="photo kyoto"><img src="../Aerok/images/popup/event_list_banner_02.jpg" alt="교토사진"></div>
+                                        <div class="inner">
+                                            <strong>청주 > 교토</strong>
+                                            <div class="date">
+                                                <div class="first">
+                                                    <span>출발</span><span>08:25</span>
+                                                </div>
+                                                <div class="icon">아이콘</div>
+                                                <div class="end">
+                                                    <span>도착</span><span>10:25</span>
+                                                </div>
+                                            </div>
+                                            <div class="money">71,000원</div>
+                                            <div class="tag_group">
+                                                <span>#초특가_일본여행</span>
+                                                <span>#벚꽃</span>
+                                                <span>#교토</span>
+                                            </div>
                                         </div>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#n">
-                                        <div class="photo c" alt="삿포로 여행">사진</div>
-                                        <div class="content_title">에어로케이 시티 에디터 삿포로 편</div>
-                                        <p>에어로케이가 청주-삿포로 노선을 취항하며, 업사이클 필름 카메라와 함께 떠날 시티 에디터를 찾습니다.</p>
-                                        <div class="label_group">
-                                            <label class="active">#삿포로</label>
-                                            <label>#겨울</label>
-                                            <label>#업사이클 카메라</label>
+                                        <div class="photo tokyo"><img src="../Aerok/images/popup/event_list_banner_03.jpg" alt="도쿄사진"></div>
+                                        <div class="inner">
+                                            <strong>청주 > 도쿄</strong>
+                                            <div class="date">
+                                                <div class="first">
+                                                    <span>출발</span><span>08:25</span>
+                                                </div>
+                                                <div class="icon">아이콘</div>
+                                                <div class="end">
+                                                    <span>도착</span><span>10:25</span>
+                                                </div>
+                                            </div>
+                                            <div class="money">102,000원</div>
+                                            <div class="tag_group">
+                                                <span>#시티뷰</span>
+                                                <span>#디즈니랜드</span>
+                                                <span>#쇼핑</span>
+                                            </div>
                                         </div>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#n">
-                                        <div class="photo d" alt="오사카 여행">사진</div>
-                                        <div class="content_title">AEROK MEETS OSAKA</div>
-                                        <p>오사카 하면 무엇이 떠오르나요? 에어로케이의 오사카 시리즈에서 그 답을 찾아보세요!</p>
-                                        <div class="label_group">
-                                            <label class="active">#오사카</label>
-                                            <label>#오사카스러운</label>
-                                            <label>#글리코상</label>
+                                        <div class="photo satporo"><img src="../Aerok/images/popup/event_list_banner_04.jpg" alt="삿포로사진"></div>
+                                        <div class="inner">
+                                            <strong>청주 > 삿포로</strong>
+                                            <div class="date">
+                                                <div class="first">
+                                                    <span>출발</span><span>08:25</span>
+                                                </div>
+                                                <div class="icon">아이콘</div>
+                                                <div class="end">
+                                                    <span>도착</span><span>10:25</span>
+                                                </div>
+                                            </div>
+                                            <div class="money">90,000원</div>
+                                            <div class="tag_group">
+                                                <span>#일본스키여행</span>
+                                                <span>#삿포로눈축제</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="dognum_pannel" role="tabpanel" aria-labelledby="dognum" class="tab_conts active">
+                            <div class="event_popup">
+                                <strong>동남아 특가 프로모션</strong>
+                                <div class="event_title_s">국제선 동남아 운항</div>
+                                <span>기간 9.24(화)-9.30(월) 17:00</span>
+                                <button type="button" class="btn">바로가기</button>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="#n">
+                                        <div class="photo thailand"><img src="../Aerok/images/popup/dongnum_list_01.jpg" alt="태국사진"></div>
+                                        <div class="inner">
+                                            <strong>청주 > 태국</strong>
+                                            <div class="date">
+                                                <div class="first">
+                                                    <span>출발</span><span>08:25</span>
+                                                </div>
+                                                <div class="icon">아이콘</div>
+                                                <div class="end">
+                                                    <span>도착</span><span>10:25</span>
+                                                </div>
+                                            </div>
+                                            <div class="money">72,000원</div>
+                                            <div class="tag_group">
+                                                <span>#태국</span>
+                                                <span>#여름여행</span>
+                                            </div>
                                         </div>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#n">
-                                        <div class="photo e" alt="항공권 이벤트">사진</div>
-                                        <div class="content_title">나만이 알고 싶은 도쿄 50명 항공권 증정</div>
-                                        <p>2023년을 마무리하며 나만의 리추얼 트래블을 경험해 보세요.</p>
-                                        <div class="label_group">
-                                            <label class="active">#일본</label>
-                                            <label>#오사카</label>
-                                            <label>#도쿄</label>
-                                            <label>#클락</label>
+                                        <div class="photo phuket"><img src="../Aerok/images/popup/dongnum_list_02.jpg" alt="푸켓"></div>
+                                        <div class="inner">
+                                            <strong>청주 > 푸켓</strong>
+                                            <div class="date">
+                                                <div class="first">
+                                                    <span>출발</span><span>08:25</span>
+                                                </div>
+                                                <div class="icon">아이콘</div>
+                                                <div class="end">
+                                                    <span>도착</span><span>10:25</span>
+                                                </div>
+                                            </div>
+                                            <div class="money">81,000원</div>
+                                            <div class="tag_group">
+                                                <span>#초특가_태국여행</span>
+                                                <span>#푸켓</span>
+                                            </div>
                                         </div>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#n">
-                                        <div class="photo f" alt="기내 도서관">사진</div>
-                                        <div class="content_title">180 Books on Board</div>
-                                        <p>여성을 주제로 한 책 80여 종과 환경, 행복, 여행 관련 도서를 기내에서 만나보세요.</p>
-                                        <div class="label_group">
-                                            <label class="active">#기내도서관</label>
-                                            <label>#에어로케이</label>
-                                            <label>#에어로굿즈</label>
+                                        <div class="photo chiang_mai"><img src="../Aerok/images/popup/dongnum_list_03.jpg" alt="치앙마이"></div>
+                                        <div class="inner">
+                                            <strong>청주 > 치앙마이</strong>
+                                            <div class="date">
+                                                <div class="first">
+                                                    <span>출발</span><span>08:25</span>
+                                                </div>
+                                                <div class="icon">아이콘</div>
+                                                <div class="end">
+                                                    <span>도착</span><span>10:25</span>
+                                                </div>
+                                            </div>
+                                            <div class="money">102,000원</div>
+                                            <div class="tag_group">
+                                                <span>#푸른바다</span>
+                                                <span>#열대휴양</span>
+                                                <span>#힐링</span>
+                                            </div>
                                         </div>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#n">
-                                        <div class="photo g" alt="CAVA LIFE 협업">사진</div>
-                                        <div class="content_title">Aero K x CAVA LIFE</div>
-                                        <p>에어로케이와 카바 라이프가 협업한 도쿄 B-Cut 프로젝트를 만나보세요!</p>
-                                        <div class="label_group">
-                                            <label class="active">#도쿄</label>
-                                            <label>#카바라이프</label>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#n">
-                                        <div class="photo h" alt="Color your life">사진</div>
-                                        <div class="content_title">Color your life</div>
-                                        <p>더 다양한 색으로 담는 이야기! 목적지 노란 안내판, 일몰의 붉은 하늘과 녹음까지 색의 감성을 느껴보세요.</p>
-                                        <div class="label_group">
-                                            <label class="active">#컬러</label>
-                                            <label>#너의 삶</label>
-                                            <label>#항공권 할인 코드</label>
+                                        <div class="photo vietnam"><img src="../Aerok/images/popup/dongnum_list_04.jpg" alt="베트남"></div>
+                                        <div class="inner">
+                                            <strong>청주 > 베트남</strong>
+                                            <div class="date">
+                                                <div class="first">
+                                                    <span>출발</span><span>08:25</span>
+                                                </div>
+                                                <div class="icon">아이콘</div>
+                                                <div class="end">
+                                                    <span>도착</span><span>10:25</span>
+                                                </div>
+                                            </div>
+                                            <div class="money">92,000원</div>
+                                            <div class="tag_group">
+                                                <span>#전통</span>
+                                                <span>#스냅여행</span>
+                                            </div>
                                         </div>
                                     </a>
                                 </li>
@@ -618,9 +382,254 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        
+            </section>
+            <section class="event_ticket">
+                <div class="wrapper">
+                    <h2>오직 에케에서만<br>특별한 혜택</h2>
+                    <div class="swiper_wrap">
+                        <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <div class="photo"><img src="../Aerok/images/popup/event_tiket_list_01.jpg" alt="일본건담">건담사진</div>
+                                    <div class="tiket_info">
+                                    <h3>도쿄 오다이바 건담 특선</h3>
+                                        <ul>
+                                            <li>
+                                                <strong>남은 일수</strong>
+                                                <em>D-31</em>
+                                            </li>
+                                            <li>
+                                                <strong>날짜</strong>
+                                                <div class="inner">
+                                                    <span>2025-03-01</span>
+                                                    <span>-</span>
+                                                    <span>2025-04-02</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <strong>장소</strong>   
+                                                <span>오다이바</span>
+                                            </li>
+                                        </ul>
+                                        <button type="button" class="btn">예약하기</button>
+                                        <div class="barcod">바코드</div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="photo"><img src="../Aerok/images/popup/event_tiket_list_02.jpg" alt="나고야">나고야사진</div>
+                                    <div class="tiket_info">
+                                        <h3>에케 청주 나고야</h3>
+                                        <ul>
+                                            <li>
+                                                <strong>남은 일수</strong>
+                                                <em>D-2</em>
+                                            </li>
+                                            <li>
+                                                <strong>날짜</strong>
+                                                <div class="inner">
+                                                    <span>2025-02-12</span>
+                                                    <span>-</span>
+                                                    <span>2025-02-14</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <strong>장소</strong>   
+                                                <span>나고야</span>
+                                            </li>
+                                        </ul>
+                                        <button type="button" class="btn">예약하기</button>
+                                        <div class="barcod">바코드</div>
+                                    </div>             
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="photo"><img src="../Aerok/images/popup/event_tiket_list_03.jpg" alt="삿포로눈축제">삿포로눈축제</div>
+                                    <div class="tiket_info">
+                                        <h3>청주 삿포로 눈꽃 축제</h3>
+                                        <ul>
+                                            <li>
+                                                <strong>남은 일수</strong>
+                                                <em>D-60</em>
+                                            </li>
+                                            <li>
+                                                <strong>날짜</strong>
+                                                <div class="inner">
+                                                    <span>2025-03-01</span>
+                                                    <span>-</span>
+                                                    <span>2025-04-02</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <strong>장소</strong>   
+                                                <span>삿포로</span>
+                                            </li>
+                                        </ul>
+                                        <button type="button" class="btn">예약하기</button>
+                                        <div class="barcod">바코드</div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="photo"><img src="../Aerok/images/popup/event_tiket_list_04.jpg" alt="몽골국립공원">몽골국립공원</div>
+                                    <div class="tiket_info">
+                                        <h3>몽골 오로라 테를지 국립공원</h3>
+                                        <ul>
+                                            <li>
+                                                <strong>남은 일수</strong>
+                                                <em>D-31</em>
+                                            </li>
+                                            <li>
+                                                <strong>날짜</strong>
+                                                <div class="inner">
+                                                    <span>2025-03-01</span>
+                                                    <span>-</span>
+                                                    <span>2025-04-02</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <strong>장소</strong>   
+                                                <span>몽골</span>
+                                            </li>
+                                        </ul>
+                                        <button type="button" class="btn">예약하기</button>
+                                        <div class="barcod">바코드</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="help">
+                <div class="wrapper">
+                    <h2>도움이필요하신가요?</h2>
+                        <div class="inner">
+                            <div class="sale_coupon">
+                                <strong>할인쿠폰</strong>
+                                <p>특가 쿠폰은 여기에 있어요</p>
+                                <div class="more"><a href="#n">자세히보기</a></div>
+                            </div>
+                            <div class="cs">
+                                <strong>상담하기</strong>
+                                <p>자주묻는 질문 항공기 수하물규정이 있어요</p>
+                                <div class="more"><a href="#n">자세히보기</a></div>
+                            </div>
+                        </div>
+                </div>
+            </section>
+            <section class="news">
+                <div class="wrapper">
+                    <h2>에케의 소식을 여기에 모았어요</h2>
+                    <div class="inner">
+                        <div class="tit">
+                            <h3>에어로 케이<br>어디까지 만나봤니?</h3>
+                            <button type="button">브랜드 만나보기</button>
+                        </div>
+                        <div class="cont_wrap">
+                            <div class="cont">
+                                <ul>
+                                    <li>
+                                        <a href="#n">
+                                            <div class="photo"><img src="../Aerok/images/news/news_01.jpg" alt="도쿄 여행">도쿄여행</div>
+                                            <h3>나만이 알고 싶은 도쿄 구석을 알려주세요</h3>
+                                            <p>낯선 곳을 여행할 때는 믿을 ‘구석’이 필요해요. 도쿄로 떠날 예비 여행자들을 위해 구석구석 알려주세요.</p>
+                                            <div class="tag_group">
+                                                <span class="active">#도쿄</span>
+                                                <span>#여행자</span>
+                                                <span>#카페</span>
+                                                <span>#에디터</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#n">
+                                            <div class="photo"><img src="../Aerok/images/news/news_02.jpg" alt="몽골 여행">몽골 여행</div>
+                                            <h3>여기는 지금 몽골</h3>
+                                            <p>1년 중 몽골 여행이 가장 좋은 시기! 에어로케이와 함께 울란바토르로 떠나세요. 항공권 할인 코드 및 추첨 이벤트 진행 중!</p>
+                                            <div class="tag_group">
+                                                <span class="active">#몽골</span>
+                                                <span>#울란바토르</span>
+                                                <span>#사막</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#n">
+                                            <div class="photo"><img src="../Aerok/images/news/news_03.jpg" alt="삿포로 여행">삿포로 여행</div>
+                                            <h3>에어로케이 시티 에디터 삿포로 편</h3>
+                                            <p>에어로케이가 청주-삿포로 노선을 취항하며, 업사이클 필름 카메라와 함께 떠날 시티 에디터를 찾습니다.</p>
+                                            <div class="tag_group">
+                                                <span class="active">#삿포로</span>
+                                                <span>#겨울</span>
+                                                <span>#업사이클 카메라</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#n">
+                                            <div class="photo"><img src="../Aerok/images/news/news_04.jpg" alt="오사카 여행">오사카 여행</div>
+                                            <h3>AEROK MEETS OSAKA</h3>
+                                            <p>오사카 하면 무엇이 떠오르나요? 에어로케이의 오사카 시리즈에서 그 답을 찾아보세요!</p>
+                                            <div class="tag_group">
+                                                <span class="active">#오사카</span>
+                                                <span>#오사카스러운</span>
+                                                <span>#글리코상</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#n">
+                                            <div class="photo"><img src="../Aerok/images/news/news_05.jpg" alt="항공권 이벤트">항공권 이벤트</div>
+                                            <h3>나만이 알고 싶은 도쿄 50명 항공권 증정</h3>
+                                            <p>2023년을 마무리하며 나만의 리추얼 트래블을 경험해 보세요.</p>
+                                            <div class="tag_group">
+                                                <span class="active">#일본</span>
+                                                <span>#오사카</span>
+                                                <span>#도쿄</span>
+                                                <span>#클락</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#n">
+                                            <div class="photo"><img src="../Aerok/images/news/news_06.jpg" alt="기내 도서관">기내 도서관</div>
+                                            <h3>180 Books on Board</h3>
+                                            <p>여성을 주제로 한 책 80여 종과 환경, 행복, 여행 관련 도서를 기내에서 만나보세요.</p>
+                                            <div class="tag_group">
+                                                <span class="active">#기내도서관</span>
+                                                <span>#에어로케이</span>
+                                                <span>#에어로굿즈</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#n">
+                                            <div class="photo"><img src="../Aerok/images/news/news_06.jpg" alt="CAVA LIFE 협업">CAVA LIFE 협업</div>
+                                            <h3>Aero K x CAVA LIFE</h3>
+                                            <p>에어로케이와 카바 라이프가 협업한 도쿄 B-Cut 프로젝트를 만나보세요!</p>
+                                            <div class="tag_group">
+                                                <span class="active">#도쿄</span>
+                                                <span>#카바라이프</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#n">
+                                            <div class="photo"><img src="./images/news/news_07.jpg" alt="Color your life">Color your life</div>
+                                            <h3>Color your life</h3>
+                                            <p>더 다양한 색으로 담는 이야기! 목적지 노란 안내판, 일몰의 붉은 하늘과 녹음까지 색의 감성을 느껴보세요.</p>
+                                            <div class="tag_group">
+                                                <span class="active">#컬러</span>
+                                                <span>#너의 삶</span>
+                                                <span>#항공권 할인 코드</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+        </div>
         <footer>
             <div class="wrapper">
                 <h1 class="logo"><a href="index.html">에어로케이</a></h1>
@@ -634,7 +643,7 @@
                     <ul>
                         <li>대표이사 : 강병호</li>
                         <li>사업자 등록번호 : 274-88-00540</li>
-                        <li>주소 : 충청북도 청주시 흥덕구 오송읍 오송생명3로 154</li>
+                        <address>주소 : 충청북도 청주시 흥덕구 오송읍 오송생명3로 154</address>
                         <li>통신판매업신고번호 : 2020-충북청주-0518</li>
                     </ul>
                 </div>

@@ -1,58 +1,54 @@
 $(document).ready(function () {
   function checkWindowSize() {
-    /*if ($(window).width() <= 1024) {
-      // 모바일/태블릿 화면에서 메뉴 닫기 및 버튼 표시
-      $('header').removeClass('over');
-      $('.gnb .depth1 > li').off('mouseenter mouseleave');
-      //$('.gnb_wrap ul.depth1').hide(); // 메뉴 닫기
-      //$('.gnb_open').show(); // GNB 열기 버튼 표시
-      //$('.gnb_close').hide(); // GNB 닫기 버튼 숨기기
-    } else {
-      // 데스크탑 화면에서 메뉴 열기 및 hover 이벤트 처리
-      $('.gnb .depth1 > li').hover(
-        function () {
-          $('header').addClass('over');
-          $(this).addClass('open');
-        },
-        function () {
-          $('header').removeClass('over');
-          $(this).removeClass('open');
-        }
-      );
-      $('.gnb_wrap ul.depth1').css('display', 'flex'); // 메뉴 보이기
-      $('.gnb_open').hide(); // GNB 열기 버튼 숨기기
-      $('.gnb_close').hide(); // GNB 닫기 버튼 숨기기
-    }*/
-    $('.gnb .depth1 > li').on('mouseenter focusin', function(){
-      
-      if($(window).width() > 1024) {
-        $('header').addClass('over')
-        $('.gnb .depth1 > li').removeClass('open')
-        $(this).addClass('open')
+    $('.gnb .depth1 > li').off('mouseenter focusin').on('mouseenter focusin', function () {
+      if ($(window).width() > 1024) {
+        $('header').addClass('over');
+        $('.gnb .depth1 > li').removeClass('open');
+        $(this).addClass('open');
       }
-    })
+    });
+
+    $('header').off('mouseleave').on('mouseleave', function () {
+      $(this).removeClass('over');
+    });
+  }
+
+  function resetMenu() {
+    if ($(window).width() > 1024) {
+      // 1024px 초과 시 depth1, depth2 관련 상태 초기화
+      $('header').removeClass('mobile_open over');
+      $('.gnb .depth1 > li').removeClass('open active');
+      $('.gnb .depth1 > li ul.depth2').removeClass('active').stop().slideUp(0);
+    }
   }
 
   // 페이지 로드 시 실행
   checkWindowSize();
+  resetMenu(); // 초기 로드 시 상태 초기화
 
   // 윈도우 리사이즈 이벤트 실행
   $(window).resize(function () {
-    // 리사이즈 시 메뉴 상태를 먼저 업데이트
     checkWindowSize();
+    resetMenu(); // 윈도우 크기 변경 시 메뉴 초기화
   });
 
   // .ko a 요소 클릭 시 언어 선택 ul 보이기/숨기기
   $('header .tnb .lang .ko a').click(function (e) {
     e.preventDefault();
     let $langMenu = $('header .tnb .lang ul');
-    // fadeToggle을 사용하여 부드럽게 열고 닫기
     $langMenu.stop().fadeToggle(200);
   });
 
   // 헤더에서 마우스가 벗어나면 언어 선택 ul 숨기기
-  $('header').mouseleave(function () {
+  $(document).on('mouseleave', 'header', function () {
     $('header .tnb .lang ul').stop().fadeOut(200);
+  });
+
+  // 윈도우 리사이즈 시 초기화
+  $(window).resize(function () {
+    if ($(window).width() > 1024) {
+      $('header .tnb .lang ul').stop().fadeOut(0); // 1024px 이상에서 강제 닫기
+    }
   });
 
   // li 클릭 시 active 클래스 추가
@@ -64,17 +60,18 @@ $(document).ready(function () {
 
   // GNB 메뉴 열기
   $('header .gnb_open').on('click', function () {
-    $('header').addClass('mobile_open');  // header에 mobile_open 클래스 추가
-  });
-  
-  $('header .gnb_close').on('click', function () {
-    $('header').removeClass('mobile_open');  // header에서 mobile_open 클래스 제거
+    $('header').addClass('mobile_open');
   });
 
- 
+  $('header .gnb_close').on('click', function () {
+    $('header').removeClass('mobile_open');
+  });
 
   // depth1 > li > a 클릭 시 active 클래스 추가
   $('.gnb_wrap ul.depth1 > li > a').on('click', function (e) {
+    if ($(window).width() > 1024) {
+      return;
+    }
     e.preventDefault();
     $('.gnb_wrap ul.depth1 > li').removeClass('active');
     $(this).parent('li').addClass('active');
@@ -82,21 +79,21 @@ $(document).ready(function () {
 
   // depth2 메뉴 toggle
   $('header .gnb .gnb_wrap ul.depth1 > li > a').click(function (e) {
+    if ($(window).width() > 1024) {
+      return;
+    }
     e.preventDefault();
 
     let $parentLi = $(this).parent();
     let $depth2 = $parentLi.find('ul.depth2');
 
     if ($depth2.hasClass('active')) {
-      // 닫기
       $depth2.removeClass('active').stop().slideUp(300);
     } else {
-      // 다른 열린 메뉴 닫기
       $('header .gnb .gnb_wrap ul.depth1 > li > ul.depth2.active')
         .removeClass('active')
         .stop()
         .slideUp(300);
-      // 새 메뉴 열기
       $depth2.addClass('active').stop().slideDown(300);
     }
   });
@@ -107,6 +104,4 @@ $(document).ready(function () {
     $('header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li').removeClass('active');
     $(this).parent().addClass('active');
   });
-
-  
 });

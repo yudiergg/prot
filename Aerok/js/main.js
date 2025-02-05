@@ -16,19 +16,22 @@ $(document).ready(function(){
 			// 	return '<span class="' + className + '">' + (index + 1) + "</span>";
 			// },
 		},
-		});
-
-		$(".tab_menu li a").click(function (e) {
-			e.preventDefault();
-			
-			$(".tab_menu li").removeClass("active");
-			$(this).parent().addClass("active");
+	});
+		
+		$('li[role="tab"]').click(function () {
+			let target = $(this).attr('aria-controls'); // 클릭한 탭의 aria-controls 값 가져오기
 	
-			$(".tab_content section").hide();
-			$($(this).attr("href")).show();
+			// 모든 탭에서 active 클래스 및 aria-selected 속성 제거
+			$('li[role="tab"]').removeClass('active').attr('aria-selected', 'false');
+			$(this).addClass('active').attr('aria-selected', 'true');
+	
+			// 모든 패널 숨기고, 해당 패널만 표시
+			$('.tab_conts').removeClass('active').hide();
+			$('#' + target).addClass('active').show();
 		});
-
-		$("#section2").hide(); // 페이지 로드 시 section2 숨김
+	
+		// 기본적으로 첫 번째 탭 활성화
+		$('li[role="tab"].active').trigger('click');
 
 		const event_ticket_swiper = new Swiper('.event_ticket .swiper', { /* 팝업을 감싼는 요소의 class명 */
 			slidesPerView: 'auto', /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
@@ -60,37 +63,43 @@ $(document).ready(function(){
 			},
 		});
 		
-		gsap.registerPlugin(ScrollTrigger);
+		// gsap.registerPlugin(ScrollTrigger);
 
-		function initScrollTrigger() {
-			// 기존 ScrollTrigger 제거 (초기화)
-			ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+		// function initScrollTrigger() {
+		// 	// 기존 ScrollTrigger 제거 (초기화)
+		// 	ScrollTrigger.getAll().forEach(trigger => trigger.kill());
 		
-			if (window.innerWidth > 768) {
-				// 768px 초과에서만 실행
-				const news_sections = document.querySelector('.news .wrapper .section');  
-				const large = document.querySelector('.news .wrapper .section .cont_wrap .cont');
+		// 	if (window.innerWidth > 768) {
+		// 		// 768px 초과에서만 실행
+		// 		const news_sections = document.querySelector('.news .wrapper .section');  
+		// 		const large = document.querySelector('.news .wrapper .section .cont_wrap .cont');
 		
-				gsap.to(large, {
-					y: () => (window.innerHeight - large.clientHeight - 0), 
-					ease: "none",
-					scrollTrigger: {
-						trigger: news_sections,
-						pin: true,
-						pinSpacing: true,
-						start: "top 20%",
-						end: () => "+=500",
-						scrub: 0.5,
-						markers: false,
-						invalidateOnRefresh: false,
-					}
-				});
-			}
-		}
+		// 		gsap.to(large, {
+		// 			y: () => (window.innerHeight - large.clientHeight - 0), 
+		// 			ease: "none",
+		// 			scrollTrigger: {
+		// 				trigger: news_sections,
+		// 				pin: true,
+		// 				pinSpacing: true,
+		// 				start: "top 10%",
+		// 				end: () => "+=500",
+		// 				scrub: 0.5,
+		// 				markers: false,
+		// 				invalidateOnRefresh: false,
+		// 			}
+		// 		});
+		// 	}
+		// }
+		// // 초기 실행
+		// initScrollTrigger();
 		
-		// 초기 실행
-		initScrollTrigger();
-		
-		// 화면 크기 변경 시 다시 적용
-		window.addEventListener("resize", initScrollTrigger);
+		// // 화면 크기 변경 시 다시 적용
+		// window.addEventListener("resize", initScrollTrigger);
+		$('.news .inner .tit').sticky({
+			stickyClass: 'sticky',      // 고정될 때 추가할 클래스
+			anchorClass: 'sticky-anchor', // 앵커 역할을 할 클래스
+			activeClass: 'active',      // 스크롤 시 활성화될 때 추가할 클래스
+			buffer: 100               // 고정될 때 위쪽 여백 (20px)
+		});
+	
 });
