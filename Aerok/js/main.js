@@ -95,11 +95,11 @@ $(document).ready(function(){
 		
 		// // 화면 크기 변경 시 다시 적용
 		// window.addEventListener("resize", initScrollTrigger);
-		$('.news .inner .tit').sticky({
+
+		$('.news .news_group .tit').sticky({
 			stickyClass: 'sticky',      // 고정될 때 추가할 클래스
 			anchorClass: 'sticky-anchor', // 앵커 역할을 할 클래스
 			activeClass: 'active',      // 스크롤 시 활성화될 때 추가할 클래스
-			buffer: 100               // 고정될 때 위쪽 여백 (20px)
+			buffer: 80               // 고정될 때 위쪽 헤더영역기준으로 (20px)	
 		});
-	
 });

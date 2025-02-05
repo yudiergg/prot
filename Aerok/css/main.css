@@ -139,7 +139,7 @@
 .visual .user .date .inner ::after {
     position: absolute;
     content: "";
-    bottom: 0.58em;
+    bottom: 0.8em;
     right: 1.17em;
     width: 24px;
     height: 24px;
@@ -200,12 +200,22 @@
     padding: 5.64em 0;
 }
 .travel h2 {
+    position: relative;
+    display: inline-block;
     margin-bottom: 1.92em;
-    font-size: var( --title-XL);
+    font-size: var(--h-s);
     font-weight: 700;
     color: var(--title-color);
 }
-
+.travel h2::after {
+    position: absolute;
+    content: "";
+    top: -0.8rem;
+    right: -4.81rem;
+    width: 3.94rem;
+    height: 3.94rem;
+    background: url(../images/icon/h3_icon_04.png) no-repeat center center / contain;
+}
 /* 탭 메뉴 */
 .travel .tab_list ul {
     display: flex;
@@ -269,7 +279,21 @@
     background-color: var(--primary-color);
     border-radius: 0.26rem;
 }
-
+@media screen and (max-width:423px){
+    .travel .tab_content .event_popup{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .travel .event_popup button {
+        position: relative;
+        right: 0;
+        bottom: 0;
+    }
+    .travel .event_popup span {
+        margin-bottom: 2.2em;
+    }
+}
 /* 탭 컨텐츠 */
 .travel .tab_content .tab_conts ul {
     display: flex;
@@ -314,8 +338,8 @@
 .travel .tab_content .tab_conts ul li a .inner .date .icon {
     font-size: 0;
     line-height: 0;
-    width: 24px;
-    height: 24px;
+    width: 1.41rem;
+    height: 1.41rem;
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.6537 12.2798L10.25 16.6836L10.25 7.87609L14.6537 12.2798Z' fill='%235F6368'/%3E%3C/svg%3E%0A");
     background-position: center center;
     background-repeat: no-repeat;
@@ -329,7 +353,7 @@
 }
 .travel .tab_content .tab_conts ul li a .inner .tag_group {
     display: flex;
-    gap: 0.7em;
+    gap: 0.4em;
 }
 .travel .tab_content .tab_conts ul li a .inner .tag_group span {
     padding: 0.33em 0.66em;
@@ -359,14 +383,24 @@
     overflow: hidden;
 }
 .event_ticket h2 {
+    position: relative;
+    display: inline-block;
     margin-bottom: 1.92em;
-    font-size: var( --title-XL);
+    font-size: var(--h-s);
     font-weight: 700;
     color: var(--title-color);
-
+}
+.event_ticket h2::after {
+    position: absolute;
+    content: "";
+    bottom: 0.3rem;
+    right: -0.2rem;
+    width: 2.64rem;
+    height: 2.64rem;
+    background: url(../images/icon/h3_icon_02.png) no-repeat center center / contain;
 }
 .event_ticket .swiper_wrap{
-    width: 4129px;
+    width: 242.88rem;
 }
 .event_ticket .swiper > ul > li {
     position: relative;
@@ -531,11 +565,23 @@
     padding: 5.64em 0;
 }
 .help h2 {
+    position: relative;
+    display: inline-block;
     margin-bottom: 1.92em;
-    font-size: var( --title-XL);
+    font-size: var(--h-s);
     font-weight: 700;
     color: var(--title-color);
 }
+.help h2::after {
+    position: absolute;
+    content: "";
+    top: -0.4em;
+    right: -4.2rem;
+    width: 3.44rem;
+    height: 3.44rem;
+    background: url(../images/icon/h3_icon_05.png) no-repeat center center / contain;
+}
+
 .help .inner {
     display: flex;
     gap: 1.41em;
@@ -593,6 +639,14 @@
     flex-direction: column; 
     }
 }
+@media screen and (max-width:457px){
+    .help .sale_coupon::after {
+        display: none
+    }
+    .help .cs::after {
+        display: none
+    }
+}
 .news {
     padding: 5.64em 0;
 }
@@ -603,26 +657,37 @@
     max-height:100vh;
 } */
 
-.news .inner .tit {
-    float: left;
-    width: 19.76rem;
-}
-.sticky-anchor {
-    height: 0;
-}
+
 .news h2 {
+    position: relative;
+    display: inline-block;
     margin-bottom: 1.92em;
-    font-size: var( --title-XL);
+    font-size: var(--h-s);
     font-weight: 700;
     color: var(--title-color);
 }
-.news .tit {
-    flex: 0 0 26.06%;/* 고정된 크기 */
-    height: 60dvh;
+.news h2::after {
+    position: absolute;
+    content: "";
+    top: -0.7rem;
+    right: -1.91rem;
+    width: 2.94rem;
+    height: 2.94rem;
+    background: url(../images/icon/h3_icon_01.png) no-repeat center center / contain;
+
+}
+/*고정할 영역*/
+.news .news_group .tit {
+    float: left;
+    width: 19.76rem !important;
+    height: 55dvh;
     padding: 2.35em;
     border-radius: 0.58rem;
     color: var(--bg-color);
     background: url(../images/news/fix_bg_01.jpg) no-repeat center center / cover;
+}
+.news .news_group .sticky-anchor {
+    height: auto !important;
 }
 .news .tit button {
     font-size: var(--body-m-default);
@@ -637,7 +702,7 @@
 }
 .news .tit h3 {
     margin-bottom: 1.5em;
-    font-size: var(--title-XXL);
+    font-size: var(--title-XL);
     font-weight: 700;
 
 }
@@ -653,11 +718,9 @@
     display: flex;
     flex-wrap: wrap; /* 줄 바꿈 가능하도록 설정 */
     gap: 1.82em; /* 기존 gap 유지 */
-    justify-content: flex-start; /* 좌측 정렬 */
-    width: 100%; /* 컨테이너에 맞춰 자동 조정 */
 }
 .news .cont_wrap .cont ul li {
-    flex: 1 1 calc(50% - 1.82em); /* 한 줄에 2개 배치 */
+    flex: 1 calc(50% - 1.82em); /* 한 줄에 2개 배치 */
     max-width: 600px; /* 최대 크기 제한 */
     min-width: 280px; /* 최소 크기 제한 */
 }
@@ -695,11 +758,11 @@
     word-break:  break-all;
     display: -webkit-box;
     -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical
+    -webkit-box-orient: vertical;
 }
 .news .cont_wrap .cont ul li a .tag_group {
     display: flex;
-    gap: 0.7em;
+    gap: 0.4em;
 }
 .news .cont_wrap .cont ul li a .tag_group span {
     padding: 0.33em 0.66em;
@@ -708,16 +771,36 @@
     border-radius: 0.33rem;
     color: var(--secondary-color);
 }
-.news .cont_wrap .cont ul li a .tag_group label.active {
+.news .cont_wrap .cont ul li a .tag_group span.active {
     background-color: var(--secondary-color);
     color: var(--bg-color);
 }
-
+@media screen and (max-width:1164px){
+    .news_group{
+        display: flex;
+        flex-direction: column;
+    }
+    .news .news_group .tit {
+        position: relative !important;
+        float: none;
+        display: flex;
+        flex-direction: column;
+        z-index: 0 !important;
+        top:0 !important;
+        width: 100% !important;
+        height: auto !important;
+        margin-bottom: 3.82em;
+    }
+    .news .cont_wrap {
+        padding-left: 0;
+    }
+}
 @media screen and (max-width:768px){
-    .news .wrapper .section {
+
+    /* .news .wrapper .section {
         overflow: visible;
         flex-direction: column;
         gap: 2.64em;
         max-height: 100%;
-    }
+    } */
 }
