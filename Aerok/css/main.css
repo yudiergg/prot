@@ -529,6 +529,16 @@
     height: 0.58rem;
     background-color: var(--disalbe);
 }
+@media screen and (max-width:1170px){
+    .event_ticket .swiper {
+        width: 140%;
+    }
+}
+@media screen and (max-width:1194px){
+    .event_ticket .swiper {
+        width: 160%;
+    }
+}
 @media screen and (max-width:1295px){
     .event_ticket .swiper_wrap{
         left: 20px;
@@ -711,6 +721,7 @@
 }
 /*고정할 영역*/
 .news .news_group .tit {
+    z-index: -1 !important;
     float: left;
     width: 19.76rem !important;
     height: 55dvh;
