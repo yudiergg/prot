@@ -103,6 +103,7 @@
 				bottom: 0,
             	'z-index': 1000,
             	'width': this.elementWidth
+				
             }).addClass(this.settings.activeClass);
 
             $(this.elementAnchor).height(this.elementHeight);

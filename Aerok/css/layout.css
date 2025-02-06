@@ -157,14 +157,15 @@ header .tnb ul li.active a {
     header .gnb .gnb_wrap ul.depth1 {
         position: absolute;
         display: none;
+        left: 50%;
         top: var(--header-h);
         width: 100%;
-        left: 50%;
         height: 100dvh;
         overflow-y: scroll;
         flex-direction: column;
         background-color: var(--bg-color);
     }
+
     /* 모바일 오픈일때 뒤에 백그라운드 주기 */
     header.mobile_open::after {
         z-index: -1;
