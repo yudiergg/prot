@@ -133,31 +133,31 @@
                             <div class="form_group route_point">
                                 <div class="inner">
                                     <label for="route_start">출발지</label>
-                                    <input type="text" id="route_start" name="출발지" placeholder="도시또는공항"/>
+                                    <input type="text" id="route_start" name="출발지" placeholder="도시또는공항">
                                 </div>
                                 <div class="inner">
                                     <label for="route_end">도착지</label>
-                                    <input type="text" id="route_end" name="도착지" placeholder="도시또는공항"/>
+                                    <input type="text" id="route_end" name="도착지" placeholder="도시또는공항">
                                 </div>
                             </div>
                             <div class="form_group date">
                                 <div class="inner">
                                     <label for="date_start">가는날짜</label>
-                                    <input type="text" id="date_start" name="날짜시작" placeholder="날짜선택"/>
+                                    <input type="text" id="date_start" name="날짜시작" placeholder="날짜선택">
                                 </div>
                                 <div class="inner">
                                     <label for="date_end">오는날짜</label>
-                                    <input type="text" id="date_end" name="날짜종료"  placeholder="날짜선택"/>
+                                    <input type="text" id="date_end" name="날짜종료"  placeholder="날짜선택">
                                 </div>
                             </div>
                             <div class="form_group booking_options">
                                 <div class="inner">
                                     <label for="people_count">인원선택</label>
-                                    <input type="number" id="people_count" name="인원수"  placeholder="0명"/>
+                                    <input type="number" id="people_count" name="인원수"  placeholder="0명">
                                 </div>
                                 <div class="inner">
                                     <label for="promo_code">프로모션코드</label>
-                                    <input type="text" id="promo_code" name="날짜종료" placeholder="코드 입력"/>
+                                    <input type="text" id="promo_code" name="날짜종료" placeholder="코드 입력">
                                 </div>
                             </div>
                         </div>
@@ -169,16 +169,18 @@
                 <div class="wrapper">
                     <h2>에케와 함께 떠는 여행</h2>
                     <!-- tab list -->
-                    <div class="tab_list">
-                        <ul role="tab_menu">
-                            <li id="japan" role="tab" aria-selected="true" aria-controls="japan_pannel" class="active">
-                                <button type="button" class="btn_tab">일본<i class="sr-only created">선택됨</i></button>
-                            </li>
-                            <li id="dognum" role="tab" aria-selected="false" aria-controls="dognum_pannel">
-                                <button type="button" class="btn_tab">동남아</button>
-                            </li>
-                        </ul>
-                    </div>
+                    <ul role="tablist">
+                        <li>
+                            <button id="japan" role="tab" aria-selected="true" aria-controls="japan_pannel" class="btn_tab active">
+                                일본<i class="sr-only created">선택됨</i>
+                            </button>
+                        </li>
+                        <li>
+                            <button id="dognum" role="tab" aria-selected="false" aria-controls="dognum_pannel" class="btn_tab">
+                                동남아
+                            </button>
+                        </li>
+                    </ul>
                     <!-- tab contents -->
                     <div class="tab_content">
                         <div id="japan_pannel" role="tabpanel" aria-labelledby="japan" class="tab_conts active">
@@ -281,7 +283,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div id="dognum_pannel" role="tabpanel" aria-labelledby="dognum" class="tab_conts active">
+                        <div id="dognum_pannel" role="tabpane2" aria-labelledby="dognum" class="tab_conts active">
                             <div class="event_popup">
                                 <strong>동남아 특가 프로모션</strong>
                                 <div class="event_title_s">국제선 동남아 운항</div>
@@ -498,7 +500,6 @@
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
-            </div>
             </section>
             <section class="help">
                 <div class="wrapper">
@@ -629,6 +630,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
             </section>
         </div>
         <footer>
@@ -641,14 +643,15 @@
                         <li>고객센터 문의 : 1899-2299</li>
                         <li>영업시간 : 09:00~18:00</li>
                     </ul>
-                    <ul>
-                        <li>대표이사 : 강병호</li>
-                        <li>사업자 등록번호 : 274-88-00540</li>
+                    <div class="inner">
+                        <span>대표이사 : 강병호</span>
+                        <span>사업자 등록번호 : 274-88-00540</span>
                         <address>주소 : 충청북도 청주시 흥덕구 오송읍 오송생명3로 154</address>
-                        <li>통신판매업신고번호 : 2020-충북청주-0518</li>
-                    </ul>
+                        <span>통신판매업신고번호 : 2020-충북청주-0518</span>
+                    </div>
                 </div>
                 <div class="copyright">© 2021 Aero K Airlines Co. Ltd. All rights reserved.</div>
+            </div>
         </footer>
     </div>
 </body>

@@ -264,7 +264,7 @@ footer .wrapper .infor {
     flex-direction: column;
     gap: 0.58em;
 }
-footer .wrapper .infor ul {
+footer .wrapper .infor .inner {
     display: flex;
     gap: 2em;
 }
@@ -278,7 +278,7 @@ footer .wrapper .copyright {
     footer .wrapper .infor {
         gap: 1.58em;
     }
-    footer .wrapper .infor ul {
+    footer .wrapper .infor .inner {
         flex-direction: column;
         gap: 0.5em;
     }

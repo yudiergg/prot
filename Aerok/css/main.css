@@ -219,7 +219,7 @@
     background: url(../images/icon/h3_icon_04.png) no-repeat center center / contain;
 }
 /* 탭 메뉴 */
-.travel .tab_list ul {
+.travel [role="tablist"] {
     display: flex;
     padding: 0.58em 0.58em;
     max-width: 11.76rem;
@@ -230,22 +230,22 @@
     color: var(--disalbe);
     background-color: var( --bg-color-2);
 }
-.travel .tab_list ul li i {
-    display: none;
-}
-.travel .tab_list ul li button {
+.travel button[role="tab"] {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 5.29rem;
     height: 49px;
 }
-.travel .tab_list ul li.active button {
-    color: var( --bg-color);
+.travel button[role="tab"][aria-selected = "true"] {
+    color: var(--bg-color);
     background-color: var(--secondary-color);
     border-radius: 100px;
 }
-
+.travel [role="tablist"] li button i {
+    font-size: 0;
+    line-height: 0;
+}
 /* event 팝업 */
 .travel .tab_content .event_popup {
     position: relative;
@@ -688,14 +688,6 @@
 .news {
     padding: 5.64em 0;
 }
-/* .news .wrapper .section {
-    display: flex;
-    overflow:hidden;
-    gap: 5.64em;
-    max-height:100vh;
-} */
-
-
 .news h2 {
     position: relative;
     display: inline-block;
@@ -835,13 +827,4 @@
     .news .cont_wrap {
         padding-left: 0;
     }
-}
-@media screen and (max-width:768px){
-
-    /* .news .wrapper .section {
-        overflow: visible;
-        flex-direction: column;
-        gap: 2.64em;
-        max-height: 100%;
-    } */
 }
