@@ -177,7 +177,7 @@
         flex-direction: column;
     }
     .visual .swiper_wrap {
-        width: 100%;
+        width: auto;
     }
     .visual .user {
         width: 100%;
@@ -285,11 +285,12 @@
 .travel .event_popup .go:hover a {
     background-color: var(--hover-color);
 }
-@media screen and (max-width:423px){
+@media screen and (max-width:424px){
     .travel .tab_content .event_popup{
         display: flex;
         flex-direction: column;
         height: auto;
+        padding: 2.1em 1.25em;
     }
     .travel .event_popup .go a {
         display: flex;
@@ -306,7 +307,6 @@
 /* 탭 컨텐츠 */
 .travel .tab_content .tab_conts ul {
     display: flex;
-    padding-bottom: 1.2em;
     gap: 1.41em;
 }
 .travel .tab_content .tab_conts ul > li { /* flex 요소 안들어올때 이거사용 */
@@ -838,7 +838,7 @@
         flex-direction: column;
         z-index: 0 !important;
         top:0 !important;
-        width: 100% !important;
+        width: auto !important;
         height: auto !important;
         margin-bottom: 3.82em;
     }
@@ -849,30 +849,55 @@
 @media screen and (max-width:540px){
     .visual .swiper ul li a {
         align-items: center;
+        height: 260px;
+    }
+    .visual .swiper ul li a.popup_title_1 .logo {
+        padding-bottom: 1.2em;
     }
     .visual .swiper ul li a .visual_title_L {
         text-align: center;
-        max-width: 80%;
+        max-width: 90%;
     }
     .visual .swiper ul li a strong {
         margin-bottom: 0.4em;
     }
 }
+/* 섹션사이영역 */
 @media screen and (max-width:1024px){
     .travel {
-        padding: 5.64em 0 0 0;
+        padding: 4.64em 0 0 0;
     }
     .visual {
-        padding: 5.58em 0 0 0;
+        padding: 4.64em 0 0 0;
     }
     .help {
-        padding: 5.58em 0 0 0;
+        padding: 4.64em 0 0 0;
     }
     .event_ticket {
-        padding: 5.64em 0 0 0;
+        padding: 4.64em 0 0 0;
     }   
 }
+
 @media screen and (max-width:434px){
+    .help .sale_coupon, .cs {
+        padding: 1.5em 1.25em;
+    }
+    .news .news_group .tit {
+        padding: 2.5em 1.25em;
+    }
+    .visual .swiper ul li a {
+        height: 230px;
+    }
+    .visual .user {
+        padding: 2.5em 1.25em;
+    }
+    .help strong {
+        font-size: var(--title-L);
+    }
+    .travel button[role="tab"] {
+        font-size: var(--body-s);
+        height: 44px;
+    }
     .visual .swiper ul li a.popup_title_1 {
         justify-content:flex-start
     }
@@ -885,15 +910,19 @@
     }
     .travel h2 {
         font-size: var( --title-XL);
+        margin-bottom: 1.2em;
     }
     .event_ticket h2 {
         font-size: var( --title-XL);
+        margin-bottom: 1.2em;
     }
     .help h2 {
         font-size: var( --title-XL);
+        margin-bottom: 1.2em;
     }
     .news h2 {
         font-size: var(--title-XL);
+        margin-bottom: 1.2em;
     }
     .event_ticket .swiper > ul > li .tiket_info h3 {
         font-size: var( --title-L);
@@ -902,5 +931,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    .visual .user h3 {
+     font-size: var(--title-L);
     }
 }
