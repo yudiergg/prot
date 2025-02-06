@@ -181,6 +181,7 @@
     }
     .visual .user {
         width: 100%;
+        padding: 1.82em;
     }
     .visual .user .user_group .form_group {
         justify-content: space-between;
@@ -290,18 +291,22 @@
         flex-direction: column;
         height: auto;
     }
-    .travel .event_popup button {
+    .travel .event_popup .go a {
+        display: flex;
         position: relative;
+        justify-content: center;
         right: 0;
         bottom: 0;
     }
     .travel .event_popup span {
         margin-bottom: 2.2em;
     }
+}@media screen and (max-width:398px){
 }
 /* 탭 컨텐츠 */
 .travel .tab_content .tab_conts ul {
     display: flex;
+    padding-bottom: 1.2em;
     gap: 1.41em;
 }
 .travel .tab_content .tab_conts ul > li { /* flex 요소 안들어올때 이거사용 */
