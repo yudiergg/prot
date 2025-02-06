@@ -19,7 +19,7 @@
     <div class="skipnav">
         <a class="cnt" href="#skip_content">본문바로가기</a>
     </div>
-    <div class="wrap">
+    <div id="wrap">
         <header>
             <h1 class="logo"><a href="index.html">에어로케이</a></h1>
             <nav class="gnb" id="skip_nav">
@@ -91,7 +91,7 @@
             <section class="visual" id="skip_content">
                 <div class="wrapper">
                     <h2>이벤트팝업창과 로그인정보</h2>
-                    <div class="siwper_wrap">
+                    <div class="swiper_wrap">
                         <div class="swiper"> 
                             <ul class="swiper-wrapper"> 
                                 <li class="swiper-slide">
@@ -114,8 +114,8 @@
                                     </a>                        
                                 </li> 
                             </ul>
-                            <div class="swiper-pagination"></div>
                         </div>
+                        <div class="swiper-pagination"></div>
                     </div>
                     <div class="user">
                         <h3>에어로케이와 함께하는 첫 걸음<br>출발지를 선택하세요</h3>
@@ -186,7 +186,7 @@
                                 <strong>일본 특가 프로모션</strong>
                                 <div class="event_title_s">국제선 일본 운항</div>
                                 <span>기간 9.24(화)-9.30(월) 17:00</span>
-                                <button type="button" class="btn">바로가기</button>
+                                <div class="go"><a href="#n">바로가기</a></div>
                             </div>
                             <ul>
                                 <li>
@@ -386,118 +386,119 @@
             <section class="event_ticket">
                 <div class="wrapper">
                     <h2>오직 에케에서만<br>특별한 혜택</h2>
-                    <div class="swiper_wrap">
-                        <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
-                            <ul class="swiper-wrapper">
-                                <li class="swiper-slide">
-                                    <div class="photo"><img src="../Aerok/images/popup/event_tiket_list_01.jpg" alt="일본건담">건담사진</div>
-                                    <div class="tiket_info">
-                                    <h3>도쿄 오다이바 건담 특선</h3>
-                                        <ul>
-                                            <li>
-                                                <strong>남은 일수</strong>
-                                                <em>D-31</em>
-                                            </li>
-                                            <li>
-                                                <strong>날짜</strong>
-                                                <div class="inner">
-                                                    <span>2025-03-01</span>
-                                                    <span>-</span>
-                                                    <span>2025-04-02</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <strong>장소</strong>   
-                                                <span>오다이바</span>
-                                            </li>
-                                        </ul>
-                                        <button type="button" class="btn">예약하기</button>
-                                        <div class="barcod">바코드</div>
-                                    </div>
-                                </li>
-                                <li class="swiper-slide">
-                                    <div class="photo"><img src="../Aerok/images/popup/event_tiket_list_02.jpg" alt="나고야">나고야사진</div>
-                                    <div class="tiket_info">
-                                        <h3>에케 청주 나고야</h3>
-                                        <ul>
-                                            <li>
-                                                <strong>남은 일수</strong>
-                                                <em>D-2</em>
-                                            </li>
-                                            <li>
-                                                <strong>날짜</strong>
-                                                <div class="inner">
-                                                    <span>2025-02-12</span>
-                                                    <span>-</span>
-                                                    <span>2025-02-14</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <strong>장소</strong>   
-                                                <span>나고야</span>
-                                            </li>
-                                        </ul>
-                                        <button type="button" class="btn">예약하기</button>
-                                        <div class="barcod">바코드</div>
-                                    </div>             
-                                </li>
-                                <li class="swiper-slide">
-                                    <div class="photo"><img src="../Aerok/images/popup/event_tiket_list_03.jpg" alt="삿포로눈축제">삿포로눈축제</div>
-                                    <div class="tiket_info">
-                                        <h3>청주 삿포로 눈꽃 축제</h3>
-                                        <ul>
-                                            <li>
-                                                <strong>남은 일수</strong>
-                                                <em>D-60</em>
-                                            </li>
-                                            <li>
-                                                <strong>날짜</strong>
-                                                <div class="inner">
-                                                    <span>2025-03-01</span>
-                                                    <span>-</span>
-                                                    <span>2025-04-02</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <strong>장소</strong>   
-                                                <span>삿포로</span>
-                                            </li>
-                                        </ul>
-                                        <button type="button" class="btn">예약하기</button>
-                                        <div class="barcod">바코드</div>
-                                    </div>
-                                </li>
-                                <li class="swiper-slide">
-                                    <div class="photo"><img src="../Aerok/images/popup/event_tiket_list_04.jpg" alt="몽골국립공원">몽골국립공원</div>
-                                    <div class="tiket_info">
-                                        <h3>몽골 오로라 테를지 국립공원</h3>
-                                        <ul>
-                                            <li>
-                                                <strong>남은 일수</strong>
-                                                <em>D-31</em>
-                                            </li>
-                                            <li>
-                                                <strong>날짜</strong>
-                                                <div class="inner">
-                                                    <span>2025-03-01</span>
-                                                    <span>-</span>
-                                                    <span>2025-04-02</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <strong>장소</strong>   
-                                                <span>몽골</span>
-                                            </li>
-                                        </ul>
-                                        <button type="button" class="btn">예약하기</button>
-                                        <div class="barcod">바코드</div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
                 </div>
+                <div class="swiper_wrap">
+                    <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <div class="photo"><img src="../Aerok/images/popup/event_tiket_list_01.jpg" alt="일본건담">건담사진</div>
+                                <div class="tiket_info">
+                                <h3>도쿄 오다이바 건담 특선</h3>
+                                    <ul>
+                                        <li>
+                                            <strong>남은 일수</strong>
+                                            <em>D-31</em>
+                                        </li>
+                                        <li>
+                                            <strong>날짜</strong>
+                                            <div class="inner">
+                                                <span>2025-03-01</span>
+                                                <span>-</span>
+                                                <span>2025-04-02</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <strong>장소</strong>   
+                                            <span>오다이바</span>
+                                        </li>
+                                    </ul>
+                                    <div class="reserv btn"><a href="#n">예약하기</a></div>
+                                    <div class="barcod">바코드</div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="photo"><img src="../Aerok/images/popup/event_tiket_list_02.jpg" alt="나고야">나고야사진</div>
+                                <div class="tiket_info">
+                                    <h3>에케 청주 나고야</h3>
+                                    <ul>
+                                        <li>
+                                            <strong>남은 일수</strong>
+                                            <em>D-2</em>
+                                        </li>
+                                        <li>
+                                            <strong>날짜</strong>
+                                            <div class="inner">
+                                                <span>2025-02-12</span>
+                                                <span>-</span>
+                                                <span>2025-02-14</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <strong>장소</strong>   
+                                            <span>나고야</span>
+                                        </li>
+                                    </ul>
+                                    <div class="reserv btn"><a href="#n">예약하기</a></div>
+                                    <div class="barcod">바코드</div>
+                                </div>             
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="photo"><img src="../Aerok/images/popup/event_tiket_list_03.jpg" alt="삿포로눈축제">삿포로눈축제</div>
+                                <div class="tiket_info">
+                                    <h3>청주 삿포로 눈꽃 축제</h3>
+                                    <ul>
+                                        <li>
+                                            <strong>남은 일수</strong>
+                                            <em>D-60</em>
+                                        </li>
+                                        <li>
+                                            <strong>날짜</strong>
+                                            <div class="inner">
+                                                <span>2025-03-01</span>
+                                                <span>-</span>
+                                                <span>2025-04-02</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <strong>장소</strong>   
+                                            <span>삿포로</span>
+                                        </li>
+                                    </ul>
+                                    <div class="reserv btn"><a href="#n">예약하기</a></div>
+                                    <div class="barcod">바코드</div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="photo"><img src="../Aerok/images/popup/event_tiket_list_04.jpg" alt="몽골국립공원">몽골국립공원</div>
+                                <div class="tiket_info">
+                                    <h3>몽골 오로라 테를지 국립공원</h3>
+                                    <ul>
+                                        <li>
+                                            <strong>남은 일수</strong>
+                                            <em>D-31</em>
+                                        </li>
+                                        <li>
+                                            <strong>날짜</strong>
+                                            <div class="inner">
+                                                <span>2025-03-01</span>
+                                                <span>-</span>
+                                                <span>2025-04-02</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <strong>장소</strong>   
+                                            <span>몽골</span>
+                                        </li>
+                                    </ul>
+                                    <div class="reserv btn"><a href="#n">예약하기</a></div>
+                                    <div class="barcod">바코드</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
             </section>
             <section class="help">
                 <div class="wrapper">
@@ -522,7 +523,7 @@
                     <div class="news_group">
                         <div class="tit">
                             <h3>에어로 케이<br>어디까지 만나봤니?</h3>
-                            <button type="button">브랜드 만나보기</button>
+                            <div class="brand btn"><a href="#n">브랜드 만나보기</a></div>
                         </div>
                         <div class="cont_wrap">
                             <div class="cont">

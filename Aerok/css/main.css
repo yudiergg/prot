@@ -13,8 +13,13 @@
     display: flex;
     gap: 2.82em;
 }
-.visual .siwper_wrap {
+.visual .swiper_wrap {
     width: 57.30%;
+}
+.visual .swiper_wrap .swiper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
 }
 .visual .swiper ul li a {
     display: flex;
@@ -52,14 +57,15 @@
 .visual .swiper ul li a.popup_title_3 {
     background: url(../images/popup/visual_banner03.jpg) no-repeat center center / cover;
 }
-.visual .swiper .swiper-pagination {
+.visual .swiper-pagination {
+    position: static;
     display: flex;
     justify-content: center;
     gap: 0.70em;
-    top: 20.47rem;
+    margin-top: 1.2em;
     max-height: fit-content;
 }
-.visual .swiper .swiper-pagination-bullet {
+.visual .swiper-pagination-bullet {
     width: 0.58rem;
     height: 0.58rem;
     background-color: var(--disalbe);
@@ -170,7 +176,7 @@
     .visual .wrapper{
         flex-direction: column;
     }
-    .visual .siwper_wrap {
+    .visual .swiper_wrap {
         width: 100%;
     }
     .visual .user {
@@ -181,10 +187,6 @@
     }
     .visual .user .user_group .form_group .inner {
         flex: 1;
-    }
-    .visual .swiper-pagination {
-        position: static;
-        margin-top: 1.41em;
     }
 }
 @media screen and (max-width:434px){
@@ -269,7 +271,7 @@
     font-size: var(--body-s);
     font-weight: 400;
 }
-.travel .event_popup button {
+.travel .event_popup .go a {
     position: absolute;
     bottom: 2.35rem;
     right: 2.82rem;
@@ -278,6 +280,9 @@
     color: var(--secondary-color);
     background-color: var(--primary-color);
     border-radius: 0.26rem;
+}
+.travel .event_popup .go:hover a {
+    background-color: var(--hover-color);
 }
 @media screen and (max-width:423px){
     .travel .tab_content .event_popup{
@@ -298,6 +303,10 @@
 .travel .tab_content .tab_conts ul {
     display: flex;
     gap: 1.41em;
+}
+.travel .tab_content .tab_conts ul > li { /* flex 요소 안들어올때 이거사용 */
+    flex-shrink: 1;
+    min-width: 250px;
 }
 .travel .tab_content .tab_conts ul li a {
     display: flex;
@@ -365,22 +374,43 @@
     white-space: nowrap;
 }
 
+@media screen and (max-width:983px){
+    .travel .tab_content .tab_conts ul {
+        display: flex;
+        gap: 1.41em;
+        overflow-x: auto; 
+        white-space: nowrap; 
+}
+}
+@media screen and (max-width:966px){
+    .travel .tab_content .tab_conts ul {
+        overflow-x: scroll;
+    }
+}
+
 @media screen and (max-width:768px){
     .travel .tab_content .tab_conts ul li a .photo {
         height: 140px;
         border-radius: 0.48rem;
     }
 }
-@media screen and (max-width:670px){
+@media screen and (max-width:565px){
     .travel .tab_content .tab_conts ul {
         flex-direction: column;
+        overflow-x: hidden;
     }
 }
 
 .event_ticket {
-    position: relative;
     padding: 5.64em 0;
-    overflow: hidden;
+}
+.event_ticket .swiper_wrap {
+    position: relative;
+    left: calc(50% - 630px);
+    width: calc(50% + 630px);
+}
+.event_ticket .swiper {
+    width: 130%;
 }
 .event_ticket h2 {
     position: relative;
@@ -399,13 +429,9 @@
     height: 2.64rem;
     background: url(../images/icon/h3_icon_02.png) no-repeat center center / contain;
 }
-.event_ticket .swiper_wrap{
-    width: 242.88rem;
-}
 .event_ticket .swiper > ul > li {
     position: relative;
     display: flex;
-    width: 24.53%;
     gap: 2.82em;
     padding: 2.35em 2.35em;
     border-radius: 1.17rem;
@@ -414,8 +440,8 @@
 .event_ticket .swiper > ul > li .photo {
     font-size: 0;
     line-height: 0;
-    width: 26%;
-    height: 305px;
+    width: 27%;
+    height: auto;
     overflow: hidden;
     border-radius: 0.29rem;
     background-position: center center;
@@ -465,7 +491,7 @@
     font-weight: 700;
     color: var(--secondary-color);
 }
-.event_ticket .swiper > ul > li .tiket_info button {
+.event_ticket .swiper > ul > li .tiket_info .reserv a {
     position: absolute;
     bottom: 2.35rem;
     font-size: var(--body-L);
@@ -475,7 +501,7 @@
     background-color: var(--primary-color);
     border-radius: 0.29em;
 }
-.event_ticket .swiper > ul > li .tiket_info button:hover {
+.event_ticket .swiper > ul > li .tiket_info .reserv:hover a {
     background-color: var(--hover-color);
 }
 .event_ticket .swiper > ul > li .tiket_info .barcod {
@@ -491,27 +517,35 @@
     background-position: center center;
     background-size: contain;
 }
-.event_ticket .swiper-pagination {
-    position: absolute;
-    bottom: 3.23rem;
+.event_ticket .swiper_wrap .swiper-pagination {
+    position: static;
     display: flex;
-    max-height: fit-content;
-    align-items: center;
     justify-content: center;
     gap: 0.70em;
+    margin-top: 1.2em;
 }
-.event_ticket .swiper-pagination-bullet {
+.event_ticket  .swiper_wrap .swiper-pagination-bullet {
     width: 0.58rem;
     height: 0.58rem;
     background-color: var(--disalbe);
 }
-
-@media screen and (max-width:768px){
+@media screen and (max-width:1295px){
     .event_ticket .swiper_wrap{
+        left: 20px;
         width: auto;
     }
+}   
+@media screen and (max-width:899px){
+    .event_ticket .swiper {
+        width: 180%;
+    }
+}
+@media screen and (max-width:812px){
+    .event_ticket .swiper > ul > li .tiket_info h3 {
+        font-size: var(--title-XL);
+    }
     .event_ticket .swiper > ul > li {
-        width: 105%;
+        width: auto;
     }
     .event_ticket .swiper > ul > li .tiket_info {
         gap: 1.82em;
@@ -525,7 +559,7 @@
     }
     .event_ticket .swiper > ul > li .photo {
         width: 26%;
-        height: 242px;
+        height: auto;
     }
     .event_ticket .swiper > ul > li .tiket_info ul > li > em {
         font-size: var(--title-XL);
@@ -536,6 +570,9 @@
     }
     .event_ticket .swiper > ul > li .tiket_info button {
         bottom: 1.17rem;
+    }
+    .event_ticket .swiper > ul > li .tiket_info .reserv a {
+        bottom: 1.15rem;
     }
 }
 @media screen and (max-width:702px){
@@ -548,10 +585,11 @@
     .event_ticket .swiper > ul > li {
         flex-direction: column;
         gap: 1.82em;
-        width: 100%;
+        width: auto;
     }
     .event_ticket .swiper > ul > li .photo {
         width: 100%;
+        height: 200px;
     }
     .event_ticket .swiper > ul > li .tiket_info > ul > li .inner {
         font-size: var(--body-s);
@@ -676,6 +714,9 @@
     background: url(../images/icon/h3_icon_01.png) no-repeat center center / contain;
 
 }
+.news .news_group {
+    position: relative;
+}
 /*고정할 영역*/
 .news .news_group .tit {
     float: left;
@@ -689,7 +730,7 @@
 .news .news_group .sticky-anchor {
     height: auto !important;
 }
-.news .tit button {
+.news .tit .brand a {
     font-size: var(--body-m-default);
     font-weight: 700;
     padding: 0.52em 1.05em;
@@ -697,7 +738,7 @@
     background-color: var(--primary-color);
     border-radius: 0.29em;
 }
-.news .tit button:hover {
+.news .tit .brand a:hover {
     background-color: var(--hover-color);
 }
 .news .tit h3 {
@@ -803,4 +844,17 @@
         gap: 2.64em;
         max-height: 100%;
     } */
+}
+.sdui-sticky-content {
+    transition: all 0.3s ease-in-out;
+}
+
+.sdui-sticky-content.is-active {
+    transition: all 0.3s ease-in-out;
+}
+
+.sdui-sticky-content.is-hidden {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease-in-out;
 }
