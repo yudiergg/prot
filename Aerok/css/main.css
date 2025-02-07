@@ -236,7 +236,7 @@
     justify-content: center;
     align-items: center;
     width: 5.29rem;
-    height: 49px;
+    height: 40px;
 }
 .travel button[role="tab"][aria-selected = "true"] {
     color: var(--bg-color);
@@ -285,12 +285,12 @@
 .travel .event_popup .go:hover a {
     background-color: var(--hover-color);
 }
-@media screen and (max-width:424px){
+@media screen and (max-width:430px){
     .travel .tab_content .event_popup{
         display: flex;
         flex-direction: column;
         height: auto;
-        padding: 2.1em 1.25em;
+        padding: 1.5em 1.25em;
     }
     .travel .event_popup .go a {
         display: flex;
@@ -300,9 +300,11 @@
         bottom: 0;
     }
     .travel .event_popup span {
-        margin-bottom: 2.2em;
+        margin-bottom: 1.9em;
     }
-}@media screen and (max-width:398px){
+    .travel .event_popup .event_title_s {
+        font-size: var(--title-XL);
+    }
 }
 /* 탭 컨텐츠 */
 .travel .tab_content .tab_conts ul {
@@ -599,7 +601,7 @@
     }
     .event_ticket .swiper > ul > li {
         flex-direction: column;
-        gap: 1.82em;
+        gap: 1.5em;
         width: auto;
     }
     .event_ticket .swiper > ul > li .photo {
@@ -840,7 +842,7 @@
         top:0 !important;
         width: auto !important;
         height: auto !important;
-        margin-bottom: 3.82em;
+        margin-bottom: 1.5em;
     }
     .news .cont_wrap {
         padding-left: 0;
@@ -864,39 +866,91 @@
 }
 /* 섹션사이영역 */
 @media screen and (max-width:1024px){
-    .travel {
-        padding: 4.64em 0 0 0;
-    }
     .visual {
-        padding: 4.64em 0 0 0;
+       padding: 5.25em 0 1.5em 0;
     }
-    .help {
-        padding: 4.64em 0 0 0;
-    }
-    .event_ticket {
-        padding: 4.64em 0 0 0;
-    }   
 }
 
-@media screen and (max-width:434px){
+@media screen and (max-width:430px){
+    .travel {
+        padding: 1.5em 0;
+    }
+    .help {
+        padding: 1.5em 0;
+    }
+    .event_ticket {
+        padding: 1.5em 0;
+    }
+    .news {
+        padding: 1.5em 0 3.0em 0;
+    }
+
+    .travel [role="tablist"] {
+        max-width: fit-content;
+    }
+    .help p { 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .event_ticket .swiper > ul > li .tiket_info  {
+        gap: 1.5em;
+    }
+    .event_ticket .swiper > ul > li .tiket_info .barcod {
+        width: 4.35rem;
+        height: 20px;
+    }
+    .event_ticket .swiper > ul > li .tiket_info .reserv a {
+        font-size: var(--body-m-default);
+    }
+    .news .tit h3 {
+        font-size: var(--title-L);
+    }
+    .news .cont_wrap .cont ul {
+        gap: 1.5em;
+    }
+    .news .cont_wrap .cont ul li a h3 {
+        font-size: var(--title-m);
+    }
+    .travel .event_popup strong {
+        font-size: var(--body-s);
+    }
+    .help .inner {
+        flex-direction: row;
+    }
+    .travel .tab_content .tab_conts ul li a {
+        gap: 0.8em;
+    }
+    .travel .tab_content .tab_conts ul li a .inner .money {
+        font-size: var(--title-L);
+    }
+    .visual .user button {
+        margin-top: 1.92em;
+    }
     .help .sale_coupon, .cs {
         padding: 1.5em 1.25em;
+        display: flex;
+        flex-direction: column;
     }
     .news .news_group .tit {
-        padding: 2.5em 1.25em;
+        padding: 1.5em 1.25em;
     }
     .visual .swiper ul li a {
         height: 230px;
     }
     .visual .user {
-        padding: 2.5em 1.25em;
+        padding: 1.5em 1.25em;
     }
     .help strong {
-        font-size: var(--title-L);
+        font-size: var(--title-m);
     }
     .travel button[role="tab"] {
         font-size: var(--body-s);
-        height: 44px;
+        width: auto;
+        height: auto;
+        padding: 0.66em 1.33em;
     }
     .visual .swiper ul li a.popup_title_1 {
         justify-content:flex-start
@@ -905,24 +959,45 @@
         font-size: var(--body-s);
     }
     .visual .swiper ul li a .visual_title_L {
-        font-size: var(--title-XL);
+        font-size: var(--title-L);
         text-align: center;
     }
     .travel h2 {
-        font-size: var( --title-XL);
+        font-size: var( --title-L);
         margin-bottom: 1.2em;
+    }
+    .travel h2::after {
+        right: -3.61rem;
+        width: 2.94rem;
+        height: 2.94rem;
     }
     .event_ticket h2 {
-        font-size: var( --title-XL);
+        font-size: var( --title-L);
         margin-bottom: 1.2em;
+    }
+    .event_ticket h2::after {
+        bottom: 0.1em;
+        right: -2.5rem;
+        width: 1.84rem;
+        height: 1.84rem;
     }
     .help h2 {
-        font-size: var( --title-XL);
+        font-size: var( --title-L);
         margin-bottom: 1.2em;
     }
+    .help h2::after {
+        width: 2.44rem;
+        height: 2.44rem;
+        right: -3.2rem;
+    }
     .news h2 {
-        font-size: var(--title-XL);
+        font-size: var(--title-L);
         margin-bottom: 1.2em;
+    }
+    .news h2::after {
+        width: 1.94rem;
+        top: -0.9rem;
+        right: -1.41rem;
     }
     .event_ticket .swiper > ul > li .tiket_info h3 {
         font-size: var( --title-L);

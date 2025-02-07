@@ -288,3 +288,11 @@ footer .wrapper .copyright {
         gap: 0.5em;
     }
 }
+@media screen and (max-width:430px){
+    footer .wrapper .infor .inner {
+        font-size: var(--sub);
+    }
+    footer .wrapper .infor {
+        font-size: var(--sub);
+    }
+}
