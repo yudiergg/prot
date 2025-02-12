@@ -318,15 +318,39 @@ body::before {
     display: flex;
     gap: 1.41em;
 }
-.core_value .core_value_group .icon_img {
+.core_value .core_value_group .inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.41em;
+}
+.core_value .core_value_group .active {
+    padding-bottom: 40px;
+}
+.core_value .core_value_group .artwork {
     width: 17.47rem;
     height: 17.47rem;
     font-size: 0;
     line-height: 0;
-    
+    border-radius: 2.35rem;
 }
-.core_value .core_value_group .icon_img .a {
+.core_value .core_value_group .a {
+    background: url(../images/corevalue/core_value_01.svg);
+    box-shadow: 7px -7px 22px 0px rgba(0, 0, 0, 0.1) inset;
 }
+.core_value .core_value_group .b {
+    background: url(../images/corevalue/core_value_02.svg);
+    box-shadow: 4px 9px 28px 0px rgba(0, 0, 0, 0.08);
+}
+.core_value .core_value_group .c {
+    background: url(../images/corevalue/core_value_03.svg);
+    box-shadow: 7px -7px 22px 0px rgba(0, 0, 0, 0.1) inset;
+}
+.core_value .core_value_group .d {
+    background: url(../images/corevalue/core_value_04.svg);
+    box-shadow: 7px -7px 22px 0px rgba(0, 0, 0, 0.1) inset;
+}
+
+/* hover 되면 flex*/
 .core_value .core_value_group .title {
     display: flex;
     flex-direction: column;
@@ -339,6 +363,25 @@ body::before {
     line-height: 1.5;
     color: var(--title-color);
 }
+
+.history {
+    padding: 5.88em 0;
+    background: url(../images/stroy/stroy_bg.png) no-repeat center center / cover;
+    height: auto;
+    color: var(--bg-color);
+}
+.history .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.82em;
+}
+.history h2 {
+    font-family: "Riasans";
+    font-size: var(--h-s);
+    line-height: 1.5;
+}
+
 footer {
     padding: 400px;
 }
