@@ -1,0 +1,98 @@
+body, html {
+    font-family: "Pretendard",'NanumSquareNeo', '나눔스퀘어네오', '나눔고딕', NanumGothic, -apple-system, BlinkMacSystemFont, helvetica, "Apple SD Gothic Neo", sans-serif;
+    font-size: var(--body-m-default);
+    font-weight: 400;
+    color: var(--bdoy-color);
+    line-height: 1.5;
+    word-break: keep-all; 
+    word-wrap: break-word;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+#wrap {
+    width: 100%;
+    overflow: hidden; 
+    position: relative;
+}
+
+:root {
+    /* color */
+    --primary-color: #F00028;
+    --secondary-color: #FFAF00;
+    --title-color: #1D1D1D;
+    --bdoy-color: #555;
+    --disalbe:#8e8e8e;
+    --border:#c6c6c6;
+    --disable-Border-color:#E4E4E4;
+    --hover-color :#8A0017;
+    /* --pressed-color:#8A0017; */
+    --bg-color-3:#BD001F;
+    --bg-color:#fff;
+    --bg-color-2: #F8F8F8;
+    /* font*/
+    --visual-L: 3.88rem;
+    --visual-m: 2.94rem;
+    --visual-s: 2.35rem;
+    --h-L: 2.94rem;
+    --h-m: 2.35rem;
+    --h-s: 1.88rem;
+    --title-XXL: 1.88rem;
+    --title-XL: 1.47rem;
+    --title-L: 1.23rem;
+    --title-m: 1.11rem;
+    --title-s: 1rem;
+    --body-L: 1.11rem;
+    --body-m-default: 17px;
+    --body-s: 0.88rem;
+    --sub: 0.76rem;
+
+    /* header */
+    --header-h:80px
+
+}
+
+@media screen and (max-width:1300px){
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+}
+@media screen and (max-width:1024px){    
+    :root {
+        --header-h: 54px;
+    }
+}
+@media screen and (max-width:640px){
+    :root {
+        --body-m-default: 15px;
+        --visual-L: 2.66rem;
+        --visual-m: 2.13rem;
+        --visual-s: 1.66rem;
+        --h-L: 2.66rem;
+        --h-m: 2.13rem;
+        --h-s: 1.66rem;
+        --title-XXL: 1.66rem;
+        --title-XL: 1.66rem;
+        --title-L: 1.4rem;
+        --title-m: 1.26rem;
+        --title-s: 1.13rem;
+        --body-L: 1.11rem;
+        --body-m-default: 15px;
+        --sub: 0.86rem;
+    }
+}
+@media screen and (max-width:360px){
+
+}
+
+/* 드래그했을대 색상바뀌는거
+::selection {
+    background-color: #AE9E8F;
+    color: #FFF9F0;
+}
+::-moz-selection {
+    background-color: #AE9E8F;
+    color: #FFF9F0;
+} */
