@@ -385,6 +385,7 @@
     line-height: 1.5;
 }
 .history .year_group {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
