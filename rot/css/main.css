@@ -506,9 +506,6 @@
     gap: 2.82em;
 
 }
-.history .year_group {
-    position: relative;
-}
 .history .year_group .color_line {
     z-index: 2;
     position: absolute;
@@ -663,6 +660,9 @@
     .year_group svg path {
         display: none;
     }
+    .history .year_group {
+                padding: 0;
+    }
     .history .year_group .year{
         flex-direction: column;
     }
@@ -711,6 +711,9 @@
         bottom: 87%;
         left: calc(50% - 143px);
     }  
+}
+@media screen and (max-width:744px){
+
 }
 @media screen and (max-width:640px){
     .new_item {
