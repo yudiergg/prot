@@ -19,11 +19,16 @@
 .skipnav a:focus, .skipnav a:active{
     transform: translateY(0);
 }
+/* 헤더 사라지게 */
+.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
 
 header {
-    z-index: 100;
+    z-index: 100000;
     position: fixed;
-    padding: 0 1.2em;
     width: 100%;
     height: var(--header-h);
     color: var(--bg-color-3);
@@ -64,7 +69,7 @@ header .tnb .insta a {
 
 
 footer {
-    padding: 3.76em 4.70em;
+    padding: 3.76em 0 4.70em 0;
     background: var(--title-color);
     color: var(--bg-color);
 }
