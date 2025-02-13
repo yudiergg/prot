@@ -402,6 +402,7 @@
     font-family: "Riasans";
     font-size: var(--h-s);
     line-height: 1.5;
+    text-align: center;
 }
 .history .year_group .year .artwork {
     width: 40%;
@@ -731,8 +732,6 @@
     .recipy {
         padding: 3.3em 0;
     }
-
-
     .stroy .fun_bg, .stroy_bg {
         font-size: 8rem;
     }
@@ -758,6 +757,9 @@
     .core_value ul li .d {
         box-shadow: 4px 9px 28px 0px rgba(0, 0, 0, 0.08);
     }
+    .history .year_group .year .bulgo_head img {
+        top: 34%;
+    }
 }
 @media screen and (max-width:460px){
     .visual .flash {
@@ -773,6 +775,18 @@
     .visual .wrapper {
         height: auto;
         gap: 24px;
+    }
+    .history .year_group .year .artwork {
+        height: 17.52rem;
+    }
+    .history .year_group .year .rice::after {
+        height: 17.52rem;
+    }
+    .history .year_group .year .mozz::after {
+        height: 17.52rem;
+    }
+    .history .year_group .year .milly::after {
+        height: 17.52rem;
     }
 }
 @media screen and (max-width:360px){
