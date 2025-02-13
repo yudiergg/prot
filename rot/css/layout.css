@@ -88,3 +88,8 @@ footer .copyright {
     font-size: var(--sub);
     opacity: 0.6;
 }
+@media screen and (max-width:640px){
+    footer {
+        padding: 2.13em 0 2.66em 0;
+    }
+}
