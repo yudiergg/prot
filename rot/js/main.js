@@ -2,7 +2,7 @@ $(document).ready(function(){
     const newitem_swiper = new Swiper('.new_item .swiper', { /* 팝업을 감싼는 요소의 class명 */
 
 	autoplay: {  /* 팝업 자동 실행 */
-		delay: 1000000000,
+		delay: 2500,
 		disableOnInteraction: true,
 	},
 
