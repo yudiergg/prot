@@ -49,9 +49,6 @@
     left: calc(50% - 126px);
     object-fit: contain;
     animation: fadein 5s;
-    -moz-animation: fadein 5s; /* Firefox */
-    -webkit-animation: fadein 5s; /* Safari and Chrome */
-    -o-animation: fadein 5s; /* Opera */
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
