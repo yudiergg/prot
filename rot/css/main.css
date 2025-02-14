@@ -37,7 +37,7 @@
 .visual .wrapper .chizz {
     width: 100%;
     height: auto;
-    top: 8.23rem;
+    top: 25%;
     left: calc(50% - 85px);
     object-fit: cover;
     
@@ -45,8 +45,8 @@
 .visual .flash {
     width: 40%;
     height: auto;
-    bottom: 102%;
-    left: calc(50% - 109px);
+    bottom: 104%;
+    left: calc(50% - 126px);
     object-fit: contain;
     animation: fadein 5s;
     -moz-animation: fadein 5s; /* Firefox */
@@ -62,9 +62,6 @@
     to {
         opacity: 1;
     }
-}
-.visual .chizz {
-    
 }
 .visual h2 {
     position: relative;
@@ -132,7 +129,7 @@
 
 .new_item .prev, .next {
     z-index: 4;
-    width: 3.76rem;
+    width: 10%;
     height: 3.76rem;
     font-size: 0;
     line-height: 0;
@@ -249,17 +246,17 @@
 .stroy .fun_bg, .stroy_bg{
     position: absolute;
     font-family: "Riasans";
-    font-size: 12rem;
+    font-size: 14vw;
     line-height: 1.5;
     color: rgba(255, 255, 255, 0.1);
 }
 .stroy .fun_bg {
     top: 0;
-    left: -0.56rem;
+    left: -3%;
 }
 .stroy .stroy_bg {
-    top: 0.23em;
-    right: -0.62em;
+    top: 2%;
+    right: -14%;
 }
 .stroy p {
     max-width: 31.41em;
@@ -352,11 +349,33 @@
     align-items: center;
     gap: 0.58em;
     margin-bottom: 40px;
+    opacity: 0;
+    animation: fade-in 0.2s;
+    animation-fill-mode: forwards;
 }
 /******************************/
 .core_value ul .Suitable:hover .title, .Various:hover .title, .Enjoyable:hover .title {
     display: flex;
 }
+
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+  
+    }
+    to {
+      opacity: 0;
+    }
+  }
 
 .core_value ul li .title h3 {
     font-family: "Riasans";
@@ -395,6 +414,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.history .year_group .year .title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.58em;
 }
 .history .year_group .left {    
     flex-direction: row-reverse;
@@ -575,8 +599,8 @@
 }
 .recipy .recipy_group .right {
     width: 130%;
-    height: auto;
-    background: linear-gradient(rgba(0, 0, 0, 0) 40%, rgba(240, 0, 40, 0.2)),url(../images/recipy/recipy_01.jpg) no-repeat center center / cover;
+    height: 32.94rem;
+    background: linear-gradient(rgba(0, 0, 0, 0) 40%, rgba(240, 0, 40, 0.5)),url(../images/recipy/recipy_01.jpg) no-repeat center center / cover;
     border-radius: 1.17rem;
 }
 /* 공동으로 타이틀안에 영역 값을 줌*/
@@ -586,6 +610,12 @@
     justify-content: flex-end;
     padding: 2.35em;
     gap: 1.41em;
+
+}
+.recipy .recipy_group .right_group, .top_group, .bottom_group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
 }
 .recipy .recipy_group .right_group h3 {
     font-family: "Riasans";
@@ -601,6 +631,9 @@
 .recipy .recipy_group .top_group p, .bottom_group p {
     max-width: 30.76rem;
     display: none;
+    opacity: 0;
+    animation: fade-in 0.4s;
+    animation-fill-mode: forwards;
 }
 .recipy .recipy_group .top:hover .top_group p {
     display: flex;
@@ -616,7 +649,7 @@
     font-weight: 700;
     border: 1px solid var(--bg-color);
     border-radius: 5.26em;
-    background-color: rgba(29, 29, 29, 0.2);
+    background-color: rgba(29, 29, 29, 0.4);
 }
 .recipy .recipy_group .more a:hover {
     color: var(--bg-color);
@@ -631,12 +664,12 @@
 }
 .recipy .recipy_group .left_group .top {
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0) 40%, rgba(240, 0, 40, 0.2)),url(../images/recipy/recipy_02.jpg) no-repeat center center / cover;
+    background: linear-gradient(rgba(0, 0, 0, 0) 40%, rgba(240, 0, 40, 0.5)),url(../images/recipy/recipy_02.jpg) no-repeat center center / cover;
     border-radius: 1.17rem;
 }
 .recipy .recipy_group .left_group .bottom {
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0) 40%, rgba(240, 0, 40, 0.2)),url(../images/recipy/recipy_03.jpg) no-repeat center center / cover;
+    background: linear-gradient(rgba(0, 0, 0, 0) 40%, rgba(240, 0, 40, 0.5)),url(../images/recipy/recipy_03.jpg) no-repeat center center / cover;
     border-radius: 1.17rem;
 }
 
@@ -653,6 +686,9 @@
     }
 }
 @media screen and (max-width:1143px){
+    .history .year_group {
+        gap: 1em;
+    }
     .history .year_group .color_line {
         display: none;
     }
@@ -671,18 +707,12 @@
     .history .year_group .year .title p {
         text-align: center;
     }
-} 
-@media screen and (max-width:1043px){
-    .stroy .fun_bg, .stroy_bg {
-        font-size: 10rem;
-    }
 }
 @media screen and (max-width:1078px){
-    .visual h2 {
-        padding-top: 2.94rem;
-    }
     .visual .wrapper {
         flex-direction: column;
+        height: auto;
+        gap: 4.2em;
     }
     .visual h2::after {
         display: none;
@@ -699,9 +729,9 @@
     }
     .visual .wrapper .chizz {
         width: 80%;
-        top: 3.43rem;
+        top: 18%;
         object-fit: contain;
-        left: calc(50% - 123px);
+        left: calc(50% - 100px);
     }
     .visual .photato {
         width: 18%;
@@ -714,10 +744,39 @@
         left: calc(50% - 143px);
     }  
 }
-@media screen and (max-width:744px){
-
+@media screen and (max-width:721px){
+    .stroy .stroy_bg {
+        top: 4%;
+        right: -26%;
+    }
+    .stroy .fun_bg {
+        top: 10%;
+        left: -18%;
+    }
 }
 @media screen and (max-width:640px){
+    .recipy .recipy_group .right_group p {
+        display: none;
+    }
+    .core_value ul li .artwork {
+        height: 12.47rem;
+    }
+    .visual {
+        height: auto;
+        padding: 7.93em  0 3.33em 0;
+    }
+    .visual h2 {
+        font-size: var(--visual-m);
+    }
+    .new_item .swiper ul li .new_item_title h3 {
+        font-size: var(--title-L);
+    }
+    .recipy .recipy_group .right_group h3 {
+        font-size: var(--title-L);
+    }
+    .history .year_group .year .title h3 {
+        font-size: var(--title-L);
+    }
     .new_item {
         padding: 3.3em 0;
     }
@@ -734,7 +793,7 @@
         padding: 3.3em 0;
     }
     .stroy .fun_bg, .stroy_bg {
-        font-size: 8rem;
+        font-size: 5rem;
     }
     .core_value ul {
         flex-direction: column;
@@ -761,6 +820,9 @@
     .history .year_group .year .bulgo_head img {
         top: 34%;
     }
+    .recipy .recipy_group .right, .top, .bottom {
+        padding: 1.33em;
+    }
 }
 @media screen and (max-width:460px){
     .visual .flash {
@@ -769,9 +831,6 @@
     .visual .photato {
         bottom: 84%;
         left: calc(50% - 80px);
-    }
-    .recipy .recipy_group .right_group p {
-        display: none;
     }
     .visual .wrapper {
         height: auto;
@@ -791,6 +850,38 @@
     }
 }
 @media screen and (max-width:360px){
+    .core_value ul li .artwork {
+        height: 8.47rem;
+    }
+    .visual .wrapper .chizz {
+        top: 17%;
+        left: calc(50% - 88px);
+    }
+    .visual {
+        height: auto;
+        padding: 6.93em 0 3.33em 0;
+    }
+    .visual h2 {
+        font-size: var(--visual-s);
+    }
+    .stroy .fun_bg, .stroy_bg {
+        display: none;
+    }
+    .new_item {
+        padding: 1.6em 0;
+    }
+    .stroy {
+        padding: 1.6em 0;
+    }
+    .core_value {
+        padding: 1.6em 0;
+    }
+    .history {
+        padding: 1.6em 0;
+    }
+    .recipy {
+        padding: 1.6em 0;
+    }
     .stroy::before {
         display: none;
     }
@@ -821,5 +912,11 @@
     .recipy .recipy_group .more a {
         display: flex;
         justify-content: center;
+    }
+    .recipy .recipy_group .top:hover .top_group p {
+        display: none;
+    }
+    .recipy .recipy_group .bottom:hover .bottom_group p {
+        display: none;
     }
 }

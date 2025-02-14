@@ -92,4 +92,10 @@ footer .copyright {
     footer {
         padding: 2.13em 0 2.66em 0;
     }
+    footer .wrapper {
+        gap: 1.6em;
+    }
+    footer .infor h2 {
+        font-size: var(--title-m);
+    }
 }

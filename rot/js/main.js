@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    const new_item_swiper = new Swiper('.new_item .swiper', { /* 팝업을 감싼는 요소의 class명 */
+    const newitem_swiper = new Swiper('.new_item .swiper', { /* 팝업을 감싼는 요소의 class명 */
 
 	autoplay: {  /* 팝업 자동 실행 */
 		delay: 1000000000,
@@ -30,6 +30,7 @@ $(document).ready(function(){
 		prevEl: '.prev',  
 	},
 }); 
+
 
 let line_obj = $('.history .year_group .color_line path') //반드시 path
 let drag_rate = 0.5 //그림을 그리기 시작하는 화면의 위치
