@@ -223,6 +223,7 @@ header .header_bottom .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   height: 100%;
 }
 header .header_bottom .wrapper .gnb {
