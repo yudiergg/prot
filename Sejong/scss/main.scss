@@ -11,10 +11,10 @@ header {
         position: relative;
         display: flex;
         justify-content: space-between;
-        align-items: center;
         color: #fff;
         height: 40px;
         width: 100%;
+        font-size: $sub;
         background-color: $primary-color-50;
         &::before {
             z-index: -10;
@@ -26,25 +26,83 @@ header {
             height: 100%;
             background-color: $primary-color-50;
         }
-        .today_info {
+        .wrapper {
             display: flex;
-            .today {
+            justify-content: space-between;
+            height: 100%;
+            .today_info {
                 display: flex;
+                gap: 1.4em;
+                .today {
+                    display: flex;
+                    gap: 0.5em;
+                    strong {
+                        @include flex-center;
+                    }
+                    a {
+                        @include flex-center;
+                        height: 100%;
+                        font-weight: 700;
+                    }
+                }
+                .info_list {
+                    display: flex;
+                    gap: 1.4em;
+                    li {
+                        @include flex-center;
+                        gap: 0.5em;
+                        width: 100%;
+                        height: 100%;
+                        a {
+                            @include flex-center;
+                            height: 100%;
+                        }
+                    }
+                }
             }
-            .info_list {
+            .user_menu {
                 display: flex;
+                gap: 1.4em;
+                height: 100%;
                 li {
-                    width: 100%;
                     height: 100%;
                     a {
-                        display: flex;
+                        @include flex-center;
                         height: 100%;
                     }
                 }
             }
         }
-        .user_menu {
+    }
+    .header_bottom {
+        height: $header-h;
+        .logo {
+            a {
+                display: flex;
+                height: 100%;
+                i {
+                    font-size: 0;
+                    line-height: 0;
+                }
+            }
+        }
+        .wrapper {
             display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 100%;
+            .gnb {
+                display: flex;
+                ul.depth1 {
+                    display: flex;
+                    li{
+                        a{
+                           display: flex;
+                           height: 100%; 
+                        }
+                    }
+                }
+            }
         }
     }
 }

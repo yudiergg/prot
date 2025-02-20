@@ -123,10 +123,10 @@ header .header_top {
   position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   color: #fff;
   height: 40px;
   width: 100%;
+  font-size: 0.76rem;
   background-color: #3E3276;
 }
 header .header_top::before {
@@ -139,25 +139,89 @@ header .header_top::before {
   height: 100%;
   background-color: #3E3276;
 }
-header .header_top .today_info {
+header .header_top .wrapper {
   display: flex;
+  justify-content: space-between;
+  height: 100%;
 }
-header .header_top .today_info .today {
+header .header_top .wrapper .today_info {
   display: flex;
+  gap: 1.4em;
 }
-header .header_top .today_info .info_list {
+header .header_top .wrapper .today_info .today {
   display: flex;
+  gap: 0.5em;
 }
-header .header_top .today_info .info_list li {
+header .header_top .wrapper .today_info .today strong {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .header_top .wrapper .today_info .today a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-weight: 700;
+}
+header .header_top .wrapper .today_info .info_list {
+  display: flex;
+  gap: 1.4em;
+}
+header .header_top .wrapper .today_info .info_list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
   width: 100%;
   height: 100%;
 }
-header .header_top .today_info .info_list li a {
+header .header_top .wrapper .today_info .info_list li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+header .header_top .wrapper .user_menu {
+  display: flex;
+  gap: 1.4em;
+  height: 100%;
+}
+header .header_top .wrapper .user_menu li {
+  height: 100%;
+}
+header .header_top .wrapper .user_menu li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+header .header_bottom {
+  height: 90px;
+}
+header .header_bottom .logo a {
   display: flex;
   height: 100%;
 }
-header .header_top .user_menu {
+header .header_bottom .logo a i {
+  font-size: 0;
+  line-height: 0;
+}
+header .header_bottom .wrapper {
   display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+header .header_bottom .wrapper .gnb {
+  display: flex;
+}
+header .header_bottom .wrapper .gnb ul.depth1 {
+  display: flex;
+}
+header .header_bottom .wrapper .gnb ul.depth1 li a {
+  display: flex;
+  height: 100%;
 }
 
 .number1 {

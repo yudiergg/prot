@@ -18,40 +18,40 @@
     </div>
     <div id="wrap">
         <header>
-                <div class="header_top">
-                    <div class="wrapper">
-                        <div class="today_info">
-                            <div class="today">
-                                <strong>02월17일</strong>
-                                <a href="#n"><i>맑음</i></a>
-                            </div>
-                            <ul class="info_list">
-                                <li><a href="#n">세종날씨</a></li>
-                                <li><a href="#n">미세먼지</a></li>
-                            </ul>
+            <div class="header_top">
+                <div class="wrapper">
+                    <div class="today_info">
+                        <div class="today">
+                            <strong>02월17일</strong>
+                            <a href="#n" name="맑음" role="link"><i>맑음</i></a>
                         </div>
-                        <ul class="user_menu">
-                            <li><a href="#n">로그인</a></li>
-                            <li><a href="#n">언어</a></li>
+                        <ul class="info_list">
+                            <li name="세종날씨" role="link"><a href="#n">세종날씨</a><i>맑음</i></li>
+                            <li name="미세먼지" role="link"><a href="#n">미세먼지</a><i>4℃</i></li>
                         </ul>
-                    </div> 
-                </div> 
-                <div class="header_bottom">
-                    <div class="wrapper">
-                        <h1 class="logo"><a href="#n"></a></h1>
-                        <nav class="gnb">
-                            <ul class="depth1">
-                                <li><a href="#n">민원 소통 참여</a></li>
-                                <li><a href="#n">여행정보</a></li>
-                                <li><a href="#n">세종소개</a></li>
-                                <li><a href="#n">정보소개</a></li>
-                                <li><a href="#n">분야별정보</a></li>
-                                <li><a href="#n">생활정보</a></li>
-                            </ul>
-                            <li class="sitemap"><a href="#n"><i>사이트맵</i></a></li>
-                        </nav>
                     </div>
+                    <ul class="user_menu">
+                        <li name="로그인" role="link"><a href="#n">로그인</a></li>
+                        <li name="언어" role="link"><a href="#n">언어</a></li>
+                    </ul>
+                </div> 
+            </div> 
+            <div class="header_bottom">
+                <div class="wrapper">
+                    <h1 class="logo"><a href="#n"><img src="../Sejong/images/visual/sejong_logo.svg" alt="세종시로고"><i>세종로고</i></a></h1>
+                    <nav class="gnb">
+                        <ul class="depth1">
+                            <li name="민원 소통 참여" role="link"><a href="#n">민원 소통 참여</a></li>
+                            <li name="여행정보" role="link"><a href="#n">여행정보</a></li>
+                            <li name="세종소개" role="link"><a href="#n">세종소개</a></li>
+                            <li name="정보소개" role="link"><a href="#n">정보소개</a></li>
+                            <li name="분야별정보" role="link"><a href="#n">분야별정보</a></li>
+                            <li name="생활정보" role="link"><a href="#n">생활정보</a></li>
+                        </ul>
+                        <li class="sitemap" name="사이트맵" role="link"><a href="#n"><i>사이트맵</i></a></li>
+                    </nav>
                 </div>
+            </div>
             </div>
         </header>
         <div class="container">
@@ -67,8 +67,8 @@
                                 <a href="#n"><img src="images/search/search_sejong.jpg" alt="세종캐릭터"></a>
                             </div>
                             <div class="search_inner">
-                                <input type="text" id="mainSearch" class="search_bar" placeholder="세종의 모든것을 검색해보세요">
-                                <button type="button" title="새창으로 이동" class="search_button"><i>검색</i></button>
+                                <input type="text" class="search_bar" name="검색어입력" role="textbox" placeholder="세종의 모든것을 검색해보세요">
+                                <button type="button" title="새창으로 이동" class="search_button" name="검색버튼" role="button"><i>검색</i></button>
                             </div>
                         </div>
                     </div>
