@@ -9,3 +9,25 @@
     background-position: center center;
     background-size: contain;
 }
+@mixin border-box_shadow {
+    color: #fff;
+    border: 1rem solid $disalbe;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10 0 rgba(142, 142, 142, 0.2);
+}
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin icon {
+    width: 1.41em;
+    height: 1.41em;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

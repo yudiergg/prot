@@ -1,0 +1,343 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Pretendard Bold"), url(../fonts/Pretendard-Bold.woff2) format("woff2"), url(../fonts/Pretendard-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Pretendard Regular"), url(../fonts/Pretendard-Regular.woff2) format("woff2"), url(../fonts/Pretendard-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: "Riasans";
+  src: local("Pretendard Regular"), url(../fonts/RiaSans-ExtraBold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+body, html {
+  font-family: "Pretendard", "NanumSquareNeo", "나눔스퀘어네오", "나눔고딕", NanumGothic, -apple-system, BlinkMacSystemFont, helvetica, "Apple SD Gothic Neo", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: #555;
+  line-height: 1.5;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+
+.wrapper {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+#wrap {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*body{
+    -ms-overflow-style: none;
+    }
+::-webkit-scrollbar {
+     display: none;
+    }*/
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+strong {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+ul, li, ol {
+  list-style: none; /* 리스트들 앞에 동그라미 있는거 삭제 */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+em, address, i {
+  font-style: normal; /* 기본 정자의 폰트로 변경*/
+}
+
+button {
+  border: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  color: inherit;
+}
+
+fieldset {
+  border: 0;
+}
+
+legend {
+  display: none;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+th {
+  font-weight: inherit;
+  text-align: inherit;
+}
+
+input {
+  height: auto; /* 높이값 초기화 */
+  font-family: inherit; /* 폰트 상속 */
+  outline-style: none; /* 포커스시 발생하는 효과 제거를 원한다면 */
+}
+
+/*폰트 */
+/*******/
+/* 컬러 */
+/*******/
+.skipnav {
+  display: none;
+}
+
+header .header_top {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  height: 40px;
+  width: 100%;
+  background-color: #3E3276;
+}
+header .header_top::before {
+  z-index: -10;
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #3E3276;
+}
+header .header_top .today_info {
+  display: flex;
+}
+header .header_top .today_info .today {
+  display: flex;
+}
+header .header_top .today_info .info_list {
+  display: flex;
+}
+header .header_top .today_info .info_list li {
+  width: 100%;
+  height: 100%;
+}
+header .header_top .today_info .info_list li a {
+  display: flex;
+  height: 100%;
+}
+header .header_top .user_menu {
+  display: flex;
+}
+
+.number1 {
+  padding: 9.7em 0 2.35em 0;
+}
+.number1 .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4em;
+}
+.number1 .serach {
+  display: flex;
+  justify-content: center;
+}
+.number1 .serach label {
+  display: none;
+}
+.number1 .serach .serach_content {
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 1.4em;
+}
+.number1 .serach .serach_content .sejong a {
+  display: flex;
+  width: 100%;
+  height: 5.76em;
+}
+.number1 .serach .serach_content input {
+  width: 31.88em;
+  height: 2.7em;
+  padding-left: 0.58em;
+  border: 2px solid #3E3276;
+  border-radius: 0.35em;
+}
+.number1 .serach .serach_content button {
+  position: absolute;
+  right: 0;
+  width: 2.7em;
+  height: 2.7em;
+  background-image: url("data:image/svg+xml,%3Csvg width='43' height='42' viewBox='0 0 43 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.734375 0H38.7344C40.9435 0 42.7344 1.79086 42.7344 4V38C42.7344 40.2091 40.9435 42 38.7344 42H0.734375V0Z' fill='%233E3276'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.7328 19.8984C13.7328 16.0877 16.822 12.9984 20.6328 12.9984C24.4436 12.9984 27.5328 16.0877 27.5328 19.8984C27.5328 21.7115 26.8335 23.3613 25.6899 24.5927C25.6143 24.6303 25.5434 24.6806 25.4804 24.7436C25.4173 24.8067 25.367 24.8777 25.3294 24.9534C24.0977 26.0983 22.447 26.7984 20.6328 26.7984C16.822 26.7984 13.7328 23.7092 13.7328 19.8984ZM26.0524 26.4469C24.5812 27.6658 22.6926 28.3984 20.6328 28.3984C15.9384 28.3984 12.1328 24.5929 12.1328 19.8984C12.1328 15.204 15.9384 11.3984 20.6328 11.3984C25.3272 11.3984 29.1328 15.204 29.1328 19.8984C29.1328 21.9569 28.4011 23.8445 27.1835 25.3153L30.5006 28.6324C30.813 28.9448 30.813 29.4513 30.5006 29.7638C30.1882 30.0762 29.6816 30.0762 29.3692 29.7638L26.0524 26.4469Z' fill='white'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.number1 .serach .serach_content button i {
+  font-size: 0;
+  line-height: 0;
+}
+
+.visual {
+  display: flex;
+  gap: 1.4em;
+}
+.visual .visual_popup .swiper {
+  width: 830px;
+  height: 300px;
+}
+.visual .visual_popup .swiper ul li a {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.visual .visual_popup .swiper ul li a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.visual .visual_popup .swiper .swiper_nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 147px;
+  height: 44px;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 10;
+}
+.visual .visual_popup .swiper .swiper_nav .swiper-pagination {
+  position: static;
+  width: auto;
+  bottom: 20px;
+  right: 20px;
+  font-size: 0.88rem;
+}
+.visual .visual_popup .swiper .swiper_nav .swiper-pagination .swiper-pagination-current {
+  color: #3E3276;
+  font-weight: 700;
+}
+.visual .visual_popup .swiper .swiper_nav .swiper-pagination .swiper-pagination-total {
+  color: #8E8E8E;
+}
+.visual .visual_popup .swiper .swiper_nav .buntton_inner {
+  display: flex;
+}
+.visual .visual_popup .swiper .swiper_nav .buntton_inner .prev {
+  width: 1.41em;
+  height: 1.41em;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.4031 12.0031L15.3031 15.9031C15.4865 16.0865 15.5781 16.3198 15.5781 16.6031C15.5781 16.8865 15.4865 17.1198 15.3031 17.3031C15.1198 17.4865 14.8865 17.5781 14.6031 17.5781C14.3198 17.5781 14.0865 17.4865 13.9031 17.3031L9.30312 12.7031C9.20312 12.6031 9.13229 12.4948 9.09062 12.3781C9.04896 12.2615 9.02812 12.1365 9.02812 12.0031C9.02812 11.8698 9.04896 11.7448 9.09062 11.6281C9.13229 11.5115 9.20312 11.4031 9.30312 11.3031L13.9031 6.70313C14.0865 6.51979 14.3198 6.42812 14.6031 6.42812C14.8865 6.42812 15.1198 6.51979 15.3031 6.70313C15.4865 6.88646 15.5781 7.11979 15.5781 7.40312C15.5781 7.68646 15.4865 7.91979 15.3031 8.10312L11.4031 12.0031Z' fill='%235F6368'/%3E%3C/svg%3E%0A");
+}
+.visual .visual_popup .swiper .swiper_nav .buntton_inner .next {
+  width: 1.41em;
+  height: 1.41em;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.4031 12.0031L15.3031 15.9031C15.4865 16.0865 15.5781 16.3198 15.5781 16.6031C15.5781 16.8865 15.4865 17.1198 15.3031 17.3031C15.1198 17.4865 14.8865 17.5781 14.6031 17.5781C14.3198 17.5781 14.0865 17.4865 13.9031 17.3031L9.30312 12.7031C9.20312 12.6031 9.13229 12.4948 9.09062 12.3781C9.04896 12.2615 9.02812 12.1365 9.02812 12.0031C9.02812 11.8698 9.04896 11.7448 9.09062 11.6281C9.13229 11.5115 9.20312 11.4031 9.30312 11.3031L13.9031 6.70313C14.0865 6.51979 14.3198 6.42812 14.6031 6.42812C14.8865 6.42812 15.1198 6.51979 15.3031 6.70313C15.4865 6.88646 15.5781 7.11979 15.5781 7.40312C15.5781 7.68646 15.4865 7.91979 15.3031 8.10312L11.4031 12.0031Z' fill='%235F6368'/%3E%3C/svg%3E%0A");
+  transform: scaleX(-1);
+}
+.visual .visual_popup .swiper .swiper_nav .buntton_inner .stop {
+  width: 1.41em;
+  height: 1.41em;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 7V17' stroke='%23555555' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M16 7V17' stroke='%23555555' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+}
+.visual .visual_popup .swiper .swiper_nav .buntton_inner i {
+  font-size: 0;
+  line-height: 0;
+}
+.visual .mayor_area {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.visual .mayor_area .title_group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 3.52em;
+  left: 2.35em;
+  color: #1D1D1D;
+}
+.visual .mayor_area .title_group img {
+  width: auto;
+  height: 1.47rem;
+  margin-bottom: 1.4em;
+}
+.visual .mayor_area .title_group strong {
+  font-size: 1.17rem;
+}
+.visual .mayor_area .title_group p strong {
+  font-size: 1.88rem;
+  font-weight: 700;
+}
+.visual .mayor_area .photo {
+  width: 586px;
+  height: 17.64em;
+}
+.visual .mayor_area .photo img {
+  width: 100%;
+  height: 100%;
+}
+.visual .mayor_area ul {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  font-weight: 700;
+  color: #fff;
+}
+.visual .mayor_area ul li {
+  flex: 1;
+  background-color: #3E3276;
+}
+.visual .mayor_area ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.58em 0;
+  height: 100%;
+}
