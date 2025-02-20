@@ -9,11 +9,14 @@
     background-position: center center;
     background-size: contain;
 }
+@mixin header-drop_shadow {
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+}
 @mixin border-box_shadow {
     color: #fff;
     border: 1rem solid $disalbe;
     border-radius: 0.5rem;
-    box-shadow: 0 0 10 0 rgba(142, 142, 142, 0.2);
+    box-shadow: 0 0 10px 0 rgba(142, 142, 142, 0.2);
 }
 @mixin flex-col {
     display: flex;
@@ -25,8 +28,8 @@
     justify-content: center;
 }
 @mixin icon {
-    width: 1.41em;
-    height: 1.41em;
+    width: 1.41rem;
+    height: 1.41rem;
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;

@@ -7,11 +7,13 @@
     display: none;
 }
 header {
+    position: fixed;
+    width: 100%;
     .header_top {
         position: relative;
         display: flex;
         justify-content: space-between;
-        color: #fff;
+        color: $bg-color;
         height: 40px;
         width: 100%;
         font-size: $sub;
@@ -57,6 +59,9 @@ header {
                             @include flex-center;
                             height: 100%;
                         }
+                        span {
+                            font-weight: 700;
+                        }
                     }
                 }
             }
@@ -75,12 +80,15 @@ header {
         }
     }
     .header_bottom {
+        @include header-drop_shadow;
+        background: $bg-color;
         height: $header-h;
         .logo {
             a {
-                display: flex;
+                @include flex-center;
+                width: auto;
                 height: 100%;
-                i {
+                span {
                     font-size: 0;
                     line-height: 0;
                 }
@@ -89,17 +97,36 @@ header {
         .wrapper {
             display: flex;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-between;
             height: 100%;
             .gnb {
                 display: flex;
+                height: 100%;
                 ul.depth1 {
                     display: flex;
-                    li{
-                        a{
-                           display: flex;
-                           height: 100%; 
+                    gap: 2.52em;
+                    li {
+                        a {
+                           @include flex-center; 
+                           height: 100%;
+                           font-size: $body-L;
+                           font-weight: 700;
+                           color: $title-color;
                         }
+                    }
+                }
+            }
+            .sitemap {
+                a {
+                    @include flex-center;
+                    padding: 0 1.17em;
+                    height: 100%;
+                    span {
+                        @include icon;
+                        position: relative;
+                        font-size: 0;
+                        line-height: 0;
+                        background-image: url("data:image/svg+xml,%3Csvg width='28' height='18' viewBox='0 0 28 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 18C1.575 18 1.21875 17.8563 0.93125 17.5688C0.64375 17.2812 0.5 16.925 0.5 16.5C0.5 16.075 0.64375 15.7188 0.93125 15.4313C1.21875 15.1438 1.575 15 2 15H26C26.425 15 26.7812 15.1438 27.0687 15.4313C27.3562 15.7188 27.5 16.075 27.5 16.5C27.5 16.925 27.3562 17.2812 27.0687 17.5688C26.7812 17.8563 26.425 18 26 18H2ZM2 10.5C1.575 10.5 1.21875 10.3562 0.93125 10.0688C0.64375 9.78125 0.5 9.425 0.5 9C0.5 8.575 0.64375 8.21875 0.93125 7.93125C1.21875 7.64375 1.575 7.5 2 7.5H26C26.425 7.5 26.7812 7.64375 27.0687 7.93125C27.3562 8.21875 27.5 8.575 27.5 9C27.5 9.425 27.3562 9.78125 27.0687 10.0688C26.7812 10.3562 26.425 10.5 26 10.5H2ZM2 3C1.575 3 1.21875 2.85625 0.93125 2.56875C0.64375 2.28125 0.5 1.925 0.5 1.5C0.5 1.075 0.64375 0.71875 0.93125 0.43125C1.21875 0.14375 1.575 0 2 0H26C26.425 0 26.7812 0.14375 27.0687 0.43125C27.3562 0.71875 27.5 1.075 27.5 1.5C27.5 1.925 27.3562 2.28125 27.0687 2.56875C26.7812 2.85625 26.425 3 26 3H2Z' fill='%23555555'/%3E%3C/svg%3E%0A");
                     }
                 }
             }
@@ -128,6 +155,7 @@ header {
                     display: flex;
                     width: 100%;
                     height: 5.76em; 
+                    mix-blend-mode: darken;
                 }
             }
             input {
@@ -146,7 +174,7 @@ header {
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-size: contain; 
-                i {
+                span {
                     font-size: 0;
                     line-height: 0;
                 }
@@ -218,7 +246,7 @@ header {
                         @include icon;
                         background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 7V17' stroke='%23555555' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M16 7V17' stroke='%23555555' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
                     }
-                    i {
+                    span {
                         font-size: 0;
                         line-height: 0;
                     }
