@@ -496,13 +496,34 @@ header {
     }
 }
 .number3 {
-    background: url(../images/);
+    width: 100%;
+    height: 180px;
+    background-color: $primary-color-50;
+    overflow: hidden;
     .wrapper {
-        h2 {
-            .more {
-                a {
-
-                }
+        @include flex-col;
+        @include flex-center;
+        .left_human {
+            position: relative;
+            left: 0;
+            top: 39px;
+            width: auto;
+            height: auto;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        .right_human {
+            right: 0;
+            top: 39px;
+            width: auto;
+            height: auto;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
             }
         }
     }

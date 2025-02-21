@@ -703,8 +703,42 @@ header .header_bottom .wrapper .sitemap a span {
 }
 
 .number3 {
-  background: url(../images/);
+  width: 100%;
+  height: 180px;
+  background-color: #3E3276;
+  overflow: hidden;
 }
+.number3 .wrapper {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.number3 .wrapper .left_human {
+  position: relative;
+  left: 0;
+  top: 39px;
+  width: auto;
+  height: auto;
+}
+.number3 .wrapper .left_human img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.number3 .wrapper .right_human {
+  right: 0;
+  top: 39px;
+  width: auto;
+  height: auto;
+}
+.number3 .wrapper .right_human img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 footer {
   height: 1000px;
 }
