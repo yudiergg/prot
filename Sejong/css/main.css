@@ -703,7 +703,7 @@ header .header_bottom .wrapper .sitemap a span {
 }
 
 .number3 {
-  background-image: url(../images/);
+  background: url(../images/);
 }
 footer {
   height: 1000px;
