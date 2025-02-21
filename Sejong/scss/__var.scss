@@ -14,7 +14,7 @@
 }
 @mixin border-box_shadow {
     color: #fff;
-    border: 1rem solid $disalbe;
+    border: 1px solid $disalbe;
     border-radius: 0.5rem;
     box-shadow: 0 0 10px 0 rgba(142, 142, 142, 0.2);
 }
@@ -33,4 +33,31 @@
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
+}
+@mixin service_icon {
+    position: absolute;
+    content: "";
+    width: 2.8rem;
+    height: 2.8rem;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+@mixin bg {
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+@mixin circle {
+    position: relative;
+    content: "";
+    width: 0.23rem;
+    height: 0.23rem;
+    background-color: $text-disalbe;
+    border-radius: 50%;
+}
+@mixin h2 {
+    font-size: $title-XL;
+    color: $title-color;
+    font-weight: 700;
 }

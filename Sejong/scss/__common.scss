@@ -27,10 +27,18 @@ $body-color: #555;
 $disalbe:#E4E4E4;
 $text-disalbe:#8E8E8E;
 $border:#c6c6c6;
-$bg-color-3:#BD001F;
+$bg-color-3:#F0F0F0;
 $bg-color:#fff;
 $bg-color-2: #F8F8F8;
 /*******/
+
+
+@media screen and (max-width:1440px){
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+}
 
 
 @media screen and (max-width:1200px){
