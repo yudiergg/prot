@@ -1,0 +1,199 @@
+@import "./_font";
+@import "./_default";
+@import "./_common";
+@import "./_var";
+
+header {
+    position: relative;
+    width: 100%;
+    .header_top {
+        color: $bg-color;
+        height: 40px;
+        font-size: $sub;
+        background-color: $primary-color-50;
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            height: 100%;
+            padding: 0 1.6em;
+            .today_info {
+                display: flex;
+                gap: 1.4em;
+                .today {
+                    display: flex;
+                    gap: 0.5em;
+                    strong {
+                        @include flex-center;
+                    }
+                    a {
+                        @include flex-center;
+                        height: 100%;
+                        font-weight: 700;
+                    }
+                }
+                .info_list {
+                    display: flex;
+                    gap: 1.4em;
+                    li {
+                        @include flex-center;
+                        gap: 0.5em;
+                        width: 100%;
+                        height: 100%;
+                        a {
+                            @include flex-center;
+                            height: 100%;
+                        }
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+            .user_menu {
+                display: flex;
+                gap: 1.4em;
+                height: 100%;
+                li {
+                    height: 100%;
+                    a {
+                        @include flex-center;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .header_bottom {
+        position: relative;
+        height: $header-h;
+        @include header-drop_shadow;
+        background: $bg-color;
+        .logo {
+            a {
+                @include flex-center;
+                width: auto;
+                height: 100%;
+                span {
+                    font-size: 0;
+                    line-height: 0;
+                }
+            }
+        }
+        .wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            .gnb {
+                display: flex;
+                height: 100%;
+                ul.depth1 {
+                    display: flex;
+                    gap: 2.52em;
+                        a {
+                           @include flex-center; 
+                           height: 100%;
+                           font-size: $body-L;
+                           font-weight: 700;
+                           color: $title-color;
+                        }
+                        /* 하위 메뉴 */
+                        .lower_menu {
+                            display: none;
+                            z-index: 100;
+                            position: absolute;
+                            top: 90px;
+                            left: 0;
+                            width: auto;
+                            height: auto;
+                            overflow: hidden;
+                            background-color: $bg-color;
+                            .title {
+                                width: 494px;
+                                height: auto;
+                                .slogon {
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    width: auto;
+                                    height: 2.35em;
+                                    margin: 50px 40px;
+                                }
+                                .bg{
+                                    position: absolute;
+                                    bottom: -20px;
+                                    width: auto;
+                                    height: auto;
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: contain;
+                                    }
+                                }                             
+                            }
+                            ul.depth2 {
+                                width: auto;
+                                height: auto;
+                                @include flex-col;
+                               > li  {
+                                    display: flex;
+                                    width: 100%;
+                                  >  a  {
+                                        padding: 1.17em 2.35em;
+                                        color: $bg-color;
+                                        background-color: $primary-color-50;
+                                       > span {
+                                            @include flex-center;
+                                           font-size: $body-m-default;
+                                           min-width: 74px; 
+                                        }
+                                    }
+                                ul.depth3 {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    gap: 0.70em 2.82em;
+                                    padding: 1.17em 2.35em;
+                                  >  li {
+                                      >  a {
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 0.58em;
+                                        font-weight: 400;
+                                        color:$body-color;
+                                        &::before {
+                                            @include circle;
+                                        }
+                                        &:hover {
+                                            font-weight: 700;
+                                            color:$primary-color-50;
+                                            &::before {
+                                                background-color: $primary-color-50
+                                            }
+                                        }
+                                        }
+                                    }
+                                }    
+                                }   
+                            }
+                        }
+                }
+            }
+            .sitemap {
+                a {
+                    @include flex-center;
+                    padding: 0 1.17em;
+                    height: 100%;
+                    span {
+                        @include icon;
+                        position: relative;
+                        font-size: 0;
+                        line-height: 0;
+                        background-image: url("data:image/svg+xml,%3Csvg width='28' height='18' viewBox='0 0 28 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 18C1.575 18 1.21875 17.8563 0.93125 17.5688C0.64375 17.2812 0.5 16.925 0.5 16.5C0.5 16.075 0.64375 15.7188 0.93125 15.4313C1.21875 15.1438 1.575 15 2 15H26C26.425 15 26.7812 15.1438 27.0687 15.4313C27.3562 15.7188 27.5 16.075 27.5 16.5C27.5 16.925 27.3562 17.2812 27.0687 17.5688C26.7812 17.8563 26.425 18 26 18H2ZM2 10.5C1.575 10.5 1.21875 10.3562 0.93125 10.0688C0.64375 9.78125 0.5 9.425 0.5 9C0.5 8.575 0.64375 8.21875 0.93125 7.93125C1.21875 7.64375 1.575 7.5 2 7.5H26C26.425 7.5 26.7812 7.64375 27.0687 7.93125C27.3562 8.21875 27.5 8.575 27.5 9C27.5 9.425 27.3562 9.78125 27.0687 10.0688C26.7812 10.3562 26.425 10.5 26 10.5H2ZM2 3C1.575 3 1.21875 2.85625 0.93125 2.56875C0.64375 2.28125 0.5 1.925 0.5 1.5C0.5 1.075 0.64375 0.71875 0.93125 0.43125C1.21875 0.14375 1.575 0 2 0H26C26.425 0 26.7812 0.14375 27.0687 0.43125C27.3562 0.71875 27.5 1.075 27.5 1.5C27.5 1.925 27.3562 2.28125 27.0687 2.56875C26.7812 2.85625 26.425 3 26 3H2Z' fill='%23555555'/%3E%3C/svg%3E%0A");
+                    }
+                }
+            }
+        }
+    }
+}
+footer {
+    height: 1000px;
+}
