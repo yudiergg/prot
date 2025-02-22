@@ -1,4 +1,19 @@
 $(document).ready(function () {
+  
+  var timestamp = new Date().getTime();
+
+  // JavaScript 파일 강제 새로고침
+  $('head').append('<script src="./js/script.js?v=' + timestamp + '"></script>');
+
+  // CSS 파일 강제 새로고침
+  $('link[rel="stylesheet"]').each(function () {
+    var href = $(this).attr('href').split('?')[0]; // 기존 쿼리스트링 제거
+    $(this).attr('href', href + '?v=' + timestamp);
+  });
+
+  // jQuery Ajax 기본 캐시 방지 설정
+
+  $.ajaxSetup({ cache: false });
   function checkWindowSize() {
     $('.gnb .depth1 > li').off('mouseenter focusin').on('mouseenter focusin', function () {
       if ($(window).width() > 1024) {
