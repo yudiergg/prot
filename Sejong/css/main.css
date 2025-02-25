@@ -347,6 +347,7 @@ header .header_bottom .wrapper .gnb ul.depth1 {
   gap: 2.52em;
 }
 header .header_bottom .wrapper .gnb ul.depth1 li {
+  border-bottom: 1px solid #E4E4E4;
   /* 하위 메뉴 */
 }
 header .header_bottom .wrapper .gnb ul.depth1 li a {
@@ -481,14 +482,31 @@ header .header_bottom .wrapper .mobile_menu .mobile_wrap {
   display: flex;
   flex-direction: column;
 }
-header .header_bottom .wrapper .mobile_menu .mobile_wrap .mobile_list_header {
+header .header_bottom .wrapper .mobile_menu .mobile_wrap .mobile_header_top {
+  display: flex;
+  justify-content: flex-end;
+}
+header .header_bottom .wrapper .mobile_menu .mobile_wrap .mobile_header_top .close a {
+  display: flex;
+  width: 1.41rem;
+  height: 1.41rem;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 2.47rem;
+  height: 2.47rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='42' height='42' viewBox='0 0 42 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 5C0 2.23858 2.23858 0 5 0H42V42H5C2.23858 42 0 39.7614 0 37V5Z' fill='%233E3276'/%3E%3Cpath d='M21.001 22.8677L14.4677 29.401C14.2233 29.6455 13.9122 29.7677 13.5344 29.7677C13.1566 29.7677 12.8455 29.6455 12.601 29.401C12.3566 29.1566 12.2344 28.8455 12.2344 28.4677C12.2344 28.0899 12.3566 27.7788 12.601 27.5344L19.1344 21.001L12.601 14.4677C12.3566 14.2233 12.2344 13.9122 12.2344 13.5344C12.2344 13.1566 12.3566 12.8455 12.601 12.601C12.8455 12.3566 13.1566 12.2344 13.5344 12.2344C13.9122 12.2344 14.2233 12.3566 14.4677 12.601L21.001 19.1344L27.5344 12.601C27.7788 12.3566 28.0899 12.2344 28.4677 12.2344C28.8455 12.2344 29.1566 12.3566 29.401 12.601C29.6455 12.8455 29.7677 13.1566 29.7677 13.5344C29.7677 13.9122 29.6455 14.2233 29.401 14.4677L22.8677 21.001L29.401 27.5344C29.6455 27.7788 29.7677 28.0899 29.7677 28.4677C29.7677 28.8455 29.6455 29.1566 29.401 29.401C29.1566 29.6455 28.8455 29.7677 28.4677 29.7677C28.0899 29.7677 27.7788 29.6455 27.5344 29.401L21.001 22.8677Z' fill='white'/%3E%3C/svg%3E%0A");
+  font-size: 0;
+  line-height: 0;
+}
+header .header_bottom .wrapper .mobile_menu .mobile_wrap .mobile_header_bottom {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 24px;
   padding: 1.17em;
 }
-header .header_bottom .wrapper .mobile_menu .mobile_wrap .mobile_list_header .login, header .header_bottom .wrapper .mobile_menu .mobile_wrap .mobile_list_header .membership {
+header .header_bottom .wrapper .mobile_menu .mobile_wrap .mobile_header_bottom .login, header .header_bottom .wrapper .mobile_menu .mobile_wrap .mobile_header_bottom .membership {
   font-weight: 700;
   color: #3E3276;
   border: 1px solid #3E3276;
