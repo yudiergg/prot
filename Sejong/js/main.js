@@ -2,7 +2,7 @@ $(document).ready(function(){
     const visual_popup_swiper = new Swiper('.visual_popup .swiper', { /* 팝업을 감싼는 요소의 class명 */
 
 	autoplay: {  /* 팝업 자동 실행 */
-		delay: 100000,
+		delay: 2500,
 		disableOnInteraction: true,
 	},
 
@@ -32,14 +32,12 @@ $(document).ready(function(){
 
 });
 
-/*swiper.autoplay.stop();  
-swiper.autoplay.start();
-*/
+// swiper.autoplay.stop();  
+// swiper.autoplay.start();
+
 
 /* 팝업존 */
-
-
-const popzone_wrap_swiper = new Swiper('.popzone_wrap .swiper', { /* 팝업을 감싼는 요소의 class명 */
+const popzone_wrap_swiper = new Swiper('.number4 .popzone_wrap .swiper', { /* 팝업을 감싼는 요소의 class명 */
 	slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
 	spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
 	breakpoints: {
