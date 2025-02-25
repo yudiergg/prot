@@ -41,7 +41,7 @@ const popzone_wrap_swiper = new Swiper('.number4 .popzone_wrap .swiper', { /* �
 	slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
 	spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
 	breakpoints: {
-		640: {    /* 640px 이상일때 적용 */
+		800: {    /* 640px 이상일때 적용 */
 			slidesPerView: 4,    /*    'auto'   라고 쓰면 css에서 적용한 넓이값이 적용됨 */
 			spaceBetween: 24,
 		},
@@ -62,4 +62,29 @@ const popzone_wrap_swiper = new Swiper('.number4 .popzone_wrap .swiper', { /* �
 		type: 'fraction',  /* type fraction을 주면 paging이 숫자로 표시됨 */
 	},
 });
+
+    // 초기 설정: 모든 ul에서 on 제거한 후, 첫 번째 패널(aria-labelledby="panel_01")의 ul에 on 추가
+    $(".tab_content ul").removeClass("on");
+    $("[aria-labelledby='panel_01'] ul").addClass("on");
+
+    $(".tab_list li").click(function() {
+        // 모든 탭에서 active 제거
+        $(".tab_list li").removeClass("active")
+            .attr("aria-selected", "false")
+            .removeAttr("title");
+
+        // 클릭한 탭에 active 추가
+        $(this).addClass("active")
+            .attr("aria-selected", "true")
+            .attr("title", "선택됨");
+
+        // 클릭한 탭의 aria-controls 값(panel_01, panel_02, ...)을 가져옴
+        var panelId = $(this).attr("aria-controls");
+
+        // 모든 tab_content 내의 ul에서 on 제거
+        $(".tab_content ul").removeClass("on");
+
+        // aria-labelledby가 panelId인 요소의 ul에 on 추가 (CSS에서 on일 때 display:block 처리)
+        $("[aria-labelledby='" + panelId + "'] ul").addClass("on");
+    });
 })

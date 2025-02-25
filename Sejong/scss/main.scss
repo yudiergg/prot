@@ -301,9 +301,11 @@
     background-color: $primary-color-50;
     overflow: hidden;
     .wrapper {
+        @include flex-col;
         position: relative;
+        gap: 1.41em;
+        padding: 1.17em 0;
         h2 {
-            margin: 32px 0 24px 0; 
             text-align: center;
             font-size: $title-XL;
             font-weight: 700;
@@ -325,8 +327,8 @@
             z-index: 2;
             position: absolute;
             left: -10%;
-            top: -14%;
-            width: 45%;
+            top: 0;
+            width: 40%;
             height: auto;
             img {
                 width: 100%;
@@ -338,8 +340,8 @@
             z-index: 1;
             position: absolute;
             right: -10%;
-            top: -20%;
-            width: 35%;
+            top: 0;
+            width: 30%;
             height: auto;
             img {
                 width: 100%;
@@ -392,7 +394,7 @@
                 .prev {
                     z-index: 20;
                     top: 13.64em;
-                    left: 9.94em;
+                    left: 10.94em;
                     width: 1.88em;
                     height: 1.88em;
                     @include before-default;
@@ -405,7 +407,7 @@
                 .next {
                     z-index: 20;
                     top: 13.64em;
-                    right: 12.94em;
+                    right: 10.94em;
                     width: 1.88em;
                     height: 1.88em;
                     @include after-default;
@@ -482,6 +484,7 @@
                                 padding: 0.58em;
                                 gap: 1.41em;
                                 span.on_line {
+                                    @include text_hidden_1;
                                     width: 100%;
                                     color: $title-color;
                                 }
@@ -590,60 +593,67 @@
         .sns_content {
             display: flex;
             gap: 1.41em;
-            .sejong_tv01 {
-                flex: 1;
-                a {
-                    position: relative;
-                    display: flex;
-                    height: 100%;
-                    overflow: hidden;
-                    border-radius: 10px;
-                    .youtube {
-                        position: absolute;
-                        top: 1.17rem;
-                        right: 0;
-                        @include icon;
-                        width: 2.35rem;
-                        height: 2.11rem;
-                        background-image: url("data:image/svg+xml,%3Csvg width='40' height='36' viewBox='0 0 40 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 18C0 8.05888 8.05887 0 18 0H40V36H18C8.05887 36 0 27.9411 0 18Z' fill='%23FF0000'/%3E%3Cpath d='M33.75 14.7033C33.75 12.1099 31.5346 10 28.8115 10H16.1885C13.4654 10 11.25 12.1099 11.25 14.7033V20.2967C11.25 22.8901 13.4538 25 16.1885 25H28.8115C31.5346 25 33.75 22.9011 33.75 20.2967V14.7033ZM26.3308 17.9231L20.6769 20.5934C20.4577 20.7033 19.6962 20.5495 19.6962 20.3187V14.8462C19.6962 14.6044 20.4577 14.4506 20.6769 14.5714L26.0885 17.3736C26.3192 17.4945 26.55 17.8132 26.3192 17.9231H26.3308Z' fill='white'/%3E%3C/svg%3E%0A");
-                        font-size: 0;
-                        line-height: 0;
-                    }
-                    .photo {
-                        height: 100%;
-                        img {
-                            width: 100%;                                    
+            padding: 0.52em;
+            .inner {
+                display: flex;
+                gap: 1.41em;
+                .sejong_tv01 {
+                    flex: 1;
+                    a {
+                        position: relative;
+                        display: flex;
+                        height: 15em;
+                        overflow: hidden;
+                        border-radius: 10px;
+                        .youtube {
+                            position: absolute;
+                            top: 1.17rem;
+                            right: 0;
+                            @include icon;
+                            width: 2.35rem;
+                            height: 2.11rem;
+                            background-image: url("data:image/svg+xml,%3Csvg width='40' height='36' viewBox='0 0 40 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 18C0 8.05888 8.05887 0 18 0H40V36H18C8.05887 36 0 27.9411 0 18Z' fill='%23FF0000'/%3E%3Cpath d='M33.75 14.7033C33.75 12.1099 31.5346 10 28.8115 10H16.1885C13.4654 10 11.25 12.1099 11.25 14.7033V20.2967C11.25 22.8901 13.4538 25 16.1885 25H28.8115C31.5346 25 33.75 22.9011 33.75 20.2967V14.7033ZM26.3308 17.9231L20.6769 20.5934C20.4577 20.7033 19.6962 20.5495 19.6962 20.3187V14.8462C19.6962 14.6044 20.4577 14.4506 20.6769 14.5714L26.0885 17.3736C26.3192 17.4945 26.55 17.8132 26.3192 17.9231H26.3308Z' fill='white'/%3E%3C/svg%3E%0A");
+                            font-size: 0;
+                            line-height: 0;
+                        }
+                        .photo {
+                            width: 100%;
                             height: 100%;
-                            object-fit: cover;
+                            img {
+                                width: 100%;                                    
+                                height: 100%;
+                                object-fit: cover;
+                            }
                         }
                     }
                 }
-            }
-            .sejong_tv02 {
-                flex: 1;
-                a {
-                    position: relative;
-                    display: flex;
-                    overflow: hidden;
-                    border-radius: 10px;
-                    height: 100%;
-                    .youtube {
-                        position: absolute;
-                        top: 1.17rem;
-                        right: 0;
-                        @include icon;
-                        width: 2.35rem;
-                        height: 2.11rem;
-                        background-image: url("data:image/svg+xml,%3Csvg width='40' height='36' viewBox='0 0 40 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 18C0 8.05888 8.05887 0 18 0H40V36H18C8.05887 36 0 27.9411 0 18Z' fill='%23FF0000'/%3E%3Cpath d='M33.75 14.7033C33.75 12.1099 31.5346 10 28.8115 10H16.1885C13.4654 10 11.25 12.1099 11.25 14.7033V20.2967C11.25 22.8901 13.4538 25 16.1885 25H28.8115C31.5346 25 33.75 22.9011 33.75 20.2967V14.7033ZM26.3308 17.9231L20.6769 20.5934C20.4577 20.7033 19.6962 20.5495 19.6962 20.3187V14.8462C19.6962 14.6044 20.4577 14.4506 20.6769 14.5714L26.0885 17.3736C26.3192 17.4945 26.55 17.8132 26.3192 17.9231H26.3308Z' fill='white'/%3E%3C/svg%3E%0A");
-                        font-size: 0;
-                        line-height: 0;
-                    }
-                    .photo {
-                        height: 100%;
-                        img {
+                .sejong_tv02 {
+                    flex: 1;
+                    a {
+                        position: relative;
+                        display: flex;
+                        overflow: hidden;
+                        border-radius: 10px;
+                        height: 15em;
+                        .youtube {
+                            position: absolute;
+                            top: 1.17rem;
+                            right: 0;
+                            @include icon;
+                            width: 2.35rem;
+                            height: 2.11rem;
+                            background-image: url("data:image/svg+xml,%3Csvg width='40' height='36' viewBox='0 0 40 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 18C0 8.05888 8.05887 0 18 0H40V36H18C8.05887 36 0 27.9411 0 18Z' fill='%23FF0000'/%3E%3Cpath d='M33.75 14.7033C33.75 12.1099 31.5346 10 28.8115 10H16.1885C13.4654 10 11.25 12.1099 11.25 14.7033V20.2967C11.25 22.8901 13.4538 25 16.1885 25H28.8115C31.5346 25 33.75 22.9011 33.75 20.2967V14.7033ZM26.3308 17.9231L20.6769 20.5934C20.4577 20.7033 19.6962 20.5495 19.6962 20.3187V14.8462C19.6962 14.6044 20.4577 14.4506 20.6769 14.5714L26.0885 17.3736C26.3192 17.4945 26.55 17.8132 26.3192 17.9231H26.3308Z' fill='white'/%3E%3C/svg%3E%0A");
+                            font-size: 0;
+                            line-height: 0;
+                        }
+                        .photo {
                             width: 100%;
                             height: 100%;
-                            object-fit: cover;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
                         }
                     }
                 }
@@ -713,12 +723,156 @@
         }
     }
 }
+@media screen and (max-width:1880px){
+    .number4 .wrapper {
+        position: relative;
+    }
+    .number4 .wrapper .popzone_wrap .swiper_nav {
+        z-index: 100;
+        position: absolute;
+        top: 3.05em;
+        right: 0;
+        display: flex;
+        gap: 0.58em;
+    }
+    .number4 .wrapper .popzone_wrap .swiper_nav .prev {
+        position: static;
+    }
+    .number4 .wrapper .popzone_wrap .swiper_nav .next {
+        position: static;
+    }
 
-@media screen and (max-width:1290px){
+}
+@media screen and (max-width:1300px){
     .visual {
-        .visual_popup {
-            .swiper {
-            }
-        }
+        @include flex-col;
+    }
+    .visual .visual_popup .swiper {
+        width: auto;
+    }
+}
+@media screen and (max-width:1200px){
+    header .header_bottom .wrapper .gnb ul.depth1 {
+        display: none;
+    }
+    .number2 .wrapper {
+        position: relative;
+    }
+    .number2 .wrapper ul li.view {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .number2 .wrapper ul li.view a i {
+        width: 2.35rem;
+        height: 2.35rem;
+    }
+    .number2 .wrapper ul li.view a span {
+        display: none;
+    }
+    .number2 .wrapper ul {
+        gap: 1.4em;
+        overflow-y: scroll;
+    }
+    .number3 .wrapper .left_human {
+        top: 18%;
+    }
+    .number3 .wrapper .right_human {
+        top: 18%;
+    }
+}
+@media screen and (max-width:1070px){
+    .number5 .wrapper {
+        flex-direction: column;        
+    }
+    .number5 .wrapper .today_news {
+        width: auto;
+    }
+    .number5 .wrapper .sejong_news {
+        width: auto;
+    }
+    .number5 .wrapper .sejong_news ul li a .photo {
+        height: 12.17em;
+    }
+}
+@media screen and (max-width:960px){
+}
+@media screen and (max-width:800px){
+    .number4 .wrapper .popzone_wrap .swiper ul li a .photo {
+        height: 189px;
+    }
+    .number6 .wrapper .sns_content {
+        @include flex-col;
+    }
+    .number6 .wrapper .sns_content .inner .sejong_tv01 a {
+        height: 12em;
+    }
+    .number6 .wrapper .sns_content .inner .sejong_tv02 a {
+        height: 12em;
+    }
+    .number3 .wrapper .left_human {
+        width: 47%;
+        top: 36%;
+        left: -16%;
+    }
+    .number3 .wrapper .right_human {
+        width: 38%;
+        top: 33%;
+        right: -23%;
+    }
+}
+@media screen and (max-width:700px){
+    .number1 .serach {
+        display: block;
+    }
+    .number1 .serach .serach_content input {
+        width: 100%;
+    }
+    .number1 .serach .serach_content {
+        width: 100%;
+    }
+    .search_inner {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .number5 .wrapper .today_news .news_layer .tab_content {
+        padding: 0 1.17em 1.41em 1.17em;
+    }
+    .number5 .wrapper .today_news {
+        position: relative;
+    }
+    .number5 .wrapper .today_news .news_layer .tab_head .more a {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 2.23em;
+        height: 2.23em;
+        padding: 0;
+        background-color: $bg-color;
+        border-radius: 0.29em;
+        border: 1px solid $disalbe;
+    }
+    .number5 .wrapper .today_news .news_layer .tab_head ul {
+        overflow-y: scroll;
+    
+    }
+    .number3 .wrapper .left_human {
+        top: 53%;
+    }
+    .number3 .wrapper .right_human {
+        top: 50%;
+    }
+}
+@media screen and (max-width:360px){
+    .number3 .wrapper .left_human {
+        top: 78%;
+    }
+    .number3 .wrapper .right_human {
+        top: 76%;
+    }
+    .number1 .serach .serach_content {
+        flex-direction: column;
     }
 }
