@@ -120,7 +120,7 @@ header {
                         }
                         /* 하위 메뉴 */
                         .lower_menu {
-                            display: none;
+                            visibility: hidden;
                             z-index: 100;
                             position: absolute;
                             top: 90px;
@@ -130,6 +130,13 @@ header {
                             overflow: hidden;
                             background-color: $bg-color;
                             border-top: 1px solid $disalbe;
+                            opacity: 0;
+                            transition: opacity 0.2s; /* 부드럽게 나타나는 효과 */
+                            &.active {
+                                display: flex; /* 메뉴를 열 때만 block으로 설정 */
+                                visibility: visible;
+                                opacity: 1;
+                            }
                             .title {
                                 position: relative;
                                 width: 494px;
@@ -152,7 +159,7 @@ header {
                                         height: 100%;
                                         object-fit: contain;
                                     }
-                                }                             
+                                }                            
                             }
                             ul.depth2 {
                                 width: auto;
