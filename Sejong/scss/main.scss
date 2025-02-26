@@ -456,7 +456,7 @@
                             color: $body-color;
                            a {
                             @include flex-center;
-                            padding: 0.6em 2.35em;
+                            padding: 0.6em 0;
                             font-weight: 700;
                             border-right: 1px solid $disalbe;
                             &:focus {
@@ -464,30 +464,15 @@
                                 background-color: $primary-color-50;
                                }
                            }
-                           &.active,{
+                           &.active{
                             color: $bg-color;
                             background-color: $primary-color-50;
                            }
                         }
                     }
-                    .more {
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                        border-bottom: 1px solid $disalbe;
-                        a {
-                            @include flex-center;
-                            padding: 0.58em 1.17em;
-                            span {
-                                font-size: 0;
-                                line-height: 0;
-                                @include icon;
-                                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 13H6C5.71667 13 5.47917 12.9042 5.2875 12.7125C5.09583 12.5208 5 12.2833 5 12C5 11.7167 5.09583 11.4792 5.2875 11.2875C5.47917 11.0958 5.71667 11 6 11H11V6C11 5.71667 11.0958 5.47917 11.2875 5.2875C11.4792 5.09583 11.7167 5 12 5C12.2833 5 12.5208 5.09583 12.7125 5.2875C12.9042 5.47917 13 5.71667 13 6V11H18C18.2833 11 18.5208 11.0958 18.7125 11.2875C18.9042 11.4792 19 11.7167 19 12C19 12.2833 18.9042 12.5208 18.7125 12.7125C18.5208 12.9042 18.2833 13 18 13H13V18C13 18.2833 12.9042 18.5208 12.7125 18.7125C12.5208 18.9042 12.2833 19 12 19C11.7167 19 11.4792 18.9042 11.2875 18.7125C11.0958 18.5208 11 18.2833 11 18V13Z' fill='%23555555'/%3E%3C/svg%3E%0A");
-                            }
-                        }
-                    }
                 }
                 .tab_content {
+                    position: relative;
                     padding: 0 2.35em 1.41em 2.35em;
                     ul {
                         display: none;
@@ -510,6 +495,23 @@
                         }
                         &.on {
                             @include flex-col;
+                        }
+                    }
+                    .more {
+                        display: none;
+                        position: absolute;
+                        top: -4.05em;
+                        right: 0;
+                        border-bottom: 1px solid $disalbe;
+                        a {
+                            @include flex-center;
+                            padding: 0.58em 1.17em;
+                            span {
+                                font-size: 0;
+                                line-height: 0;
+                                @include icon;
+                                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 13H6C5.71667 13 5.47917 12.9042 5.2875 12.7125C5.09583 12.5208 5 12.2833 5 12C5 11.7167 5.09583 11.4792 5.2875 11.2875C5.47917 11.0958 5.71667 11 6 11H11V6C11 5.71667 11.0958 5.47917 11.2875 5.2875C11.4792 5.09583 11.7167 5 12 5C12.2833 5 12.5208 5.09583 12.7125 5.2875C12.9042 5.47917 13 5.71667 13 6V11H18C18.2833 11 18.5208 11.0958 18.7125 11.2875C18.9042 11.4792 19 11.7167 19 12C19 12.2833 18.9042 12.5208 18.7125 12.7125C18.5208 12.9042 18.2833 13 18 13H13V18C13 18.2833 12.9042 18.5208 12.7125 18.7125C12.5208 18.9042 12.2833 19 12 19C11.7167 19 11.4792 18.9042 11.2875 18.7125C11.0958 18.5208 11 18.2833 11 18V13Z' fill='%23555555'/%3E%3C/svg%3E%0A");
+                            }
                         }
                     }       
                 }
@@ -879,14 +881,26 @@
     .number5 .wrapper .today_news .news_layer .tab_content {
         padding: 0 1.17em 1.41em 1.17em;
     }
-    .number5 .wrapper .today_news {
+    .number5 .wrapper {
         position: relative;
+        overflow: visible;
     }
     .number5 .wrapper .today_news .news_layer .tab_head ul {
         width: 100%;
     }
-    .number5 .wrapper .today_news .news_layer .tab_head {
+    .number5 .wrapper .today_news .news_layer .tab_content {
         position: inherit;
+    }
+    .number5 .wrapper .today_news .news_layer .tab_content .more {
+        top: -0.05em;
+    }
+    .number5 .wrapper .today_news .news_layer .tab_content .more a {
+        width: 2.23em;
+        height: 2.23em;
+        padding: 0;
+        background-color: $bg-color;
+        border-radius: 0.29em;
+        border: 1px solid $disalbe;
     }
     .number5 .wrapper .today_news .news_layer .tab_head .more a {
         position: absolute;
@@ -899,10 +913,9 @@
         border-radius: 0.29em;
         border: 1px solid $disalbe;
     }
-    .number5 .wrapper .today_news .news_layer .tab_head ul {
-        overflow-y: scroll;
-    
-    }
+    // .number5 .wrapper .today_news .news_layer .tab_head ul {
+    //     overflow-y: scroll;
+    // }
     .number3 .wrapper .left_human {
         top: 53%;
     }

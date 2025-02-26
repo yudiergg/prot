@@ -49,42 +49,45 @@ const popzone_wrap_swiper = new Swiper('.number4 .popzone_wrap .swiper', { /* �
 	//centeredSlides: true, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
 	loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
 	autoplay: {  /* 팝업 자동 실행 */
-		delay: 100000,
+		delay: 2500,
 		disableOnInteraction: true,
 	},
 	navigation: {
 		nextEl: '.popzone_wrap .swiper_nav .prev',
 		prevEl: '.popzone_wrap .swiper_nav .next',
 	},
-	pagination: {  /* 몇개의 팝업이 있는지 보여주는 동그라미 */
-		el: '.swiper-pagination', /* 해당 요소의 class명 */
-		clickable: true,  /* 클릭하면 해당 팝업으로 이동할 것인지 값 */
-		type: 'fraction',  /* type fraction을 주면 paging이 숫자로 표시됨 */
-	},
 });
 
- // 초기 설정: 모든 tabpanel을 숨기고, 첫 번째 패널을 활성화
- $(".tab_content [role='tabpanel']").attr("aria-hidden", "true").find("ul").removeClass("on");
- $("#tabpanel_01").attr("aria-hidden", "false").find("ul").addClass("on");
+// 초기 설정: 모든 tabpanel을 숨기고, 첫 번째 패널을 활성화
+$(".tab_content [role='tabpanel']").attr("aria-hidden", "true").find("ul").removeClass("on");
+$("#tabpanel_01").attr("aria-hidden", "false").find("ul").addClass("on");
 
- $(".tab_list li").on('click focusin', function() {
-	 // 모든 탭에서 active 제거
-	 $(".tab_list li").removeClass("active")
-		 .attr("aria-selected", "false")
-		 .removeAttr("title");
+// 추가: 모든 .more 숨기기, 첫 번째 패널의 .more 보이기
+$(".tab_content .more").hide();
+$("#tabpanel_01 .more").show();
 
-	 // 클릭한 탭에 active 추가
-	 $(this).addClass("active")
-		 .attr("aria-selected", "true")
-		 .attr("title", "선택됨");
+$(".tab_list li").on('click focusin', function() {
+    // 모든 탭에서 active 제거
+    $(".tab_list li").removeClass("active")
+        .attr("aria-selected", "false")
+        .removeAttr("title");
 
-	 // 클릭한 탭의 aria-controls 값(panel_01, panel_02, ...)을 가져옴
-	 var panelId = $(this).attr("aria-controls");
+    // 클릭한 탭에 active 추가
+    $(this).addClass("active")
+        .attr("aria-selected", "true")
+        .attr("title", "선택됨");
 
-	 // 모든 tabpanel 숨기기
-	 $(".tab_content [role='tabpanel']").attr("aria-hidden", "true").find("ul").removeClass("on");
+    // 클릭한 탭의 aria-controls 값(panel_01, panel_02, ...)을 가져옴
+    var panelId = $(this).attr("aria-controls");
 
-	 // 선택된 tabpanel 보이기
-	 $("#" + panelId).attr("aria-hidden", "false").find("ul").addClass("on");
- });
+    // 모든 tabpanel 숨기기
+    $(".tab_content [role='tabpanel']").attr("aria-hidden", "true").find("ul").removeClass("on");
+
+    // 선택된 tabpanel 보이기
+    $("#" + panelId).attr("aria-hidden", "false").find("ul").addClass("on");
+
+    // 추가: 모든 .more 숨기고, 선택된 패널의 .more 보이기
+    $(".tab_content .more").hide();
+    $("#" + panelId + " .more").show();
+});
 })
