@@ -180,6 +180,9 @@
                     @include flex-center;
                     padding: 0.58em 0;
                     height: 100%;
+                    &:hover {
+                        background-color: $hover-color-60;
+                    }
                 }
                 &:first-child {
                     border-left: 0;
@@ -318,6 +321,9 @@
                 color: $bg-color;
                 background-color: $pressed-color-70;
                 border-radius: 100px;
+                &:hover {
+                    background-color: $hover-color-60;
+                }
             }
         }
         .left_human {
@@ -440,7 +446,9 @@
                 border-radius: 0.58em;
                 background-color: $bg-color;
                 .tab_head {
+                    position: relative;
                     ul {
+                        width: calc(100% - 64px);
                         display: flex;
                         box-shadow: 0 0 0 1px $disalbe inset;
                         li {
@@ -448,7 +456,7 @@
                             color: $body-color;
                            a {
                             @include flex-center;
-                            padding: 0.58em 2.35em;
+                            padding: 0.6em 2.35em;
                             font-weight: 700;
                             border-right: 1px solid $disalbe;
                             &:focus {
@@ -463,7 +471,10 @@
                         }
                     }
                     .more {
-                        width: 30%;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        border-bottom: 1px solid $disalbe;
                         a {
                             @include flex-center;
                             padding: 0.58em 1.17em;
@@ -870,6 +881,12 @@
     }
     .number5 .wrapper .today_news {
         position: relative;
+    }
+    .number5 .wrapper .today_news .news_layer .tab_head ul {
+        width: 100%;
+    }
+    .number5 .wrapper .today_news .news_layer .tab_head {
+        position: inherit;
     }
     .number5 .wrapper .today_news .news_layer .tab_head .more a {
         position: absolute;
