@@ -67,7 +67,7 @@ const popzone_wrap_swiper = new Swiper('.number4 .popzone_wrap .swiper', { /* �
     $(".tab_content ul").removeClass("on");
     $("[aria-labelledby='panel_01'] ul").addClass("on");
 
-    $(".tab_list li").click(function() {
+    $(".tab_list li").on('click focusin',function() {
         // 모든 탭에서 active 제거
         $(".tab_list li").removeClass("active")
             .attr("aria-selected", "false")
@@ -76,7 +76,7 @@ const popzone_wrap_swiper = new Swiper('.number4 .popzone_wrap .swiper', { /* �
         // 클릭한 탭에 active 추가
         $(this).addClass("active")
             .attr("aria-selected", "true")
-            .attr("title", "선택됨");
+            .attr("title","선택됨");
 
         // 클릭한 탭의 aria-controls 값(panel_01, panel_02, ...)을 가져옴
         var panelId = $(this).attr("aria-controls");

@@ -4,9 +4,6 @@
 @import "./_var";
 @import "./_layout";
 
-.skipnav {
-    display: none;
-}
 .number1 {
     padding: 2.35em 0 2.35em 0;
     .wrapper{
@@ -170,7 +167,7 @@
         ul {
             position: absolute;
             display: flex;
-            width: 101%;
+            width: 100%;
             bottom: 0;
             left: 0;
             font-weight: 700;
@@ -204,7 +201,7 @@
             display: flex;
             li {
                 flex: 1;
-                a {
+                a { 
                     @include flex-col;
                     @include flex-center;
                     gap: 0.9em;
@@ -454,8 +451,12 @@
                             padding: 0.58em 2.35em;
                             font-weight: 700;
                             border-right: 1px solid $disalbe;
+                            &:focus {
+                                color: $bg-color;
+                                background-color: $primary-color-50;
+                               }
                            }
-                           &.active {
+                           &.active,{
                             color: $bg-color;
                             background-color: $primary-color-50;
                            }
@@ -515,16 +516,23 @@
                 gap: 1.41em;
                 height: 100%;
                 li {
+                    position: relative;
                     flex: 1;
                     overflow: hidden;
                     border: 0;
                     border-radius: 0.58em;
                     @include border-box_shadow;
                     a {
-                        position: relative;
                         @include flex-col;
                         height: 100%;
+                        &:hover,&:focus {
+                            .photo img {
+                                transform: scale(1.1);
+                                transition: 0.3s;
+                            }
+                        }
                         .blog {
+                            z-index: 100;
                             position: absolute;
                             top: 1.17rem;
                             right:0; 
@@ -537,6 +545,7 @@
                         }
                         .photo {
                             height: 100%;
+                            overflow: hidden;
                             img {
                                 width: 100%;
                                 height: 100%;
@@ -599,13 +608,22 @@
                 gap: 1.41em;
                 .sejong_tv01 {
                     flex: 1;
+                    @include border-box_shadow;
+                    border: 0;
                     a {
                         position: relative;
                         display: flex;
                         height: 15em;
                         overflow: hidden;
                         border-radius: 10px;
+                        &:hover, &:focus {
+                            .photo img {
+                                transform: scale(1.1);
+                                transition: 0.3s;
+                            }
+                        }
                         .youtube {
+                            z-index: 100;
                             position: absolute;
                             top: 1.17rem;
                             right: 0;
@@ -629,13 +647,22 @@
                 }
                 .sejong_tv02 {
                     flex: 1;
+                    @include border-box_shadow;
+                    border: 0;
                     a {
                         position: relative;
                         display: flex;
                         overflow: hidden;
                         border-radius: 10px;
                         height: 15em;
+                        &:hover, &:focus {
+                            .photo img {
+                                transform: scale(1.1);
+                                transition: 0.3s;
+                            }
+                        }
                         .youtube {
+                            z-index: 100;
                             position: absolute;
                             top: 1.17rem;
                             right: 0;
@@ -875,4 +902,7 @@
     .number1 .serach .serach_content {
         flex-direction: column;
     }
+}
+
+@include mobile {
 }

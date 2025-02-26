@@ -79,3 +79,12 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+@mixin mobile {
+    @media (max-width:640px){
+        @content;
+        body, html {
+            font-size: 15px;
+        }
+    }
+}

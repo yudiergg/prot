@@ -3,6 +3,27 @@
 @import "./_common";
 @import "./_var";
 
+.skipnav {
+    z-index: 1000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    a {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        background-color: $primary-color-50;
+        color: $bg-color;
+        transform: translateY(-100%);
+        &:focus, &:active {transform: translateY(0);}
+    }
+}
+
+
 header {
     position: relative;
     width: 100%;
@@ -90,7 +111,6 @@ header {
                     display: flex;
                     gap: 2.52em;
                     li {
-                        border-bottom: 1px solid $disalbe;
                         a {
                             @include flex-center; 
                             height: 100%;
@@ -174,6 +194,10 @@ header {
                                                 background-color: $primary-color-50
                                             }
                                         }
+                                        &:focus {
+                                            font-weight: 700;
+                                            color:$primary-color-50;
+                                        }
                                         }
                                     }
                                 }    
@@ -208,7 +232,7 @@ header {
                 right: 0;
                 background: $bg-color;
                 width: 18.23em;
-                height: 1000dvh;
+                height: 100dvh;
                 @include header-drop_shadow;
                 .mobile_wrap {
                     @include flex-col;
@@ -231,8 +255,10 @@ header {
                         @include flex-center;
                         gap: 24px;
                         padding: 1.17em;
+                        border-bottom: 1px solid $disalbe;
                         .login, .membership {
                             font-weight: 700;
+                            font-size: $body-s;
                             color: $primary-color-50;
                             border: 1px solid $primary-color-50;
                             border-radius: 100px;
@@ -246,6 +272,7 @@ header {
                                &.active {
                                    > a {
                                         color: $primary-color-50;
+
                                        > i {
                                             transform: scale(1, -1);
                                         }
@@ -271,8 +298,11 @@ header {
                                 ul.depth2 {
                                     display: block;
                                    > li {
+                                        border-bottom: 1px solid $pressed-color-70;
+                                        &:last-child {border-bottom: 0;}
                                         &.active {
                                             > a {
+                                                
                                                 > i {
                                                     transform: scale(1, -1);
                                                 }
@@ -299,12 +329,14 @@ header {
                                         ul.depth3 {
                                             display: block;
                                             li {
+                                                border-bottom: 1px solid $primary-color-50;
+                                                &:last-child {border-bottom: 0;}
                                                 a {
                                                     display: flex;
                                                     align-items: center;
                                                     justify-content: space-between;
-                                                    padding: 0.47em 1.17em 0.47em 1.17em;
-                                                    font-size: $body-m-default;
+                                                    padding: 0.58em 2.35em 0.58em 2.35em;
+                                                    font-size: $body-s;
                                                     color: $bg-color;
                                                     font-weight: 400;
                                                     background-color: $pressed-color-70;
@@ -331,6 +363,7 @@ footer {
         background-color: $footer-header;
         font-weight: 700;
         .wrapper {
+            overflow: visible;
             ul.footer_link {
                 display: flex;
                 align-items: center;
@@ -338,6 +371,11 @@ footer {
                     position: relative;
                     flex: 1;
                     border-left: 1px solid rgba(255, 255, 255, 0.1);
+                    &.active {
+                      > a > i {
+                        transform: scale(-1);
+                      }  
+                    }
                   > a {
                         display: flex;
                         justify-content: space-between;
@@ -349,18 +387,26 @@ footer {
                             line-height: 0;
                             width: 0.94rem;
                             height: 0.94rem;
-                            background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.84568 10.3943C2.62675 10.1973 2.609 9.86006 2.80605 9.64113L7.60618 4.30779C7.70732 4.19541 7.85141 4.13124 8.0026 4.13125C8.15379 4.13125 8.29788 4.19542 8.39902 4.3078L13.199 9.64113C13.3961 9.86007 13.3783 10.1973 13.1594 10.3943C12.9404 10.5914 12.6032 10.5736 12.4062 10.3547L8.00259 5.46182L3.59889 10.3547C3.40184 10.5736 3.06462 10.5914 2.84568 10.3943Z' fill='white'/%3E%3C/svg%3E%0A");
+                            background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.1543 5.60567C13.3733 5.80272 13.391 6.13994 13.1939 6.35887L8.39382 11.6922C8.29268 11.8046 8.14859 11.8688 7.9974 11.8688C7.84621 11.8688 7.70212 11.8046 7.60098 11.6922L2.80098 6.35887C2.60393 6.13993 2.62168 5.80271 2.84062 5.60566C3.05956 5.40862 3.39678 5.42637 3.59382 5.64531L7.99741 10.5382L12.4011 5.6453C12.5982 5.42637 12.9354 5.40862 13.1543 5.60567Z' fill='white'/%3E%3C/svg%3E%0A");
                         }
                     }
                     &:last-child {
                         border-right: 1px solid rgba(255, 255, 255, 0.1);
                     }
                     ul.depth2 {
+                        display: none;
                         z-index: 100;
                         position: absolute;
-                        @include flex-col;
+                        bottom: 2.64em;
+                        left: 0;
+                        background-color: $footer-header;
+                        border-radius: 10px 10px 0 0;
+                        width: 100%;
                         li {
+                            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
                             a {
+                                display: flex;
+                                padding: 0.58em 1.17em;
                             }
                         }
                     }
@@ -446,14 +492,12 @@ footer {
         margin-right: 0;
     }
 }
-@media screen and (max-width:1040px){
-}
-@media screen and (max-width:800px){
-    footer .footer_body .wrapper .right_inner ul.footer_nav li a {
-        font-size: $body-s;
+@media screen and (max-width:1048px){
+    footer .footer_head .wrapper ul.footer_link > li ul.depth2 {
+        bottom: 4.11em;
     }
 }
-@media screen and (max-width:600px){
+@media screen and (max-width:805px){
     footer .footer_head .wrapper ul.footer_link {
         flex-direction: column;
         align-items: normal;
@@ -469,5 +513,22 @@ footer {
     }
     footer .footer_info address, .copyright {
         font-size: $sub;
+    }
+    footer .footer_head .wrapper ul.footer_link > li ul.depth2 {
+        position: relative;
+        bottom: 2.64em;
+        top: 0;
+        left: 0;
+    }
+    footer .footer_head .wrapper ul.footer_link > li ul.depth2 li a {
+        font-size: $body-s;
+    }
+}
+@media screen and (max-width:800px){
+    footer .footer_body .wrapper .right_inner ul.footer_nav li a {
+        font-size: $body-s;
+    }
+    footer .footer_head .wrapper ul.footer_link > li > a {
+        padding: 0.88em;
     }
 }
