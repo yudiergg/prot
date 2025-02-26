@@ -63,28 +63,28 @@ const popzone_wrap_swiper = new Swiper('.number4 .popzone_wrap .swiper', { /* �
 	},
 });
 
-    // 초기 설정: 모든 ul에서 on 제거한 후, 첫 번째 패널(aria-labelledby="panel_01")의 ul에 on 추가
-    $(".tab_content ul").removeClass("on");
-    $("[aria-labelledby='panel_01'] ul").addClass("on");
+ // 초기 설정: 모든 tabpanel을 숨기고, 첫 번째 패널을 활성화
+ $(".tab_content [role='tabpanel']").attr("aria-hidden", "true").find("ul").removeClass("on");
+ $("#tabpanel_01").attr("aria-hidden", "false").find("ul").addClass("on");
 
-    $(".tab_list li").on('click focusin',function() {
-        // 모든 탭에서 active 제거
-        $(".tab_list li").removeClass("active")
-            .attr("aria-selected", "false")
-            .removeAttr("title");
+ $(".tab_list li").on('click focusin', function() {
+	 // 모든 탭에서 active 제거
+	 $(".tab_list li").removeClass("active")
+		 .attr("aria-selected", "false")
+		 .removeAttr("title");
 
-        // 클릭한 탭에 active 추가
-        $(this).addClass("active")
-            .attr("aria-selected", "true")
-            .attr("title","선택됨");
+	 // 클릭한 탭에 active 추가
+	 $(this).addClass("active")
+		 .attr("aria-selected", "true")
+		 .attr("title", "선택됨");
 
-        // 클릭한 탭의 aria-controls 값(panel_01, panel_02, ...)을 가져옴
-        var panelId = $(this).attr("aria-controls");
+	 // 클릭한 탭의 aria-controls 값(panel_01, panel_02, ...)을 가져옴
+	 var panelId = $(this).attr("aria-controls");
 
-        // 모든 tab_content 내의 ul에서 on 제거
-        $(".tab_content ul").removeClass("on");
+	 // 모든 tabpanel 숨기기
+	 $(".tab_content [role='tabpanel']").attr("aria-hidden", "true").find("ul").removeClass("on");
 
-        // aria-labelledby가 panelId인 요소의 ul에 on 추가 (CSS에서 on일 때 display:block 처리)
-        $("[aria-labelledby='" + panelId + "'] ul").addClass("on");
-    });
+	 // 선택된 tabpanel 보이기
+	 $("#" + panelId).attr("aria-hidden", "false").find("ul").addClass("on");
+ });
 })

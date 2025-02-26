@@ -828,16 +828,16 @@
                             <!-- tab list -->
                             <div class="tab_head">
                                 <ul class="tab_list">
-                                    <li role="tab" aria-selected="true" aria-controls="panel_01" class="active" title="선택됨">
+                                    <li role="tab" id="tab_01" aria-selected="true" aria-controls="tabpanel_01" class="active" title="선택됨">
                                         <a href="#n">공지사항</a>
                                     </li>
-                                    <li role="tab" aria-selected="false" aria-controls="panel_02">
+                                    <li role="tab" id="tab_02" aria-selected="false" aria-controls="tabpanel_02">
                                         <a href="#n">고시공고</a>
                                     </li>
-                                    <li role="tab" aria-selected="false" aria-controls="panel_03">
+                                    <li role="tab" id="tab_03" aria-selected="false" aria-controls="tabpanel_03">
                                         <a href="#n">시험정보</a>
                                     </li>
-                                    <li role="tab" aria-selected="false" aria-controls="panel_04">
+                                    <li role="tab" id="tab_04" aria-selected="false" aria-controls="tabpanel_04">
                                         <a href="#n">보도자료</a>
                                     </li>
                                     <li class="more"><a href="#n"><span>전체보기</span></a></li>
@@ -846,7 +846,7 @@
                             <!-- //tab list -->                          
                             <!-- tab contents -->
                             <div class="tab_content">
-                                <div role="tabpanel" aria-labelledby="panel_01">
+                                <div role="tabpanel" id="tabpanel_01" aria-labelledby="tab_01" aria-hidden="false">
                                     <ul>
                                         <li>
                                             <a href="#n">
@@ -880,7 +880,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div role="tabpanel" aria-labelledby="panel_02">
+                                <div role="tabpanel" id="tabpanel_02" aria-labelledby="tab_02" aria-hidden="true">
                                     <ul>
                                         <li>
                                             <a href="#n">
@@ -914,7 +914,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div role="tabpanel" aria-labelledby="panel_03">
+                                <div role="tabpanel" id="tabpanel_03" aria-labelledby="tab_03" aria-hidden="true">
                                     <ul>
                                         <li>
                                             <a href="#n">
@@ -948,7 +948,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div role="tabpanel" aria-labelledby="panel_04">
+                                <div role="tabpanel" id="tabpanel_04" aria-labelledby="tab_04" aria-hidden="true">
                                     <ul>
                                         <li>
                                             <a href="#n">
