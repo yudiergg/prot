@@ -75,129 +75,7 @@ em, address, i {
 
 button {
   border: 0;
-  font-size: inherit;
-  font-weight: inherit;
-  line-height: inherit;
-  letter-spacing: inherit;
-  cursor: pointer;
-  background-color: transparent;
-  color: inherit;
-}
-
-fieldset {
-  border: 0;
-}
-
-legend {
-  display: none;
-}
-
-input, textarea, select {
   font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  line-height: inherit;
-  letter-spacing: inherit;
-}
-
-th {
-  font-weight: inherit;
-  text-align: inherit;
-}
-
-input {
-  height: auto; /* 높이값 초기화 */
-  font-family: inherit; /* 폰트 상속 */
-  outline-style: none; /* 포커스시 발생하는 효과 제거를 원한다면 */
-}
-
-/*폰트 */
-/*******/
-/* 컬러 */
-/*******/
-@media screen and (max-width: 1440px) {
-  .wrapper {
-    width: auto;
-    margin: 0 20px;
-  }
-}
-/* max width 정해줘야함 */
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 700;
-  font-display: swap;
-  src: local("Pretendard Bold"), url(../fonts/Pretendard-Bold.woff2) format("woff2"), url(../fonts/Pretendard-Bold.woff) format("woff");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 400;
-  font-display: swap;
-  src: local("Pretendard Regular"), url(../fonts/Pretendard-Regular.woff2) format("woff2"), url(../fonts/Pretendard-Regular.woff) format("woff");
-}
-@font-face {
-  font-family: "Riasans";
-  src: local("Pretendard Regular"), url(../fonts/RiaSans-ExtraBold.woff2) format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-body, html {
-  font-family: "Pretendard", "NanumSquareNeo", "나눔스퀘어네오", "나눔고딕", NanumGothic, -apple-system, BlinkMacSystemFont, helvetica, "Apple SD Gothic Neo", sans-serif;
-  font-size: 17px;
-  font-weight: 400;
-  color: #555;
-  line-height: 1.5;
-  word-break: keep-all;
-  word-wrap: break-word;
-}
-
-.wrapper {
-  width: 1440px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-#wrap {
-  width: 100%;
-  position: relative;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/*body{
-    -ms-overflow-style: none;
-    }
-::-webkit-scrollbar {
-     display: none;
-    }*/
-h1, h2, h3, h4, h5, h6 {
-  font-weight: inherit;
-  font-size: inherit;
-}
-
-strong {
-  font-weight: inherit;
-  font-size: inherit;
-}
-
-ul, li, ol {
-  list-style: none; /* 리스트들 앞에 동그라미 있는거 삭제 */
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-em, address, i {
-  font-style: normal; /* 기본 정자의 폰트로 변경*/
-}
-
-button {
-  border: 0;
   font-size: inherit;
   font-weight: inherit;
   line-height: inherit;
@@ -972,6 +850,7 @@ footer .footer_body .wrapper .right_inner .footer_info {
   border: 1px solid #E4E4E4;
   border-radius: 0.5rem;
   box-shadow: 0 0 10px 0 rgba(142, 142, 142, 0.2);
+  background-color: rgba(62, 50, 118, 0.02);
 }
 .visual .mayor_area .title_group {
   display: flex;
@@ -1403,7 +1282,7 @@ footer .footer_body .wrapper .right_inner .footer_info {
 .section_news .wrapper .today_news .news_layer .tab_head ul {
   width: calc(100% - 64px);
   display: flex;
-  box-shadow: 0 0 0 1px #E4E4E4 inset;
+  border-bottom: 1px solid #E4E4E4;
 }
 .section_news .wrapper .today_news .news_layer .tab_head ul li {
   width: 100%;
@@ -1795,6 +1674,11 @@ footer .footer_body .wrapper .right_inner .footer_info {
   }
   .visual .visual_popup .swiper {
     width: auto;
+    height: auto;
+  }
+  .visual .mayor_area .photo img {
+    object-fit: contain;
+    object-position: right bottom;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -1881,9 +1765,6 @@ footer .footer_body .wrapper .right_inner .footer_info {
   }
 }
 @media screen and (max-width: 600px) {
-  .visual .visual_popup .swiper {
-    height: 178px;
-  }
   .section_news .wrapper .today_news .news_layer .tab_content {
     padding: 0 1.17em 1.41em 1.17em;
   }
