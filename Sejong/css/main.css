@@ -1804,16 +1804,16 @@ footer .footer_body .wrapper .right_inner .footer_info {
   .section_service .wrapper {
     position: relative;
   }
-  .section_service .wrapper ul li.view {
+  .section_service .wrapper ul li a i.view {
     position: absolute;
     top: 0;
     right: 0;
   }
-  .section_service .wrapper ul li.view a i {
+  .section_service .wrapper ul li a i.view {
     width: 2.35rem;
     height: 2.35rem;
   }
-  .section_service .wrapper ul li.view a span {
+  .section_service .wrapper ul li:last-child span {
     display: none;
   }
   .section_service .wrapper ul {
@@ -1881,6 +1881,9 @@ footer .footer_body .wrapper .right_inner .footer_info {
   }
 }
 @media screen and (max-width: 600px) {
+  .visual .visual_popup .swiper {
+    height: 178px;
+  }
   .section_news .wrapper .today_news .news_layer .tab_content {
     padding: 0 1.17em 1.41em 1.17em;
   }
@@ -1923,6 +1926,20 @@ footer .footer_body .wrapper .right_inner .footer_info {
     top: 50%;
   }
 }
+@media screen and (max-width: 430px) {
+  .section_eventbanner .wrapper .left_human {
+    top: 70%;
+  }
+  .section_eventbanner .wrapper .right_human {
+    top: 67%;
+  }
+  .section_sejong_tv .wrapper .sns_content .sns {
+    padding: 1.35em;
+  }
+  .section_sejong_tv {
+    padding: 2.82em 0 2.76em 0;
+  }
+}
 @media screen and (max-width: 360px) {
   .section_eventbanner .wrapper .left_human {
     top: 78%;
@@ -1932,9 +1949,6 @@ footer .footer_body .wrapper .right_inner .footer_info {
   }
   .section_visual .serach .serach_content {
     flex-direction: column;
-  }
-  .section_sejong_tv .wrapper .sns_content .sns {
-    padding: 1.35em;
   }
 }
 @keyframes WidthCenter {
