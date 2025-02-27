@@ -4,7 +4,7 @@
 @import "./_var";
 @import "./_layout";
 
-.number1 {
+.section_visual {
     padding: 2.35em 0 2.35em 0;
     .wrapper{
         @include flex-col;
@@ -196,7 +196,7 @@
         }
     }
 }
-.number2 {
+.section_service {
     padding: 1.8em 0;
     background-color: $bg-color-3;
     .wrapper {
@@ -361,7 +361,7 @@
         }
     }
 }
-.number3 {
+.section_eventbanner {
     width: 100%;
     background-color: $primary-color-50;
     overflow: hidden;
@@ -370,7 +370,7 @@
         position: relative;
         gap: 1.41em;
         padding: 1.17em 0;
-        h2 {
+        h3 {
             text-align: center;
             font-size: $title-XL;
             font-weight: 700;
@@ -419,7 +419,7 @@
         }
     }
 }
-.number4 {
+.section_popupzone {
     .wrapper {
         position: relative;
         @include flex-col;
@@ -490,7 +490,7 @@
         }
     }
 }
-.number5 {
+.section_news {
     padding: 2.82em 0;
     background-color: $bg-color-3;
     .wrapper {
@@ -677,7 +677,7 @@
         }
     }
 }
-.number6 {
+.section_sejong_tv {
     padding: 2.82em 0 3.76em 0;
     .wrapper {
         @include flex-col;
@@ -837,10 +837,10 @@
     }
 }
 @media screen and (max-width:1880px){
-    .number4 .wrapper {
+    .section_popupzone .wrapper {
         position: relative;
     }
-    .number4 .wrapper .popzone_wrap .swiper_nav {
+    .section_popupzone .wrapper .popzone_wrap .swiper_nav {
         z-index: 100;
         position: absolute;
         top: 3.05em;
@@ -848,10 +848,10 @@
         display: flex;
         gap: 0.58em;
     }
-    .number4 .wrapper .popzone_wrap .swiper_nav .prev {
+    .section_popupzone .wrapper .popzone_wrap .swiper_nav .prev {
         position: static;
     }
-    .number4 .wrapper .popzone_wrap .swiper_nav .next {
+    .section_popupzone .wrapper .popzone_wrap .swiper_nav .next {
         position: static;
     }
 
@@ -868,80 +868,80 @@
     header .header_bottom .wrapper .gnb ul.depth1 {
         display: none;
     }
-    .number2 .wrapper {
+    .section_service .wrapper {
         position: relative;
     }
-    .number2 .wrapper ul li.view {
+    .section_service .wrapper ul li.view {
         position: absolute;
         top: 0;
         right: 0;
     }
-    .number2 .wrapper ul li.view a i {
+    .section_service .wrapper ul li.view a i {
         width: 2.35rem;
         height: 2.35rem;
     }
-    .number2 .wrapper ul li.view a span {
+    .section_service .wrapper ul li.view a span {
         display: none;
     }
-    .number2 .wrapper ul {
+    .section_service .wrapper ul {
         gap: 1.4em;
         overflow-y: scroll;
     }
-    .number3 .wrapper .left_human {
+    .section_eventbanner .wrapper .left_human {
         top: 18%;
     }
-    .number3 .wrapper .right_human {
+    .section_eventbanner .wrapper .right_human {
         top: 18%;
     }
 }
 @media screen and (max-width:1070px){
-    .number5 .wrapper {
+    .section_news .wrapper {
         flex-direction: column;        
     }
-    .number5 .wrapper .today_news {
+    .section_news .wrapper .today_news {
         width: auto;
     }
-    .number5 .wrapper .sejong_news {
+    .section_news .wrapper .sejong_news {
         width: auto;
     }
-    .number5 .wrapper .sejong_news ul li a .photo {
+    .section_news .wrapper .sejong_news ul li a .photo {
         height: 12.17em;
     }
 }
 @media screen and (max-width:960px){
 }
 @media screen and (max-width:800px){
-    .number4 .wrapper .popzone_wrap .swiper ul li a .photo {
+    .section_popupzone .wrapper .popzone_wrap .swiper ul li a .photo {
         height: 189px;
     }
-    .number6 .wrapper .sns_content {
+    .section_sejong_tv .wrapper .sns_content {
         @include flex-col;
     }
-    .number6 .wrapper .sns_content .inner .sejong_tv01 a {
+    .section_sejong_tv .wrapper .sns_content .inner .sejong_tv01 a {
         height: 12em;
     }
-    .number6 .wrapper .sns_content .inner .sejong_tv02 a {
+    .section_sejong_tv .wrapper .sns_content .inner .sejong_tv02 a {
         height: 12em;
     }
-    .number3 .wrapper .left_human {
+    .section_eventbanner .wrapper .left_human {
         width: 47%;
         top: 36%;
         left: -16%;
     }
-    .number3 .wrapper .right_human {
+    .section_eventbanner .wrapper .right_human {
         width: 38%;
         top: 33%;
         right: -23%;
     }
 }
 @media screen and (max-width:700px){
-    .number1 .serach {
+    .section_visual .serach {
         display: block;
     }
-    .number1 .serach .serach_content input {
+    .section_visual .serach .serach_content input {
         width: 100%;
     }
-    .number1 .serach .serach_content {
+    .section_visual .serach .serach_content {
         width: 100%;
     }
     .search_inner {
@@ -950,23 +950,23 @@
 }
 
 @media screen and (max-width:600px){
-    .number5 .wrapper .today_news .news_layer .tab_content {
+    .section_news .wrapper .today_news .news_layer .tab_content {
         padding: 0 1.17em 1.41em 1.17em;
     }
-    .number5 .wrapper {
+    .section_news .wrapper {
         position: relative;
         overflow: visible;
     }
-    .number5 .wrapper .today_news .news_layer .tab_head ul {
+    .section_news .wrapper .today_news .news_layer .tab_head ul {
         width: 100%;
     }
-    .number5 .wrapper .today_news .news_layer .tab_content {
+    .section_news .wrapper .today_news .news_layer .tab_content {
         position: inherit;
     }
-    .number5 .wrapper .today_news .news_layer .tab_content .more {
+    .section_news .wrapper .today_news .news_layer .tab_content .more {
         top: -0.05em;
     }
-    .number5 .wrapper .today_news .news_layer .tab_content .more a {
+    .section_news .wrapper .today_news .news_layer .tab_content .more a {
         width: 2.23em;
         height: 2.23em;
         padding: 0;
@@ -974,7 +974,7 @@
         border-radius: 0.29em;
         border: 1px solid $disalbe;
     }
-    .number5 .wrapper .today_news .news_layer .tab_head .more a {
+    .section_news .wrapper .today_news .news_layer .tab_head .more a {
         position: absolute;
         top: 0;
         right: 0;
@@ -985,27 +985,27 @@
         border-radius: 0.29em;
         border: 1px solid $disalbe;
     }
-    // .number5 .wrapper .today_news .news_layer .tab_head ul {
+    // .section_news .wrapper .today_news .news_layer .tab_head ul {
     //     overflow-y: scroll;
     // }
-    .number3 .wrapper .left_human {
+    .section_eventbanner .wrapper .left_human {
         top: 53%;
     }
-    .number3 .wrapper .right_human {
+    .section_eventbanner .wrapper .right_human {
         top: 50%;
     }
 }
 @media screen and (max-width:360px){
-    .number3 .wrapper .left_human {
+    .section_eventbanner .wrapper .left_human {
         top: 78%;
     }
-    .number3 .wrapper .right_human {
+    .section_eventbanner .wrapper .right_human {
         top: 76%;
     }
-    .number1 .serach .serach_content {
+    .section_visual .serach .serach_content {
         flex-direction: column;
     }
-    .number6 .wrapper .sns_content .sns {
+    .section_sejong_tv .wrapper .sns_content .sns {
         padding: 1.35em;
     }
 }
@@ -1016,4 +1016,8 @@
 }
 
 @include mobile {
+}
+
+h2.skip {
+    @include skip;
 }

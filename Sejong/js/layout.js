@@ -94,13 +94,13 @@ $('header .header_bottom .wrapper .mobile_menu .mobile_wrap .mobile_header_top .
 $('footer .footer_head .wrapper ul.footer_link > li').on('click', function (e) {
     if($(this).hasClass('active') == true){
         $(this).removeClass('active')
-        $('footer .footer_head .wrapper ul.footer_link > li').find('button').attr("title", "닫힘");
+        $('footer .footer_head .wrapper ul.footer_link > li').find('button').attr("title", "열림");
         $(this).find('.depth2').slideUp()
     }else{
         $('footer .footer_head .wrapper ul.footer_link > li.active > .depth2').slideUp()
         $('footer .footer_head .wrapper ul.footer_link > li').removeClass('active')
         $(this).addClass('active')
-        $('footer .footer_head .wrapper ul.footer_link > li.active').find('button').attr("title", "열림");
+        $('footer .footer_head .wrapper ul.footer_link > li.active').find('button').attr("title", "닫힘");
         $(this).find('.depth2').slideDown()
     }
 });

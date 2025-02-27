@@ -51,7 +51,7 @@ $('.visual .visual_popup .swiper .swiper_nav .buntton_inner .start').on('click',
 
 
 /* 팝업존 */
-const popzone_wrap_swiper = new Swiper('.number4 .popzone_wrap .swiper', { /* 팝업을 감싼는 요소의 class명 */
+const popzone_wrap_swiper = new Swiper('.section_popupzone .popzone_wrap .swiper', { /* 팝업을 감싼는 요소의 class명 */
 	slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
 	spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
 	breakpoints: {
@@ -67,8 +67,8 @@ const popzone_wrap_swiper = new Swiper('.number4 .popzone_wrap .swiper', { /* �
 		disableOnInteraction: true,
 	},
 	navigation: {
-		nextEl: '.popzone_wrap .swiper_nav .prev',
-		prevEl: '.popzone_wrap .swiper_nav .next',
+		nextEl: '.popzone_wrap .swiper_nav .next',
+		prevEl: '.popzone_wrap .swiper_nav .prev',
 	},
 });
 
