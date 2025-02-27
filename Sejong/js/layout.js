@@ -1,37 +1,35 @@
 $(document).ready(function () {
 
 /* 헤더 메뉴 */
-$('.header_bottom .gnb ul.depth1 li').on('mouseenter focusin', function () {
-    var $lowerMenu = $(this).find('.lower_menu');
-    
-    // 메뉴를 열고 'active' 클래스를 추가하여 표시
+$('.header_bottom .gnb ul.depth1 > li').on('mouseenter focusin', function () {
+    let $lowerMenu = $(this).find('.lower_menu');
+
+    // 기존의 active 클래스 제거
+    $('.header_bottom .gnb ul.depth1 > li').removeClass('active');
+    $('.header_bottom .gnb ul.depth1 .lower_menu').removeClass('active');
+
+    // 현재 선택된 메뉴에 active 클래스 추가
     $(this).addClass('active');
     $lowerMenu.stop(true, true).addClass('active');
-}).on('mouseleave', function () {
-    var $lowerMenu = $(this).find('.lower_menu');
-    
-    // 메뉴를 닫을 때 'active' 클래스 제거
-    if (!$(this).find('.lower_menu').is(':focus')) {
-        $(this).removeClass('active');
-        $lowerMenu.removeClass('active'); // 'active' 클래스 제거
-    }
 });
 
-// focusout을 사용하여 포커스가 벗어날 때만 active를 제거
-$('.header_bottom .gnb ul.depth1 li').on('focusout', function () {
-    var $lowerMenu = $(this).find('.lower_menu');
-
-    // focusout 시 메뉴가 닫히도록 처리
-    if (!$(this).find('.lower_menu').is(':focus')) {
-        $(this).removeClass('active');
-        $lowerMenu.removeClass('active'); // 'active' 클래스 제거
-    }
+// 마우스를 헤더에서 벗어나면 전체 메뉴 비활성화
+$('.header_bottom .gnb').on('mouseleave', function(){
+    $('.header_bottom .gnb ul.depth1 > li').removeClass('active');
+    $('.header_bottom .gnb ul.depth1 .lower_menu').removeClass('active');
 });
+
+// focusout을 사용하여 포커스가 벗어날 때 active를 제거
+$('header .header_bottom .wrapper .sitemap a').on('focusin', function () {
+    $('.header_bottom .gnb ul.depth1 > li').removeClass('active');
+    $('.header_bottom .gnb ul.depth1 .lower_menu').removeClass('active');
+});
+
 
 
 
 /* 모바일 메뉴 */
-$('header .header_bottom .wrapper .sitemap a').on('click focusin', function (e) {
+$('header .header_bottom .wrapper .sitemap a').on('click', function (e) {
     e.preventDefault();
     $('header .header_bottom .wrapper .mobile_menu').fadeToggle(300); // 부드럽게 토글
 });
@@ -39,12 +37,12 @@ $('header .header_bottom .wrapper .sitemap a').on('click focusin', function (e) 
 // 모든 2차 메뉴 초기 숨김 설정
 $('.mobile_list_body ul.depth1 ul.depth2, .mobile_list_body ul.depth1 ul.depth2 ul.depth3').hide();
 
-// 1차 메뉴 클릭 또는 포커스 시 2차 메뉴 열기/닫기
-$('.mobile_list_body ul.depth1 > li > a').on('click', function (e) {
+// 1차 메뉴 클릭시 2차 메뉴 열기/닫기
+$('.mobile_list_body ul.depth1 > li').on('click', function (e) {
     e.preventDefault();
 
-    var $parentLi = $(this).parent('li');
-    var $depth2 = $parentLi.find('ul.depth2');
+    let $parentLi = $(this).parent('li');
+    let $depth2 = $parentLi.find('ul.depth2');
 
     // 1차 메뉴가 이미 열려있으면 2차 메뉴를 닫고, 다시 클릭하면 열림
     if ($parentLi.hasClass('active')) {
@@ -66,8 +64,8 @@ $('.mobile_list_body ul.depth1 > li > a').on('click', function (e) {
 $('.mobile_list_body ul.depth1 ul.depth2 > li > a').on('click', function (e) {
     e.preventDefault();
 
-    var $parentLi = $(this).parent('li');
-    var $depth3 = $parentLi.find('ul.depth3');
+    let $parentLi = $(this).parent('li');
+    let $depth3 = $parentLi.find('ul.depth3');
 
     // 2차 메뉴가 이미 열려있으면 3차 메뉴를 닫고, 다시 클릭하면 열림
     if ($parentLi.hasClass('active')) {
@@ -85,29 +83,13 @@ $('.mobile_list_body ul.depth1 ul.depth2 > li > a').on('click', function (e) {
     }
 });
 
-// 1차 메뉴 포커스 시 2차 메뉴 열기
-$('.mobile_list_body ul.depth1 > li > a').on('focusin', function (e) {
-    e.preventDefault();
-
-    var $parentLi = $(this).parent('li');
-    var $depth2 = $parentLi.find('ul.depth2');
-
-    if (!$parentLi.hasClass('active')) {
-        // 클릭 없이 포커스만 들어온 경우에만 2차 메뉴 열기
-        $('.mobile_list_body ul.depth1 > li').removeClass('active')
-            .find('ul.depth2').stop(true, true).slideUp(300, 'swing'); // 2차 메뉴 숨기기
-
-        $parentLi.addClass('active');
-        $depth2.stop(true, true).slideDown(300, 'swing'); // 2차 메뉴 열기
-    }
-});
 
 // 2차 메뉴 포커스 시 3차 메뉴 열기
-$('.mobile_list_body ul.depth1 ul.depth2 > li > a').on('focusin', function (e) {
+$('.mobile_list_body ul.depth1 ul.depth2 > li > a').on('click', function (e) {
     e.preventDefault();
 
-    var $parentLi = $(this).parent('li');
-    var $depth3 = $parentLi.find('ul.depth3');
+    let $parentLi = $(this).parent('li');
+    let $depth3 = $parentLi.find('ul.depth3');
 
     if (!$parentLi.hasClass('active')) {
         // 클릭 없이 포커스만 들어온 경우에만 3차 메뉴 열기
@@ -119,49 +101,24 @@ $('.mobile_list_body ul.depth1 ul.depth2 > li > a').on('focusin', function (e) {
     }
 });
 
-/* 모바일 닫기 */
+/* 모바일닫기 */
 $('header .header_bottom .wrapper .mobile_menu .mobile_wrap .mobile_header_top .close a').on('click', function (e) {
     e.preventDefault();
     $('header .header_bottom .wrapper .mobile_menu').fadeToggle(300);
 });
 
 
-
-/* 푸터 */
-$('footer .footer_head .wrapper ul.footer_link ul.depth2').hide();
-
-$('footer .footer_head .wrapper ul.footer_link > li > a').on('click focusin', function (e) {
-    e.preventDefault();
-    
-    var $parent = $(this).parent('li');
-    var $footerdepth2 = $parent.find('ul.depth2');
-    
-    // 현재 메뉴가 이미 열려있으면 아무 동작도 하지 않음
-    if ($parent.hasClass('active')) {
-        return; // 클릭이나 focusin시 아무 동작도 하지 않음
-    }
-    
-    // 다른 모든 메뉴를 닫음
-    $('footer .footer_head .wrapper ul.footer_link > li').not($parent).removeClass('active')
-        .find('ul.depth2').stop(true, true).slideUp(300, 'swing');
-    
-    // 현재 메뉴 열기
-    $parent.addClass('active');
-    $footerdepth2.stop(true, true).slideDown(300, 'swing');
-});
-
-// 포커스가 메뉴 항목을 벗어나면 2차 메뉴 닫기
-$('footer .footer_head .wrapper ul.footer_link > li > a').on('focusout', function () {
-    var $parent = $(this).parent('li');
-    var $footerdepth2 = $parent.find('ul.depth2');
-    
-    // 2차 메뉴가 열려 있으면 닫기
-    if ($parent.hasClass('active')) {
-        $parent.removeClass('active');
-        $footerdepth2.stop(true, true).slideUp(300, 'swing');
+/* 푸터닫기 */
+$('footer .footer_head .wrapper ul.footer_link > li').on('click', function (e) {
+    if($(this).hasClass('active') == true){
+        $(this).removeClass('active')
+        $(this).find('.depth2').slideUp()
+    }else{
+        $('footer .footer_head .wrapper ul.footer_link > li.active > .depth2').slideUp()
+        $('footer .footer_head .wrapper ul.footer_link > li').removeClass('active')
+        $(this).addClass('active')
+        $(this).find('.depth2').slideDown()
     }
 });
-
-
 
 });

@@ -238,7 +238,7 @@ header {
                 top: 0;
                 right: 0;
                 background: $bg-color;
-                width: 18.23em;
+                width: 100vw;
                 height: 100dvh;
                 @include header-drop_shadow;
                 .mobile_wrap {
