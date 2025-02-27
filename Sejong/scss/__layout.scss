@@ -182,7 +182,7 @@ header {
                                     display: flex;
                                     flex-wrap: wrap;
                                     gap: 0.70em 2.82em;
-                                    padding: 1.17em 2.35em;
+                                    padding: 1.17em 3.35em;
                                     >  li {
                                         >  a {
                                         display: flex;
@@ -289,7 +289,7 @@ header {
                                     display: flex;
                                     align-items: center;
                                     justify-content: space-between;
-                                    padding: 1.17em;
+                                    padding: 1.17em 2.35em;
                                     font-size: $body-L;
                                     color: $title-color;
                                     font-weight: 700;
@@ -308,8 +308,7 @@ header {
                                         border-bottom: 1px solid $pressed-color-70;
                                         &:last-child {border-bottom: 0;}
                                         &.active {
-                                            > a {
-                                                
+                                            > a {                                                    
                                                 > i {
                                                     transform: scale(1, -1);
                                                 }
@@ -319,8 +318,7 @@ header {
                                             display: flex;
                                             align-items: center;
                                             justify-content: space-between;
-                                            padding: 0.82em 1.17em 0.82em 1.17em;
-                                            font-size: $body-m-default;
+                                            padding: 0.8em 2.35em;
                                             color: $bg-color;
                                             font-weight: 700;
                                             background-color: $primary-color-50;
@@ -342,7 +340,7 @@ header {
                                                     display: flex;
                                                     align-items: center;
                                                     justify-content: space-between;
-                                                    padding: 0.58em 2.35em 0.58em 2.35em;
+                                                    padding: 0.6em 2.35em;
                                                     font-size: $body-s;
                                                     color: $bg-color;
                                                     font-weight: 400;
@@ -379,14 +377,15 @@ footer {
                     flex: 1;
                     border-left: 1px solid rgba(255, 255, 255, 0.1);
                     &.active {
-                      > a > i {
+                      > button > i {
                         transform: scale(-1);
                       }  
                     }
-                  > a {
+                  > button {
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
+                        width: 100%;
                         padding: 0.58em 1.17em;
                         i {
                             @include bg;
@@ -497,6 +496,14 @@ footer {
     }
     header .header_bottom .wrapper {
         margin-right: 0;
+    }
+    header .header_bottom .wrapper .mobile_menu .mobile_wrap .mobile_list_body ul.depth1 > li a {
+        padding: 1.17em;
+    }
+}
+@media screen and (min-width:1200px){
+    header .header_bottom .wrapper .mobile_menu .mobile_wrap .mobile_header_bottom {
+        display: none;
     }
 }
 @media screen and (max-width:1048px){

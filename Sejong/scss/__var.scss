@@ -47,6 +47,14 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
+@mixin service_icon2 {
+    content: "";
+    width: 2.8rem;
+    height: 2.8rem;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 @mixin bg {
     background-position: center center;
     background-size: contain;

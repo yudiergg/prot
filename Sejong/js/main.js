@@ -29,11 +29,25 @@ $(document).ready(function(){
 		nextEl: '.next',  
 		prevEl: '.prev',  
 	},
-
 });
 
-// swiper.autoplay.stop();  
-// swiper.autoplay.start();
+// 초기 상태 설정 (처음에는 stop 버튼만 보이도록)
+$('.visual .visual_popup .swiper .swiper_nav .buntton_inner .start').hide(); // 처음에 play 숨기기
+
+// stop 버튼 클릭 시 -> autoplay 멈추고 play 버튼 보이기
+$('.visual .visual_popup .swiper .swiper_nav .buntton_inner .stop').on('click', function () {
+    $(this).hide(); // stop 버튼 숨기기
+    $('.visual .visual_popup .swiper .swiper_nav .buntton_inner .start').show(); // play 버튼 표시
+    visual_popup_swiper.autoplay.stop(); // Swiper 자동 재생 정지
+});
+
+// play 버튼 클릭 시 -> autoplay 시작하고 stop 버튼 보이기
+$('.visual .visual_popup .swiper .swiper_nav .buntton_inner .start').on('click', function () {
+    $(this).hide(); // play 버튼 숨기기
+    $('.visual .visual_popup .swiper .swiper_nav .buntton_inner .stop').show(); // stop 버튼 표시
+    visual_popup_swiper.autoplay.start(); // Swiper 자동 재생 시작
+});
+
 
 
 /* 팝업존 */
