@@ -1429,6 +1429,7 @@ footer .footer_body .wrapper .right_inner .footer_info {
   background-color: #fff;
 }
 .section_news .wrapper .sejong_news ul li a .title .on_line {
+  width: 100%;
   font-size: 1.11rem;
   font-weight: 700;
   color: #1D1D1D;
@@ -1830,6 +1831,11 @@ footer .footer_body .wrapper .right_inner .footer_info {
   }
   .section_visual .serach .serach_content {
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .section_news .wrapper .sejong_news ul li a .title .on_line {
+    height: 3.29em;
   }
 }
 @keyframes WidthCenter {

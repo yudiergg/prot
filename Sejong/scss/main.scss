@@ -646,6 +646,7 @@
                             padding: 1.17em 1.17em;
                             background-color: $bg-color;
                             .on_line {
+                                width: 100%;
                                 font-size: $body-L;
                                 font-weight: 700;
                                 color: $title-color;
@@ -1027,7 +1028,11 @@
         flex-direction: column;
     }
 }
-
+@media screen and (max-width:1070px){
+    .section_news .wrapper .sejong_news ul li a .title .on_line {
+        height: 3.29em;
+    }
+}
 @keyframes WidthCenter {
     0% {transform:scaleX(0);}
     100% {transform:scaleX(1);}
