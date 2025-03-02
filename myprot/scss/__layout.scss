@@ -1,0 +1,49 @@
+header {
+    z-index: 9999;
+    position: fixed;
+    background-color: $bg-color;
+    width: 100%;
+    .wrapper {        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: $body-L;
+        font-weight: 700;
+        color: $primary-color-50;
+        height: $header-h;
+        h1{
+            a {
+                display: flex;
+                height: 100%;
+            }
+        }
+        .gnb {
+            display: flex;
+            gap: 2.35em;
+            height: 100%;
+            i.skip {
+                position: relative;
+                width: 0.47rem;
+                height: 5.29rem;
+                background-image: url("data:image/svg+xml,%3Csvg width='8' height='90' viewBox='0 0 8 90' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.54199 53.5225H0.185547L4.50879 37.4355H6.88379L2.54199 53.5225Z' fill='%231040FF'/%3E%3C/svg%3E%0A");
+            }
+            ul {
+                display: flex;
+                gap: 2.35em;
+                li {
+                    a{
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                        span {
+                            border-bottom: 1px solid transparent;
+                            &:hover {
+                                border-bottom: 1px solid $primary-color-50;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

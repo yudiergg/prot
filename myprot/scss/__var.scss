@@ -6,7 +6,15 @@
         }
     }
 }
-
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 @mixin skip {
     overflow: hidden;
     position: absolute;
@@ -18,4 +26,28 @@
     font-size: 3px;
     color: transparent;
     line-height: 0;
+}
+@mixin after-default{
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+@mixin text_hidden_2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+@mixin text_hidden_1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@mixin bg {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
 }
