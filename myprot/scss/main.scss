@@ -1,13 +1,11 @@
-@import "./_font";
-@import "./_default";
-@import "./_common";
-@import "./_var";
-@import "./_layout";
-
-@include skip{    
-}
+@import "../scss/_var";
+@import "../scss/_default";
+@import "../scss/_font";
+@import "../scss/_layout";
+@import "../scss/_common";
 
 .visual {
-    h2.skip{}
-    
+    h2.skip{
+        @include skip
+    }
 }
