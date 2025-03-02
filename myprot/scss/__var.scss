@@ -51,3 +51,8 @@
     background-position: center center;
     background-size: contain;
 }
+@mixin diesign_concept_span {
+    font-size: $body-L;
+    font-weight: 700;
+    color: $title-color;
+}
