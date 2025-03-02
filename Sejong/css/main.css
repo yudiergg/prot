@@ -11,12 +11,6 @@
   font-display: swap;
   src: local("Pretendard Regular"), url(../fonts/Pretendard-Regular.woff2) format("woff2"), url(../fonts/Pretendard-Regular.woff) format("woff");
 }
-@font-face {
-  font-family: "Riasans";
-  src: local("Pretendard Regular"), url(../fonts/RiaSans-ExtraBold.woff2) format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
 body, html {
   font-family: "Pretendard", "NanumSquareNeo", "나눔스퀘어네오", "나눔고딕", NanumGothic, -apple-system, BlinkMacSystemFont, helvetica, "Apple SD Gothic Neo", sans-serif;
   font-size: 17px;

@@ -1,0 +1,84 @@
+body, html {
+    font-family: "Pretendard",'NanumSquareNeo', '나눔스퀘어네오', '나눔고딕', NanumGothic, -apple-system, BlinkMacSystemFont, helvetica, "Apple SD Gothic Neo", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.5;
+    word-break: keep-all; 
+    word-wrap: break-word;
+}
+.wrapper {
+    width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#wrap {
+    width: 100%; 
+    position: relative;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*body{
+    -ms-overflow-style: none;
+    }
+::-webkit-scrollbar {
+     display: none;
+    }*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: inherit; 
+    font-size: inherit;
+}
+strong {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+ul, li, ol {
+    list-style: none; /* 리스트들 앞에 동그라미 있는거 삭제 */
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+em, address, i {
+    font-style: normal; /* 기본 정자의 폰트로 변경*/
+}
+button {
+    border: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    cursor: pointer;
+    background-color: transparent;
+    color: inherit;    
+}
+fieldset {
+    border: 0;
+}
+
+legend {
+    display: none;
+}
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+}
+th {
+    font-weight: inherit;
+    text-align: inherit;
+}
+input {
+    height: auto;  /* 높이값 초기화 */
+    font-family: inherit;  /* 폰트 상속 */
+    outline-style: none;  /* 포커스시 발생하는 효과 제거를 원한다면 */
+}

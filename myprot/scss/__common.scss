@@ -1,0 +1,41 @@
+/*폰트 */
+$visual-L: 3.88rem;
+$visual-m: 2.94rem;
+$visual-s: 2.35rem;
+$h-L: 2.94rem;
+$h-m: 2.35rem;
+$h-s: 1.88rem;
+$title-XXL: 1.88rem;
+$title-XL: 1.41rem;
+$title-L: 1.23rem;
+$title-m: 1.11rem;
+$title-s: 1rem;
+$body-L: 1.11rem;
+$body-m-default: 17px;
+$body-s: 0.88rem;
+$sub: 0.76rem;
+$header-h: 90px;
+/*******/
+
+/* 컬러 */
+$primary-color-50: #1040FF;
+$title-color: #1D1D1D;
+$body-color: #555;
+$disalbe:#E4E4E4;
+$text-disalbe:#8E8E8E;
+$border:#c6c6c6;
+$bg-color-3:#F0F0F0;
+$bg-color:#fff;
+$bg-color-2: #F8F8F8;
+$footer:#343849;
+$footer-header:#3E4253;
+$footer-depth2 :#3E4249;
+/*******/
+
+
+@media screen and (max-width:1260px){
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+}
