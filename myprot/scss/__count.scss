@@ -1,0 +1,12 @@
+.count {
+    .wrapper {
+        width: 100%;
+        .photo {
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}

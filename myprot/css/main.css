@@ -1124,6 +1124,24 @@ header .wrapper .gnb ul li a span:hover {
   font-size: 17px;
 }
 
+.mannger .wrapper {
+  width: 100%;
+}
+.mannger .wrapper .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.count .wrapper {
+  width: 100%;
+}
+.count .wrapper .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .skip {
   overflow: hidden;
   position: absolute;
