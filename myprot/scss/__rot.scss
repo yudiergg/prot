@@ -5,14 +5,15 @@
     80% {transform:translateY(8px);}
     90% {transform:translateY(-8px);}
 }
-.aerok_visual {
+
+.rot_visual {
     width: 100%;
-    background-image: url(../images/aerok/aerok_visual.jpg);
+    background-image: url(../images/rot/rot_visual.jpg);
     .wrapper {
         @include flex-col;
         justify-content: center;
         gap: 2.35em;
-        height: 55.70em;
+        height: 55em;
         color: $bg-color;
         .title {
             @include flex-col;
@@ -33,37 +34,27 @@
                 }
             }
         }
-        .inner {
-            display: flex;
-            gap: 0.94em;
-            font-size: $body-L;
-            font-weight: 700;
-            .original_site {
-                a {
-                    display: flex;
-                    padding: 0.52em 1.05em;
-                    border: 1px solid $bg-color;
-                    border-radius: 100px;
-                }
-            }
-            .renewal_site {
-                a {
-                    display: flex;
-                    padding: 0.52em 1.05em;
-                    border: 1px solid #256EF4;
-                    border-radius: 100px;
-                    background-color: #256EF4;
-                    &:hover {
-                        background-color: #0B54DA;
-                        border: 1px solid #0B54DA;
-                        transition: 0.1s;
-                    }
+        .renewal_site {
+            a {
+                display: inline-block;
+                padding: 0.52em 1.05em;
+                border: 1px solid #BD0020;
+                border-radius: 100px;
+                background-color: $bg-color;
+                color: #BD0020;
+                font-size: $body-L;
+                font-weight: 700;
+                &:hover {
+                    background-color: #8A0017;
+                    border: 1px solid #BD0020;
+                    color: $bg-color;
+                    transition: 0.1s;
                 }
             }
         }
     }
 }
-.design_concept {
+.rot_design_concept {
     padding: 5.88em 0;
     .wrapper {
         @include flex-col;
@@ -84,7 +75,12 @@
             }
             .typography {
                 @include flex-col;
-                color: #002554;
+                color: #BD0020;
+                em {
+                    font-family:"Riasans";
+                    font-size: $title-XXL;
+                    font-weight: 700;
+                }
                 span {
                     font-size: $title-XXL;
                     font-weight: 700;
@@ -97,7 +93,7 @@
         .color {
             display: flex;
             gap: 1.41em;
-            .prmary, .secondary, .title_90, .body_70 {
+            .prmary, .pramry_2, .secondary, .title_90, .body_70 {
                 @include flex-center;
                 gap: 0.58em;
                 height: 5.29em;
@@ -110,11 +106,15 @@
             }
             .prmary {
                 width: 40%;
-                background-color: #002554;
+                background-color: #BD0020;
+            }
+            .pramry_2 {
+                width: 20%;
+                background-color: #F00028;
             }
             .secondary {
-                width: 40%;
-                background-color: #FFA600;
+                width: 20%;
+                background-color: #FFAF00;
             }
             .title_90 {
                 width: 20%;
@@ -127,7 +127,7 @@
         }
     }
 }
-.popup {
+.rot_popup {
     padding: 5.88em 0;
     .wrapper {
         @include flex-col;
@@ -148,7 +148,7 @@
         }
     }
 }
-.page_detail {
+.rot_page_detail {
     padding: 5.88em 0;
     h2.skip {
     }
@@ -163,9 +163,9 @@
         }
     }
 }
-.device {
+.rot_device {
     padding: 5.88em 0;
-    background: url(../images/aerok/bg_01.jpg);
+    background: url(../images/rot/rot_footer_bg.jpg);
     .wrapper {
         @include flex-center;
         flex-direction: column;
@@ -175,32 +175,21 @@
             font-weight: 700;
             color: $bg-color;
         }
-        .inner {
-            display: flex;
-            gap: 0.94em;
-            font-size: $body-L;
-            font-weight: 700;
-            color: $bg-color;
-            .original_site {
-                a {
-                    display: flex;
-                    padding: 0.52em 1.05em;
-                    border: 1px solid $bg-color;
-                    border-radius: 100px;
-                }
-            }
-            .renewal_site {
-                a {
-                    display: flex;
-                    padding: 0.52em 1.05em;
-                    border: 1px solid #256EF4;
-                    border-radius: 100px;
-                    background-color: #256EF4;
-                    &:hover {
-                        background-color: #0B54DA;
-                        border: 1px solid #0B54DA;
-                        transition: 0.1s;
-                    }
+        .renewal_site {
+            a {
+                display: inline-block;
+                padding: 0.52em 1.05em;
+                border: 1px solid #BD0020;
+                border-radius: 100px;
+                background-color: $bg-color;
+                color: #BD0020;
+                font-size: $body-L;
+                font-weight: 700;
+                &:hover {
+                    background-color: #8A0017;
+                    border: 1px solid #BD0020;
+                    color: $bg-color;
+                    transition: 0.1s;
                 }
             }
         }
