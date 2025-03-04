@@ -27,6 +27,10 @@
     75% {transform:scale3d(1.05, 0.95, 1);}
     100% {transform:scale3d(1, 1, 1);}
 }
+@keyframes FadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
 
 .visual {
     .wrapper {

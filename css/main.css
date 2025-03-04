@@ -128,6 +128,28 @@ input {
   font-weight: 700;
   font-style: normal;
 }
+.skipnav {
+  z-index: 1000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.skipnav a {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: #1040FF;
+  color: #fff;
+  transform: translateY(-100%);
+}
+.skipnav a:focus, .skipnav a:active {
+  transform: translateY(0);
+}
+
 header {
   z-index: 9999;
   position: fixed;
@@ -161,6 +183,23 @@ header .wrapper .gnb i.skip {
 header .wrapper .gnb ul {
   display: flex;
   gap: 2.35em;
+}
+header .wrapper .gnb ul li {
+  position: relative;
+}
+header .wrapper .gnb ul li.on::before {
+  content: "";
+  position: absolute;
+  right: -0.6em;
+  top: 1.2em;
+  width: 0.4em;
+  height: 0.4em;
+  background-color: #1040FF;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+  animation: FadeIn 2s ease infinite normal both;
 }
 header .wrapper .gnb ul li a {
   display: flex;
@@ -1182,6 +1221,14 @@ header .wrapper .gnb ul li a span:hover {
   }
   100% {
     transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 .visual .wrapper {
