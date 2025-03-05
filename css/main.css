@@ -22,12 +22,13 @@ body, html {
 .wrapper {
   width: 1260px;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 #wrap {
+  min-width: 1260px;
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 * {
