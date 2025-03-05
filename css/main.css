@@ -3,12 +3,6 @@
 /*******/
 /* 컬러 */
 /*******/
-@media screen and (max-width: 1260px) {
-  .wrapper {
-    width: auto;
-    margin: 0 20px;
-  }
-}
 body, html {
   font-family: "Pretendard", "NanumSquareNeo", "나눔스퀘어네오", "나눔고딕", NanumGothic, -apple-system, BlinkMacSystemFont, helvetica, "Apple SD Gothic Neo", sans-serif;
   font-size: 17px;
@@ -1182,12 +1176,6 @@ header .wrapper .gnb ul li a span:hover {
   object-fit: contain;
 }
 
-@media screen and (max-width: 1260px) {
-  .wrapper {
-    width: auto;
-    margin: 0 20px;
-  }
-}
 .skip {
   overflow: hidden;
   position: absolute;

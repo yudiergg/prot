@@ -9,12 +9,7 @@
 @import "./_mannger";
 @import "./_count";
 
-@media screen and (max-width:1260px){
-    .wrapper {
-        width: auto;
-        margin: 0 20px;
-    }
-}
+
 .skip{
     @include skip;
 }
