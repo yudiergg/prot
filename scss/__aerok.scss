@@ -5,13 +5,27 @@
     80% {transform:translateY(8px);}
     90% {transform:translateY(-8px);}
 }
+@keyframes motion{
+    25%{
+      opacity: 1;
+    }
+    50%{
+      opacity: 1;
+      transform: translateY(15px);
+    }
+    100%{
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  }
 .aerok_visual {
+    position: relative;
     width: 100%;
     background-image: url(../images/aerok/aerok_visual.jpg);
     .wrapper {
         @include flex-col;
         justify-content: center;
-        gap: 2.35em;
+        gap: 1.41em;
         height: 55.70em;
         color: $bg-color;
         .title {
@@ -38,20 +52,6 @@
             gap: 0.94em;
             font-size: $body-L;
             font-weight: 700;
-            .original_site {
-                a {
-                    display: flex;
-                    padding: 0.52em 1.05em;
-                    border: 1px solid $bg-color;
-                    border-radius: 100px;
-                    &:hover {
-                        background-color: $bg-color;
-                        border: 1px solid #256EF4;
-                        color: #256EF4;
-                        transition: 0.1s;
-                    }
-                }
-            }
             .renewal_site {
                 a {
                     display: flex;
@@ -64,6 +64,23 @@
                         border: 1px solid #0B54DA;
                         transition: 0.1s;
                     }
+                }
+            }
+        }
+        .arrow_div {
+            position: absolute;
+            left: calc(50% - 11px);
+            bottom: 4.82em;
+            height: 1.29em;
+            .arrow {
+                position: absolute;
+                opacity: 1;
+                &:first-child {
+                    animation: motion 2s ease-out 0s infinite;
+                }
+                &:last-child {
+                    animation: motion 2s ease-out 1s infinite;
+                    opacity: 0;
                 }
             }
         }
@@ -187,20 +204,6 @@
             font-size: $body-L;
             font-weight: 700;
             color: $bg-color;
-            .original_site {
-                a {
-                    display: flex;
-                    padding: 0.52em 1.05em;
-                    border: 1px solid $bg-color;
-                    border-radius: 100px;
-                    &:hover {
-                        background-color: $bg-color;
-                        border: 1px solid #256EF4;
-                        color: #256EF4;
-                        transition: 0.1s;
-                    }
-                }
-            }
             .renewal_site {
                 a {
                     display: flex;

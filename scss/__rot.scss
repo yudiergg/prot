@@ -7,12 +7,13 @@
 }
 
 .rot_visual {
+    position: relative;
     width: 100%;
     background-image: url(../images/rot/rot_visual.jpg);
     .wrapper {
         @include flex-col;
         justify-content: center;
-        gap: 2.35em;
+        gap: 1.41em;
         height: 55em;
         color: $bg-color;
         .title {
@@ -49,6 +50,23 @@
                     border: 1px solid #BD0020;
                     color: $bg-color;
                     transition: 0.1s;
+                }
+            }
+        }
+        .arrow_div {
+            position: absolute;
+            left: calc(50% - 11px);
+            bottom: 4.82em;
+            height: 1.29em;
+            .arrow {
+                position: absolute;
+                opacity: 1;
+                &:first-child {
+                    animation: motion 2s ease-out 0s infinite;
+                }
+                &:last-child {
+                    animation: motion 2s ease-out 1s infinite;
+                    opacity: 0;
                 }
             }
         }

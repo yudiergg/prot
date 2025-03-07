@@ -225,7 +225,21 @@ header .wrapper .gnb ul li a span:hover {
     transform: translateY(-8px);
   }
 }
+@keyframes motion {
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
 .aerok_visual {
+  position: relative;
   width: 100%;
   background-image: url(../images/aerok/aerok_visual.jpg);
 }
@@ -233,7 +247,7 @@ header .wrapper .gnb ul li a span:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2.35em;
+  gap: 1.41em;
   height: 55.7em;
   color: #fff;
 }
@@ -264,18 +278,6 @@ header .wrapper .gnb ul li a span:hover {
   font-size: 1.11rem;
   font-weight: 700;
 }
-.aerok_visual .wrapper .inner .original_site a {
-  display: flex;
-  padding: 0.52em 1.05em;
-  border: 1px solid #fff;
-  border-radius: 100px;
-}
-.aerok_visual .wrapper .inner .original_site a:hover {
-  background-color: #fff;
-  border: 1px solid #256EF4;
-  color: #256EF4;
-  transition: 0.1s;
-}
 .aerok_visual .wrapper .inner .renewal_site a {
   display: flex;
   padding: 0.52em 1.05em;
@@ -287,6 +289,23 @@ header .wrapper .gnb ul li a span:hover {
   background-color: #0B54DA;
   border: 1px solid #0B54DA;
   transition: 0.1s;
+}
+.aerok_visual .wrapper .arrow_div {
+  position: absolute;
+  left: calc(50% - 11px);
+  bottom: 4.82em;
+  height: 1.29em;
+}
+.aerok_visual .wrapper .arrow_div .arrow {
+  position: absolute;
+  opacity: 1;
+}
+.aerok_visual .wrapper .arrow_div .arrow:first-child {
+  animation: motion 2s ease-out 0s infinite;
+}
+.aerok_visual .wrapper .arrow_div .arrow:last-child {
+  animation: motion 2s ease-out 1s infinite;
+  opacity: 0;
 }
 
 .design_concept {
@@ -418,18 +437,6 @@ header .wrapper .gnb ul li a span:hover {
   font-weight: 700;
   color: #fff;
 }
-.device .wrapper .inner .original_site a {
-  display: flex;
-  padding: 0.52em 1.05em;
-  border: 1px solid #fff;
-  border-radius: 100px;
-}
-.device .wrapper .inner .original_site a:hover {
-  background-color: #fff;
-  border: 1px solid #256EF4;
-  color: #256EF4;
-  transition: 0.1s;
-}
 .device .wrapper .inner .renewal_site a {
   display: flex;
   padding: 0.52em 1.05em;
@@ -548,6 +555,7 @@ header .wrapper .gnb ul li a span:hover {
   }
 }
 .sejong_visual {
+  position: relative;
   width: 100%;
   background-image: url(../images/sejong/sejong_visual.jpg);
 }
@@ -555,7 +563,7 @@ header .wrapper .gnb ul li a span:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2.35em;
+  gap: 1.41em;
   padding-bottom: 20.2em;
   height: 55.7em;
   color: #38278D;
@@ -587,19 +595,6 @@ header .wrapper .gnb ul li a span:hover {
   font-size: 1.11rem;
   font-weight: 700;
 }
-.sejong_visual .wrapper .inner .original_site a {
-  display: flex;
-  padding: 0.52em 1.05em;
-  border: 1px solid #fff;
-  border-radius: 100px;
-  color: #fff;
-}
-.sejong_visual .wrapper .inner .original_site a:hover {
-  background-color: #fff;
-  border: 1px solid #38278D;
-  color: #6857B8;
-  transition: 0.1s;
-}
 .sejong_visual .wrapper .inner .renewal_site a {
   display: flex;
   padding: 0.52em 1.05em;
@@ -612,6 +607,23 @@ header .wrapper .gnb ul li a span:hover {
   background-color: #38278D;
   border: 1px solid #38278D;
   transition: 0.1s;
+}
+.sejong_visual .wrapper .arrow_div {
+  position: absolute;
+  left: calc(50% - 11px);
+  bottom: 4.82em;
+  height: 1.29em;
+}
+.sejong_visual .wrapper .arrow_div .arrow {
+  position: absolute;
+  opacity: 1;
+}
+.sejong_visual .wrapper .arrow_div .arrow:first-child {
+  animation: motion 2s ease-out 0s infinite;
+}
+.sejong_visual .wrapper .arrow_div .arrow:last-child {
+  animation: motion 2s ease-out 1s infinite;
+  opacity: 0;
 }
 
 .sejong_design_concept {
@@ -743,19 +755,6 @@ header .wrapper .gnb ul li a span:hover {
   font-weight: 700;
   color: #fff;
 }
-.sejong_device .wrapper .inner .original_site a {
-  display: flex;
-  padding: 0.52em 1.05em;
-  border: 1px solid #fff;
-  color: #fff;
-  border-radius: 100px;
-}
-.sejong_device .wrapper .inner .original_site a:hover {
-  background-color: #fff;
-  border: 1px solid #38278D;
-  color: #6857B8;
-  transition: 0.1s;
-}
 .sejong_device .wrapper .inner .renewal_site a {
   display: flex;
   padding: 0.52em 1.05em;
@@ -874,6 +873,7 @@ header .wrapper .gnb ul li a span:hover {
   }
 }
 .rot_visual {
+  position: relative;
   width: 100%;
   background-image: url(../images/rot/rot_visual.jpg);
 }
@@ -881,7 +881,7 @@ header .wrapper .gnb ul li a span:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2.35em;
+  gap: 1.41em;
   height: 55em;
   color: #fff;
 }
@@ -921,6 +921,23 @@ header .wrapper .gnb ul li a span:hover {
   border: 1px solid #BD0020;
   color: #fff;
   transition: 0.1s;
+}
+.rot_visual .wrapper .arrow_div {
+  position: absolute;
+  left: calc(50% - 11px);
+  bottom: 4.82em;
+  height: 1.29em;
+}
+.rot_visual .wrapper .arrow_div .arrow {
+  position: absolute;
+  opacity: 1;
+}
+.rot_visual .wrapper .arrow_div .arrow:first-child {
+  animation: motion 2s ease-out 0s infinite;
+}
+.rot_visual .wrapper .arrow_div .arrow:last-child {
+  animation: motion 2s ease-out 1s infinite;
+  opacity: 0;
 }
 
 .rot_design_concept {
