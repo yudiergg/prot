@@ -160,6 +160,11 @@ header .wrapper {
   color: #1040FF;
   height: 90px;
 }
+@media (max-width: 1260px) {
+  header .wrapper {
+    width: auto;
+  }
+}
 header .wrapper h1 a {
   display: flex;
   height: 100%;
@@ -1206,6 +1211,11 @@ header .wrapper .gnb ul li a span:hover {
   object-fit: contain;
 }
 
+@media (max-width: 1260px) {
+  .wrapper {
+    margin: 0 20px;
+  }
+}
 .skip {
   overflow: hidden;
   position: absolute;
@@ -1359,6 +1369,11 @@ header .wrapper .gnb ul li a span:hover {
   width: 1440px;
   gap: 1.88em;
 }
+@media (max-width: 1260px) {
+  .project .wrapper {
+    width: 1260px;
+  }
+}
 .project .wrapper .title h2 {
   font-size: 3.88rem;
   font-weight: 700;
@@ -1375,6 +1390,11 @@ header .wrapper .gnb ul li a span:hover {
 }
 .project .project_popup .swiper {
   width: 1440px;
+}
+@media (max-width: 1260px) {
+  .project .project_popup .swiper {
+    width: 1260px;
+  }
 }
 .project .project_popup .swiper ul li a {
   position: relative;
@@ -1463,7 +1483,13 @@ header .wrapper .gnb ul li a span:hover {
 .works .wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 1440px;
+}
+@media (max-width: 1260px) {
+  .works .wrapper {
+    width: auto;
+  }
 }
 .works .wrapper .title h2 {
   font-size: 3.88rem;

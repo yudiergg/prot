@@ -9,6 +9,11 @@
 @import "./_mannger";
 @import "./_count";
 
+@media (max-width:1260px){
+    .wrapper {
+        margin: 0 20px;
+    }
+}
 
 .skip{
     @include skip;
@@ -125,6 +130,9 @@
         @include flex-col;
         width: 1440px;
         gap: 1.88em;
+        @media (max-width:1260px){
+            width: 1260px;
+        }
             .title{
                 h2 {
                     font-size: $visual-L;
@@ -142,6 +150,9 @@
         gap: 1.88em;
         .swiper {   
             width: 1440px;
+            @media (max-width:1260px){
+                width: 1260px;
+            }
             ul {
                 li {
                     a {               
@@ -231,7 +242,11 @@
     .wrapper {
         display: flex;
         justify-content: space-between;
+            align-items: center;
         width: 1440px;
+        @media (max-width:1260px){
+            width: auto;
+        }
         .title {
             h2 {
                 font-size: $visual-L;
