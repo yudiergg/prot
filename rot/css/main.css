@@ -126,7 +126,7 @@
 
 .new_item .prev, .next {
     z-index: 4;
-    width: 10%;
+    width: 3.76rem;
     height: 3.76rem;
     font-size: 0;
     line-height: 0;
