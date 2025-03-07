@@ -10,6 +10,9 @@
     position: relative;
     width: 100%;
     background-image: url(../images/rot/rot_visual.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     .wrapper {
         @include flex-col;
         justify-content: center;
@@ -183,7 +186,7 @@
 }
 .rot_device {
     padding: 5.88em 0;
-    background: url(../images/rot/rot_footer_bg.jpg);
+    background: url(../images/rot/rot_footer_bg.jpg) no-repeat center center / cover;
     .wrapper {
         @include flex-center;
         flex-direction: column;
@@ -251,11 +254,12 @@
             }
             .inner {
                 @include flex-col;
+                justify-content: space-around;
+                font-weight: 700;
+                color: $bg-color;
                 span {
                     width: 109px;
                     font-size: $title-L;
-                    font-weight: 700;
-                    color: $bg-color;
                 }
                 em {
                     font-size: $body-m-default;
@@ -282,10 +286,11 @@
             .inner {
                 width: 109px;
                 @include flex-col;
+                justify-content: space-around;
+                font-weight: 700;
+                color: $bg-color;
                 span {
                     font-size: $title-L;
-                    font-weight: 700;
-                    color: $bg-color;
                 }
                 em {
                     font-size: $body-m-default;

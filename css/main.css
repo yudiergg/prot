@@ -242,6 +242,9 @@ header .wrapper .gnb ul li a span:hover {
   position: relative;
   width: 100%;
   background-image: url(../images/aerok/aerok_visual.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .aerok_visual .wrapper {
   display: flex;
@@ -416,7 +419,7 @@ header .wrapper .gnb ul li a span:hover {
 
 .device {
   padding: 5.88em 0;
-  background: url(../images/aerok/bg_01.jpg);
+  background: url(../images/aerok/bg_01.jpg) no-repeat center center/cover;
 }
 .device .wrapper {
   display: flex;
@@ -432,7 +435,6 @@ header .wrapper .gnb ul li a span:hover {
 }
 .device .wrapper .inner {
   display: flex;
-  gap: 0.94em;
   font-size: 1.11rem;
   font-weight: 700;
   color: #fff;
@@ -493,6 +495,7 @@ header .wrapper .gnb ul li a span:hover {
 .device .group .mobile .inner {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
 }
 .device .group .mobile .inner span {
   width: 109px;
@@ -527,6 +530,7 @@ header .wrapper .gnb ul li a span:hover {
   width: 109px;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
 }
 .device .group .notebook .inner span {
   font-size: 1.23rem;
@@ -558,6 +562,9 @@ header .wrapper .gnb ul li a span:hover {
   position: relative;
   width: 100%;
   background-image: url(../images/sejong/sejong_visual.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .sejong_visual .wrapper {
   display: flex;
@@ -734,7 +741,7 @@ header .wrapper .gnb ul li a span:hover {
 
 .sejong_device {
   padding: 5.88em 0;
-  background: url(../images/sejong/sejong_footer_bg.jpg);
+  background: url(../images/sejong/sejong_footer_bg.jpg) no-repeat center center/cover;
 }
 .sejong_device .wrapper {
   display: flex;
@@ -750,7 +757,6 @@ header .wrapper .gnb ul li a span:hover {
 }
 .sejong_device .wrapper .inner {
   display: flex;
-  gap: 0.94em;
   font-size: 1.11rem;
   font-weight: 700;
   color: #fff;
@@ -811,6 +817,7 @@ header .wrapper .gnb ul li a span:hover {
 .sejong_device .group .mobile .inner {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
 }
 .sejong_device .group .mobile .inner span {
   width: 109px;
@@ -845,6 +852,7 @@ header .wrapper .gnb ul li a span:hover {
   width: 109px;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
 }
 .sejong_device .group .notebook .inner span {
   font-size: 1.23rem;
@@ -876,6 +884,9 @@ header .wrapper .gnb ul li a span:hover {
   position: relative;
   width: 100%;
   background-image: url(../images/rot/rot_visual.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .rot_visual .wrapper {
   display: flex;
@@ -1057,7 +1068,7 @@ header .wrapper .gnb ul li a span:hover {
 
 .rot_device {
   padding: 5.88em 0;
-  background: url(../images/rot/rot_footer_bg.jpg);
+  background: url(../images/rot/rot_footer_bg.jpg) no-repeat center center/cover;
 }
 .rot_device .wrapper {
   display: flex;
@@ -1131,12 +1142,13 @@ header .wrapper .gnb ul li a span:hover {
 .rot_device .group .mobile .inner {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  font-weight: 700;
+  color: #fff;
 }
 .rot_device .group .mobile .inner span {
   width: 109px;
   font-size: 1.23rem;
-  font-weight: 700;
-  color: #fff;
 }
 .rot_device .group .mobile .inner em {
   font-size: 17px;
@@ -1165,11 +1177,12 @@ header .wrapper .gnb ul li a span:hover {
   width: 109px;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  font-weight: 700;
+  color: #fff;
 }
 .rot_device .group .notebook .inner span {
   font-size: 1.23rem;
-  font-weight: 700;
-  color: #fff;
 }
 .rot_device .group .notebook .inner em {
   font-size: 17px;

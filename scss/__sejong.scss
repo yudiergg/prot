@@ -10,6 +10,9 @@
     position: relative;
     width: 100%;
     background-image: url(../images/sejong/sejong_visual.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     .wrapper {
         @include flex-col;
         justify-content: center;
@@ -178,7 +181,7 @@
 }
 .sejong_device {
     padding: 5.88em 0;
-    background: url(../images/sejong/sejong_footer_bg.jpg);
+    background: url(../images/sejong/sejong_footer_bg.jpg) no-repeat center center / cover;
     .wrapper {
         @include flex-center;
         flex-direction: column;
@@ -190,7 +193,6 @@
         }
         .inner {
             display: flex;
-            gap: 0.94em;
             font-size: $body-L;
             font-weight: 700;
             color: $bg-color;
@@ -249,6 +251,7 @@
             }
             .inner {
                 @include flex-col;
+                justify-content: space-around;
                 span {
                     width: 109px;
                     font-size: $title-L;
@@ -280,6 +283,7 @@
             .inner {
                 width: 109px;
                 @include flex-col;
+                justify-content: space-around;
                 span {
                     font-size: $title-L;
                     font-weight: 700;
