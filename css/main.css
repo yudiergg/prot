@@ -160,7 +160,7 @@ header .wrapper {
   color: #1040FF;
   height: 90px;
 }
-@media (max-width: 1260px) {
+@media (max-width: 1440px) {
   header .wrapper {
     width: auto;
   }
@@ -1211,7 +1211,7 @@ header .wrapper .gnb ul li a span:hover {
   object-fit: contain;
 }
 
-@media (max-width: 1260px) {
+@media (max-width: 1440px) {
   .wrapper {
     margin: 0 20px;
   }
@@ -1369,7 +1369,7 @@ header .wrapper .gnb ul li a span:hover {
   width: 1440px;
   gap: 1.88em;
 }
-@media (max-width: 1260px) {
+@media (max-width: 1440px) {
   .project .wrapper {
     width: 1260px;
   }
@@ -1486,7 +1486,7 @@ header .wrapper .gnb ul li a span:hover {
   align-items: center;
   width: 1440px;
 }
-@media (max-width: 1260px) {
+@media (max-width: 1440px) {
   .works .wrapper {
     width: auto;
   }
@@ -1538,6 +1538,11 @@ footer .wrapper {
   gap: 1.41em;
   padding: 3.52em 0;
   height: 554px;
+}
+@media (max-width: 1440px) {
+  footer .wrapper {
+    width: auto;
+  }
 }
 footer .wrapper h2 {
   font-size: 2.94rem;

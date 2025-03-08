@@ -9,7 +9,7 @@
 @import "./_mannger";
 @import "./_count";
 
-@media (max-width:1260px){
+@media (max-width:1440px){
     .wrapper {
         margin: 0 20px;
     }
@@ -130,7 +130,7 @@
         @include flex-col;
         width: 1440px;
         gap: 1.88em;
-        @media (max-width:1260px){
+        @media (max-width:1440px){
             width: 1260px;
         }
             .title{
@@ -244,7 +244,7 @@
         justify-content: space-between;
             align-items: center;
         width: 1440px;
-        @media (max-width:1260px){
+        @media (max-width:1440px){
             width: auto;
         }
         .title {
@@ -294,6 +294,9 @@ footer {
         gap: 1.41em;
         padding: 3.52em 0;
         height: 554px;
+        @media (max-width:1440px){
+            width: auto;
+        }
         h2 {
             font-size: $h-L;
             font-weight: 700;
