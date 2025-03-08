@@ -11,6 +11,7 @@
 
 @media (max-width:1440px){
     .wrapper {
+        width: auto;
         margin: 0 20px;
     }
 }
@@ -294,9 +295,6 @@ footer {
         gap: 1.41em;
         padding: 3.52em 0;
         height: 554px;
-        @media (max-width:1440px){
-            width: auto;
-        }
         h2 {
             font-size: $h-L;
             font-weight: 700;
