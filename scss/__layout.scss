@@ -31,6 +31,9 @@ header {
         font-weight: 700;
         color: $primary-color-50;
         height: $header-h;
+        @media (max-width:1440px){
+            width: auto;
+        }
         h1{
             a {
                 display: flex;
