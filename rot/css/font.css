@@ -12,7 +12,7 @@
 }
 @font-face {
     font-family: "Riasans";
-    src: local('Pretendard Regular'), url(../fonts/RiaSans-ExtraBold.woff2) format('woff2');
+    src: local('RiaSans-ExtraBold'), url(../fonts/RiaSans-ExtraBold.woff2) format('woff2');
     font-weight: 700;
     font-style: normal;
 }
