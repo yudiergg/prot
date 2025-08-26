@@ -1702,10 +1702,10 @@ header .wrapper .gnb ul li a span:hover {
   padding: 0.38em 0.76em;
   font-size: 0.76rem;
   font-weight: 700;
-  border: 1px solid #1040FF;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 100px;
-  color: #1040FF;
-  background-color: #fff;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 .project .project_popup .swiper ul li a em {
   z-index: 10;
