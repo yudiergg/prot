@@ -2,7 +2,7 @@
     h2.skip{}
     .wrapper {
         width: 100%;
-        padding: 0 140px;   
+        padding: 0 0;   
         margin: 0 auto;
         .photo {
             img {
@@ -12,9 +12,9 @@
             }
         }
     }
-    @media (max-width:1260px){
-      .wrapper {
-        padding: 0 0;
-      }
-    }
+    // @media (max-width:1260px){
+    //   .wrapper {
+    //     padding: 0 0;
+    //   }
+    // }
 }
