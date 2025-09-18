@@ -1609,6 +1609,7 @@ header .wrapper .gnb ul li a span:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 1440px;
   padding: 3.52em 0;
 }
 .about .wrapper .left_inner {
