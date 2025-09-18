@@ -1,4 +1,4 @@
-// $(document).ready(function(){
+$(document).ready(function(){
 //     const project_popup_swiper = new Swiper('.project_popup .swiper', { /* 팝업을 감싼는 요소의 class명 */
 
 // 	autoplay: {  /* 팝업 자동 실행 */
@@ -25,5 +25,5 @@
 // 	},
 // });
 
-// gsap.from(".tit", {duration: 5, text: ""}) //글자를 감싸는 요소
-// })
+gsap.from(".tit", {duration: 5, text: ""}) //글자를 감싸는 요소
+})
