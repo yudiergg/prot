@@ -1609,8 +1609,8 @@ header .wrapper .gnb ul li a span:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1440px;
   padding: 3.52em 0;
+  width: 1440px;
 }
 .about .wrapper .left_inner {
   display: flex;
@@ -1650,6 +1650,12 @@ header .wrapper .gnb ul li a span:hover {
   color: #1040FF;
   background-color: #fff;
   border-radius: 100px;
+}
+@media (max-width: 1440px) {
+  .about .wrapper {
+    width: auto !important;
+    margin: 0 20px;
+  }
 }
 
 .project {
